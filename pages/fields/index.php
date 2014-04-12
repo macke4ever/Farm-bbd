@@ -45,9 +45,8 @@
 	    $.get(file, function(data){
 	        $('#content').html(data);
 	      });
-	    var id = $(this).data('field');
 	    resetMaps();
-	    paryskinti(laukai[id]);
+	    paryskinti2($(this).data('field'));
 	    return false;
 	});
 

@@ -87,12 +87,21 @@ function setSelected(){
 
 
  function paryskinti(obj) {
-  if (obj.fillOpacity == 0.35) {
+  // if (obj.fillOpacity == 0.35) {
     obj.setOptions({fillOpacity :0.8});
-  } 
+  // } 
   // else {
     // obj.setOptions({fillOpacity :0.35});
   // }
+ }
+
+ function paryskinti2(obj){
+  $.each(laukai, function(index){
+            if (laukai[index].id == obj){             
+              laukai[index].setOptions({fillOpacity :0.8});
+
+            }
+        });
  }
 
   function show() {         
