@@ -26,7 +26,7 @@
 	
 		$field = $field[0];
 
-	    $cultures = $db->query("SELECT `cultures`.`name` as name, `cultures`.`id` as id FROM seeds INNER JOIN cultures ON `cultures`.`id` = `seeds`.`culture_id` WHERE `seeds`.`farm_id` = ".$_SESSION["user_farm"]." GROUP BY cultures.`name`");
+	    $cultures = $db->query("SELECT `cultures`.`name` as name, `cultures`.`id` as id FROM seeds INNER JOIN cultures ON `cultures`.`id` = `seeds`.`culture_id` WHERE `seeds`.`farm_id` = ".$_SESSION["user_farm"]." GROUP BY cultures.`name` ORDER BY cultures.`name`");
 
 		$fieldworks = array();	 
 		$seedings = $db->query("select id as id, date as date from seedings where farm_id = ".$_SESSION["user_farm"]." and season_id = 5 and field_id = ".@$_GET['id'].""); 		
@@ -85,7 +85,7 @@
 					<?php
 						foreach($cultures as $key => $culture){
 				            echo '<optgroup label="'.$culture["name"].'">';
-				            $q = "SELECT id, name FROM seeds WHERE `farm_id`=".$_SESSION["user_farm"]." and `culture_id`='".@$culture["id"]."'";
+				            $q = "SELECT id, name FROM seeds WHERE `farm_id`=".$_SESSION["user_farm"]." and `culture_id`='".@$culture["id"]."' ORDER BY seeds.name";
 				            $rc = mysql_query($q);			    
 				            $seeds = array();
 				            while(@$seed = mysql_fetch_assoc($rc)){
