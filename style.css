@@ -1,0 +1,218 @@
+body, html{
+	margin: 0;
+	padding: 0;
+	color: #0F0F0F;
+	font-family: Arial;
+}
+
+#map{
+	height: 100%;
+	float: left;
+	background-color: red;
+}
+
+#settings{
+	height: 100%;
+	width: 396px;
+	float: right;
+	background: #2d2d2d;
+}
+
+.menu {
+	height: 30px;
+	padding: 0;
+	margin: 0;
+	margin-left: 2px;
+	display: block;
+}
+
+.menu li {
+	padding: 0;
+	display: inline;
+	line-height: 30px;
+	margin: 6px 2px;
+	list-style: none;
+}
+
+.menu li:last-child {
+	float: right;
+	margin: 0 8px 0 0;
+}
+
+.menu li a {
+	color: #bbbbbb;
+	font-family: Arial;
+	text-decoration: none;
+	
+}
+
+.menu li a:hover{
+	text-decoration: underline;
+	color: #FFFFFF;
+}
+
+.menu img {
+	width: 18px;
+	height: 18px;
+	margin: 4px 0px 0px 0px;
+	vertical-align: top;
+	border-top: solid 2px #2d2d2d;
+	border-bottom: solid 2px #2d2d2d;
+
+}
+
+.menu img:hover {
+	background-color: #4f4f4f;
+}
+
+#content {
+
+	background-color: #FFFFFF;
+	position: relative;
+	overflow:scroll;
+}
+
+h1 {
+	margin: 10px 0 10px 20px;
+	padding: 5px 0 10px 0;
+	width: 100%;
+	font-size: 22px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 40px;
+	display: inline;
+}
+
+h2 {
+	margin: 0;
+	padding: 10px 0 10px 0;
+	width: 100%;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+}
+
+table {
+	padding: 0;
+	/*margin: 0 8px 0 8px;*/
+	width:100%;
+	border-width: 0;
+	border-left: solid white 8px;
+	border-right: solid white 5px;
+	border-collapse:collapse	
+}
+
+.tableLeft, .tableRight, .tableSingle {
+	border-width: 0px;
+	background: #dddddd;
+	padding: 0;
+	margin: 0;
+
+}
+
+.tableLeft {
+	width: 96px;
+	text-align: right;
+	line-height: 28px;
+	padding-right: 4px;
+}
+
+.tableRight {
+	width: 261px;
+	text-align: left;
+	line-height: 28px;
+	padding-left: 4px;
+}
+
+.tableSingle {
+	padding-left: 15px;
+	width: 100%;
+	text-align: left;
+}
+
+.aStyle {
+	margin: 0;
+	padding: 0;
+	color: #0F0F0F;
+	font-family: Arial;
+	text-decoration: none;
+	line-height: 26px;
+}
+.aStyle:hover {
+	text-decoration: underline;
+}
+
+.second {
+	background: #bbbbbb;
+}
+
+.addButton {
+	text-align: right;
+	float: right;
+	margin: 8px 20px 0 8px;
+	display: inline;
+	font-size: 16px;
+}
+
+#uploadCoordinates {
+	padding: 0 5px;
+	position: relative;
+}
+#myForm
+{
+	display: block; 
+	margin: 20px auto; 
+	background: #eee; 
+	border-radius: 10px; 
+	padding: 15px 
+}
+
+#progress 
+{ 
+	position:relative;
+	width:99%; 
+	border: 1px solid #ddd; 
+	padding: 1px; 
+	border-radius: 3px; 
+}
+
+#bar 
+{ 
+	background-color: #B4F5B4; 
+	width:0%;
+	height:20px; 
+	border-radius: 3px; 
+}
+
+#percent 
+{ 
+	position:absolute; 
+	display:inline-block; 
+	top:3px; 
+	left:48%; 
+}
+
+
+
+
+/*Additional stuff*/
+
+.clear {
+	clear: both;
+	height: 1px;
+}
+
+.cf:before,
+.cf:after {
+    content:"";
+    display:table;
+}
+
+.cf:after {
+    clear:both;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+.cf {
+    zoom:1;
+}

@@ -1,0 +1,490 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"border",
+				"border-color"
+			],
+			[
+				"paddi",
+				"padding-left"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"s",
+				"switch	switch …"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"table",
+				"tableFields"
+			],
+			[
+				"ta",
+				"tablecol"
+			],
+			[
+				"tableco",
+				"tablecols"
+			],
+			[
+				"in",
+				"input"
+			],
+			[
+				"Expectedti",
+				"ExpectedTimeDeparture"
+			],
+			[
+				"c",
+				"c"
+			],
+			[
+				"ISO",
+				"Iso"
+			],
+			[
+				"st",
+				"st"
+			],
+			[
+				"is_",
+				"is_int"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"stip",
+				"stiprumas"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "pages/cropscares/views/showCropscare.php",
+			"settings":
+			{
+				"buffer_size": 2627,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/Users/kestutiscesnavicius/Library/Containers/com.apple.mail/Data/Library/Mail Downloads/89310378-2B2F-4689-A55F-E4F3D9618987/moodle.if.ktu.lt.cfg",
+			"settings":
+			{
+				"buffer_size": 340,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 27.0,
+		"selected_items":
+		[
+			[
+				"php",
+				"Set Syntax: PHP"
+			]
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Applications/MAMP/htdocs/farm/pages/fields/views/showField.php",
+		"/Applications/MAMP/htdocs/farm/pages/fields/views/editField.php",
+		"/Applications/MAMP/htdocs/farm/pages/fields/actions/changeField.php",
+		"/Applications/MAMP/htdocs/farm/pages/fields/actions/deleteWorkFromField.php",
+		"/Applications/MAMP/htdocs/farm/pages/fieldworks/views/editFieldwork.php",
+		"/Applications/MAMP/htdocs/farm/pages/fieldworks/views/showFieldwork.php",
+		"/Applications/MAMP/htdocs/farm/pages/cropscares/views/editCropscare.php",
+		"/Applications/MAMP/htdocs/farm/pages/cropscares/actions/changeCropscare.php",
+		"/Applications/MAMP/htdocs/farm/pages/cropscares/views/showCropscare.php",
+		"/Applications/MAMP/htdocs/farm/pages/cropscares/views/addCropscare.php",
+		"/Applications/MAMP/htdocs/farm/pages/cropscares/actions/deleteCropscare.php",
+		"/Applications/MAMP/htdocs/farm/pages/cropscares/actions/addCropscareSQL.php",
+		"/Applications/MAMP/htdocs/farm/pages/cropscares/index.php",
+		"/Applications/MAMP/htdocs/farm/pages/fieldworks/index.php",
+		"/Users/kestutiscesnavicius/Desktop/tmp/login.php",
+		"/Users/kestutiscesnavicius/Desktop/tmp/styles.css",
+		"/Users/kestutiscesnavicius/Desktop/tmp/logout.php",
+		"/Users/kestutiscesnavicius/Desktop/tmp/index.php",
+		"/Users/kestutiscesnavicius/Desktop/tmp/gameSelect.php",
+		"/Users/kestutiscesnavicius/Desktop/tmp/database/dbConfig.php",
+		"/Applications/MAMP/htdocs/board/games/basketball/index.php",
+		"/Applications/MAMP/htdocs/board/games/basketball/ajax/gactions.php",
+		"/Applications/MAMP/htdocs/board/games/basketball/board.php",
+		"/Applications/MAMP/htdocs/board/games/basketball/styles.css",
+		"/Applications/MAMP/htdocs/board/games/basketball/ajax/updateSettings.php",
+		"/Applications/MAMP/htdocs/board/gameSelect.php",
+		"/Applications/MAMP/htdocs/board/games/basketball/ajax/actions.php",
+		"/Applications/MAMP/htdocs/board/ajax/actions.php",
+		"/Applications/MAMP/htdocs/board/database/dbConfig.php",
+		"/Applications/MAMP/htdocs/board/login.php",
+		"/Applications/MAMP/htdocs/board/games/tennis/index.php",
+		"/Applications/MAMP/htdocs/board/games/tennis/board.php",
+		"/Applications/MAMP/htdocs/board/board.php",
+		"/Volumes/JVC 1_B/PRIVATE/JVC/CQAV/MEDIAINF.XML",
+		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/plugins/clients/index.php",
+		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/plugins/receivers/getFile.php",
+		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/plugins/transporters/getFile.php",
+		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/plugins/clients/filters.php",
+		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/js/wkm-development.js",
+		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/plugins/orders/getAPMTable.php",
+		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/plugins/orders/getFile.php",
+		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/plugins/containers/getFile.php",
+		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/plugins/clients/getFile.php",
+		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/plugins/files/getFile.php",
+		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/plugins/containers/fetFile.php",
+		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/plugins/clients/getAPMTable.php",
+		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/plugins/transporters/getAPMTable.php",
+		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/plugins/receivers/getAPMTable.php",
+		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/plugins/files/getAPMTable.php",
+		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/plugins/containers/getAPMTable.php",
+		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/ajax/getAPMTable.php",
+		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/plugins/containers/containers-fields.php",
+		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/index.php",
+		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/ajax/getFile.php",
+		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/plugins/orders/orders-fields.php",
+		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/inc/dynamicRender.php",
+		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/inc/fieldrenderer.php",
+		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/plugins/orders/index.php",
+		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/js/fieldscripts.js",
+		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/plugins/orders/getOrderContainers.php",
+		"/Applications/MAMP/htdocs/terminalai/www/system/libs/Exceptions.php",
+		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/main.detached.php",
+		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/css/d-development.css",
+		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/js/chosen/chosen.jquery.js",
+		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/plugins/containers/index.php",
+		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/plugins/clients/clients-fields.php",
+		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/plugins/receivers/receivers-fields.php",
+		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/plugins/receivers/index.php",
+		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/plugins/transporters/transporters-fields.php",
+		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/plugins/transporters/index.php",
+		"/Applications/MAMP/htdocs/terminalai/application/modules/wkm/ajax/getAPMTable.php",
+		"/Applications/MAMP/htdocs/terminalai/application/modules/wkm/ajax/getFile.php",
+		"/Applications/MAMP/htdocs/terminalai/application/modules/wkm/js/wkm-development.js",
+		"/Applications/MAMP/htdocs/terminalai/config/database.php",
+		"/Applications/MAMP/htdocs/terminalai/application/modules/wkm/main.detached.php",
+		"/Applications/MAMP/htdocs/terminalai/system/libs/Exceptions.php",
+		"/Applications/MAMP/htdocs/biudzetu_demo/config/database.php",
+		"/Users/kestutiscesnavicius/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/wkmcore/application/modules/wkm/index.php",
+		"/Users/kestutiscesnavicius/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/wkmcore/application/modules/wkm/inc/events-fields.php",
+		"/Users/kestutiscesnavicius/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/wkmcore/application/modules/wkm/inc/fieldrenderer.php",
+		"/Users/kestutiscesnavicius/wkmcore/application/modules/wkm/inc/fieldrenderer.php",
+		"/Users/kestutiscesnavicius/wkmcore/application/modules/wkm/index.php",
+		"/Users/kestutiscesnavicius/wkmcore/system/libs/Response.php",
+		"/Users/kestutiscesnavicius/wkmcore/application/modules/users/views/users.index.view.php",
+		"/Users/kestutiscesnavicius/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/farm/connection/login.php",
+		"/Volumes/DEBIAN/maps/lrubik_agro.sql"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"var file = \"pages/cropscares/views/showCropscare.php?id=\"\n		file += $(this).data('cropscare');\n		 console.log(file);\n	    $.get(file, function(data){\n	        $('#content').html(data);\n	      });\n	    return false;",
+			"basketball",
+			"'font/",
+			"aa",
+			"reloadC",
+			"Events",
+			"events",
+			"tableName",
+			"Clients",
+			"getFile.php",
+			"stream",
+			"$Do",
+			"View",
+			"fieldset",
+			"addNewDataLine\naddNewDataLine",
+			"addNewDataLine\n",
+			"addNewDataLine",
+			"ContainerLists",
+			"EntryID",
+			"generateField",
+			"getOrder",
+			"tablecols",
+			"generateFie",
+			");\n",
+			"entryid",
+			"EntryID",
+			"exit",
+			"totalbytypes",
+			"$line",
+			"separator",
+			"separa",
+			"ajax/getInvoiceLines",
+			"invoice",
+			"EntryID",
+			"sTexts",
+			"ExpenseCategoryID",
+			"expenseCategories",
+			"setPrintCopyTimeout",
+			"updatePCountInDataLines",
+			"1",
+			"Entry",
+			"_GET",
+			"PlaceHolder",
+			"$db->query",
+			"new",
+			"quer",
+			"msie",
+			"containers",
+			"Containers",
+			"containers",
+			"client",
+			"Client",
+			"Clients",
+			"clients",
+			"Transporter",
+			"Transporters",
+			"transporters",
+			"transporter",
+			"Transporter",
+			"transporter",
+			"Transporter",
+			"transporter",
+			"Transporter",
+			"Receiver",
+			"Transporter",
+			"transporter",
+			"Transporter",
+			"Transporters",
+			"Files",
+			"files",
+			"week_start",
+			"SearchQuery",
+			"name",
+			"filterresponsive",
+			"filter",
+			"filtereventcategory",
+			"$rs",
+			"rs",
+			"line",
+			"event",
+			"events",
+			"expenses",
+			"'];\n",
+			"php"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"'../../font/",
+			"ContainersLists",
+			"plugins/orders/getOrderContainers",
+			"ContainerID",
+			"containers",
+			"orders",
+			"Orders",
+			"orders",
+			"Containers",
+			"containers",
+			"Client",
+			"Clients",
+			"clients",
+			"client",
+			"Client",
+			"client",
+			"Client",
+			"client",
+			"Client",
+			"Receiver",
+			"receiver",
+			"Receiver",
+			"Receivers",
+			"Transporters",
+			"transporters"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "pages/cropscares/views/showCropscare.php",
+					"settings":
+					{
+						"buffer_size": 2627,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1681,
+								1512
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 1.0,
+						"translation.y": 9.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/kestutiscesnavicius/Library/Containers/com.apple.mail/Data/Library/Mail Downloads/89310378-2B2F-4689-A55F-E4F3D9618987/moodle.if.ktu.lt.cfg",
+					"settings":
+					{
+						"buffer_size": 340,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								291,
+								291
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"ex",
+				"www/system/libs/Exceptions.php"
+			],
+			[
+				"data",
+				"config/database.php"
+			],
+			[
+				"excep",
+				"system/libs/Exceptions.php"
+			],
+			[
+				"wkm/in",
+				"application/modules/wkm/index.php"
+			],
+			[
+				"wkm/ind",
+				"application/modules/wkm/index.php"
+			],
+			[
+				"res",
+				"system/libs/Response.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 188.0,
+	"status_bar_visible": true
+}
