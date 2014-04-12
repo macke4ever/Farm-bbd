@@ -99,7 +99,7 @@ function setSelected(){
   $.each(laukai, function(index){
             if (laukai[index].id == obj){             
               laukai[index].setOptions({fillOpacity :0.8});
-
+              return false;
             }
         });
  }
