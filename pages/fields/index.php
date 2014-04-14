@@ -2,7 +2,11 @@
 <?php 		
 	include "../../dbConfig.php";
 	$fields = $db->query("SELECT  name, id, coordinates FROM fields WHERE farm_id = '".$_SESSION["user_farm"]."' order by name asc"); 	 
-	echo '<h1>Laukai</h1><a href=""><img src="img/add.png" class="addButton" tabindex="1" style="width: 22px; height:22px; margin: 10px 15px 0 0;"></a>';
+	echo '<h1>Laukai</h1>';
+	if ($_SESSION["user_rights"] >= 16) {
+		echo '<a href=""><img src="img/add.png" class="addButton" tabindex="1" style="width: 22px; height:22px; margin: 10px 15px 0 0;">';
+	}
+	echo '</a>';
 	if (!empty($fields)) {
 		$color = 1;	
 		echo "<table class='fieldsList'>";		
