@@ -49,6 +49,12 @@
 	    $.get(file, function(data){
 	        $('#content').html(data);
 	      });
+
+	    var file2 = "markWorkFields.php?workType=fieldwork&workID="
+		file2 += $(this).data('work');
+	    $.get(file2, function(data){
+	        $('#content2').html(data);
+	      });
 	    return false;
 	});
 

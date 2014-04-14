@@ -64,7 +64,7 @@ function resetMaps(){
 
 //info apie lauka, cia tveriami visi case pagal paspausta taba
 function showFieldInfo(event) {
-  if (document.getElementById('fields') != null) {
+  //if (document.getElementById('fields') != null) {
           var page = "pages/fields/views/showField.php?id=";
           page += this.id;
           $.get(page, function(data){
@@ -72,7 +72,7 @@ function showFieldInfo(event) {
           });  
           resetMaps();        
           paryskinti(this);
-  } 
+  //} 
 }
 
 

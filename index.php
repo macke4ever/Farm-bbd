@@ -51,6 +51,9 @@
     
     <div id='content'>
     </div>
+    <div id='content2'>
+    </div>
+
     <!-- <div id='mapCoordsInclude'></div> -->
     <!-- <div id='mapCoordsInclude'><?php  //include "addMaps.php"; ?></div> -->
 

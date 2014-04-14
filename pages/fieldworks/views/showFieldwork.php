@@ -37,6 +37,7 @@
 
 	$('#cancel').click(function(){
      // console.log('aa');
+     	resetMaps();
         var file = "pages/fieldworks/index.php";
         $.get(file, function(data){
             $('#content').html(data);

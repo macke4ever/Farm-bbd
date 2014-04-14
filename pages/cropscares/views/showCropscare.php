@@ -68,7 +68,7 @@
 	});
 
 	$('#cancel').click(function(){
-     console.log('aa');
+		resetMaps();
         var file = "pages/cropscares/index.php";
         $.get(file, function(data){
             $('#content').html(data);
