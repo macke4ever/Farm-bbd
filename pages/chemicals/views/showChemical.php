@@ -31,7 +31,7 @@
 			<td class="tableRight"><?php echo @$chemicals[0]['quantity']." ".@$chemicals[0]['measure']."."; ?></td>
 		</tr>
 		<tr>
-		    <td class="tableLeft"><button type="button" class="buttonChange" data-chemical=<?php echo '"'. @$_GET['id']. '"'; ?>>Redaguoti</button></td>
+		    <td class="tableLeft"><?php if ($_SESSION["user_rights"] >= 16){ ?><button type="button" class="buttonChange" data-chemical=<?php echo '"'. @$_GET['id']. '"'; ?>>Redaguoti</button><?php } ?></td>
 			<td class="tableRight"><button id="cancel">Atgal</button></td>
 		</tr>
 	</table>

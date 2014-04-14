@@ -1,6 +1,6 @@
 <div id="chemical">	
 	
-	<h1>Pasėlių priežiūros priemonės</h1><a href=""><img src="img/add.png" class="addButton" tabindex="1" style="width: 22px; height:22px; margin: 10px 15px 0 0;"></a>
+	<h1>Pasėlių priežiūros priemonės</h1><?php if ($_SESSION["user_rights"] >= 16){ ?><a href=""><img src="img/add.png" class="addButton" tabindex="1" style="width: 22px; height:22px; margin: 10px 15px 0 0;"></a><?php } ?>
 
 
 <?php
@@ -18,13 +18,21 @@
 					$color = 2;
 					echo '<tr>';
 					echo '    <td class="tableSingle show" data-id="'.@$chemical['id'].'"><a href="" class="aStyle">'.@$chemical['name'].'</a></td>';
-					echo '	  <td class="tableSingle" style="text-align: right; width: 20px;"><a href=""><img src="img/delete.png" class="delete" data-id="'.@$chemical['id'].'" style="width: 16px; height:16px; margin: 2px 4px 0 0;"></a><td>';
+					echo '	  <td class="tableSingle" style="text-align: right; width: 20px;"><a href="">';
+					if ($_SESSION["user_rights"] >= 16){
+						echo '<img src="img/delete.png" class="delete" data-id="'.@$chemical['id'].'" style="width: 16px; height:16px; margin: 2px 4px 0 0;"></a>';
+					}
+					echo '<td>';
 					echo '</tr>';
 				} else {
 					$color = 1;
 					echo '<tr>';
 					echo '    <td class="tableSingle second show" data-id="'.@$chemical['id'].'"><a href="" class="aStyle">'.@$chemical['name'].'</a></td>';
-					echo '	  <td class="tableSingle second" style="text-align: right; width: 20px;"><a href=""><img src="img/delete.png" class="delete" data-id="'.@$chemical['id'].'" style="width: 16px; height:16px; margin: 2px 4px 0 0;"></a><td>';
+					echo '	  <td class="tableSingle second" style="text-align: right; width: 20px;"><a href="">';
+					if ($_SESSION["user_rights"] >= 16){
+						echo '<img src="img/delete.png" class="delete" data-id="'.@$chemical['id'].'" style="width: 16px; height:16px; margin: 2px 4px 0 0;"></a>';
+					}
+					echo '<td>';
 					echo '</tr>';
 				}
 			}

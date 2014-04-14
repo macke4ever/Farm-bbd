@@ -30,7 +30,7 @@
 			<td class="tableRight"><?php echo @$seeds[0]['quantity']; ?>&nbsp;t.</td>
 		</tr>
 		<tr>
-		    <td class="tableLeft"><button type="button" class="buttonChange" data-seed=<?php echo '"'. @$_GET['id']. '"'; ?>>Redaguoti</button></td>
+		    <td class="tableLeft"><?php if ($_SESSION["user_rights"] >= 16){ ?><button type="button" class="buttonChange" data-seed=<?php echo '"'. @$_GET['id']. '"'; ?>>Redaguoti</button><?php } ?></td>
 			<td class="tableRight"><button id="cancel">Atgal</button></td>
 		</tr>
 	</table>
