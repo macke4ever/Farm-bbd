@@ -1,7 +1,7 @@
 <div id="fields">
 <?php 		
 	include "../../dbConfig.php";
-	$fields = $db->query("SELECT  name, id, coordinates FROM fields WHERE farm_id = '".$_SESSION["user_farm"]."' order by name asc"); 	 
+	$fields = $db->query("SELECT  name, id, coordinates, area FROM fields WHERE farm_id = '".$_SESSION["user_farm"]."' order by name asc"); 	 
 	echo '<h1>Laukai</h1>';
 	if ($_SESSION["user_rights"] >= 16) {
 		echo '<a href=""><img src="img/add.png" class="addButton" tabindex="1" style="width: 22px; height:22px; margin: 10px 15px 0 0;">';
@@ -9,9 +9,11 @@
 	echo '</a>';
 	if (!empty($fields)) {
 		$color = 1;	
-		echo "<table class='fieldsList'>";		
+		echo "<table class='fieldsList'>";	
+		$area = 0;	
 		foreach ($fields as $key => $field) {
 			$coord = "";
+			$area += @$field['area'];
 			if ($field["coordinates"] == ""){
 				$coord = "color: red;";
 			}
@@ -37,6 +39,8 @@
 				echo '</tr>';
 			}				
 		}
+
+		echo "<tr><td class='tableSingle second' style='padding-top: 20px; font-weight: bold;'>Bendras plotas: ".$area." ha</td><td class='tableSingle second'></td></tr>";
 		echo "</table>";
 	}
  ?>	

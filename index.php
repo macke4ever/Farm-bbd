@@ -73,6 +73,8 @@
 
   //nustatomas puslapio vaizdas - i kairi stulpeli ikalamas paspausto tabo sugeneruotas kodas.
   $('.menu li').click(function(){
+    $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
+    
     var file = $(this).data('menu');
     $.get(file, function(data){
         $('#content').html(data);

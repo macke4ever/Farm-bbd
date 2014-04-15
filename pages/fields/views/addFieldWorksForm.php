@@ -1,8 +1,8 @@
 <?php 
 	
-    $fieldworksList = $db->query("SELECT * FROM fieldworks");
+    $fieldworksList = $db->query("SELECT * FROM fieldworks ORDER BY name ASC");
 
-    $cropscaresList = $db->query("SELECT * FROM caresets");
+    $cropscaresList = $db->query("SELECT * FROM caresets ORDER BY name ASC");
 
 ?>
 <h2>Darbų pridėjimas</h2>

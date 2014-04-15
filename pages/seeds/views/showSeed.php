@@ -12,6 +12,12 @@
 		} 
 	}		
 
+
+	$seedAreas = $db->query("SELECT `fields`.area as area FROM `fields` LEFT OUTER JOIN seedings ON `fields`.id = `seedings`.`field_id` WHERE seed_id = ".@$_GET['id']." and season_id = ".$_SESSION["user_season"]." and `fields`.farm_id = ".$_SESSION["user_farm"].";"); 
+	$seedArea = 0;
+	foreach ($seedAreas as $key => $value) {
+		$seedArea += $value["area"];
+	}
 ?>  
 
 <div id="seeds">	
@@ -30,6 +36,10 @@
 			<td class="tableRight"><?php echo @$seeds[0]['quantity']; ?>&nbsp;t.</td>
 		</tr>
 		<tr>
+		    <td class="tableLeft second">Plotas</td>
+			<td class="tableRight second"><?php echo @$seedArea; ?>&nbsp;t.</td>
+		</tr>
+		<tr>
 		    <td class="tableLeft"><?php if ($_SESSION["user_rights"] >= 16){ ?><button type="button" class="buttonChange" data-seed=<?php echo '"'. @$_GET['id']. '"'; ?>>Redaguoti</button><?php } ?></td>
 			<td class="tableRight"><button id="cancel">Atgal</button></td>
 		</tr>
@@ -38,6 +48,7 @@
 
 <script type="text/javascript">
 	$('.buttonChange').click(function(){
+		$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 	    var file = "pages/seeds/views/editSeed.php?id="
 		file += $(this).data('seed');
 	    $.get(file, function(data){
@@ -48,10 +59,12 @@
 
 
 	$('#cancel').click(function(){
+		$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 	    var file = "pages/seeds/index.php"
 	    $.get(file, function(data){
 	        $('#content').html(data);
 	      });
+	    resetMaps();
 	    return false;
 	});
 </script>
