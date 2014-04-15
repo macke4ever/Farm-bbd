@@ -160,11 +160,24 @@ $('.delete').click(function(){
 
     $('#cancel').click(function(){
      // console.log('aa');
-        var file = "pages/fields/index.php";
-        $.get(file, function(data){
-            $('#content').html(data);
-          });
+
+     //prideta visokios logikos kad butu galima gristi i ankstesni puslapi pagal tai is kur buvo ateita
+     //kadangi jau galima perziureti lauka ne tik is lauku saraso bet ir is apsetu lauku tam tikra veisle saraso
+	    <?php 
+	     	if (!empty($_GET["back"]) && $_GET["back"] == "showseed"){
+	     		echo 'var file = "pages/seeds/views/showSeed.php?id='.$_GET["bid"].'";';
+	     		echo 'var file2 = "markWorkFields.php?workType=seed&workID='.$_GET["bid"].'";';
+				echo '$.get(file, function(data){$(\'#content\').html(data);});';
+				echo '$.get(file2, function(data){$(\'#content2\').html(data);});';
+
+	     	} else {	
+	        	echo 'var file = "pages/fields/index.php";';
+	        	echo '$.get(file, function(data){$(\'#content\').html(data);});';
+	     	}
+	    ?>
+        
         resetMaps();
+
         return false;
     });
 

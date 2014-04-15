@@ -73,7 +73,6 @@
 
     var file2 = "markWorkFields.php?workType=seed&workID="
 	file2 += $(this).data('id');
-	console.log(file2);
     $.get(file2, function(data){
         $('#content2').html(data);
       });
