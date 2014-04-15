@@ -29,7 +29,7 @@
 	    $cultures = $db->query("SELECT `cultures`.`name` as name, `cultures`.`id` as id FROM seeds INNER JOIN cultures ON `cultures`.`id` = `seeds`.`culture_id` WHERE `seeds`.`farm_id` = ".$_SESSION["user_farm"]." GROUP BY cultures.`name` ORDER BY cultures.`name`");
 
 		$fieldworks = array();	 
-		$seedings = $db->query("select id as id, date as date from seedings where farm_id = ".$_SESSION["user_farm"]." and season_id = 5 and field_id = ".@$_GET['id'].""); 		
+		$seedings = $db->query("select id as id, date as date from seedings where farm_id = ".$_SESSION["user_farm"]." and season_id = ".$_SESSION["user_season"]." and field_id = ".@$_GET['id'].""); 		
 		if(!empty($seedings)){			
 			foreach ($seedings as $key => $seeding) {
 				$seeding['name'] = "Sėjimas";
@@ -134,6 +134,9 @@
 	</form>
 
 	<div id="coordContent"><?php include "coordinates.php"; ?></div>
+	<button id="deleteCoord" style="margin-left: 15px;" data-field=<?php echo '"'. @$_GET['id']. '"'; ?>>Trinti koordinates</button><br>
+
+
 	<h2>Darbai lauke</h2>
 
 	<table>
@@ -183,6 +186,8 @@
         // alert('success');
         <?php echo 'var file = "pages/fields/views/showField.php?id='.@$_GET["id"].'";' ?>
         $.get(file, function(data){$('#content').html(data);});
+        reloadMaps();
+        paryskinti2(<?php echo @$_GET["id"]; ?>);
       });
     });
 
@@ -200,6 +205,19 @@ $('.delete').click(function(){
 	        });
 	      });
     }
+    return false;
+});
+
+$('#deleteCoord').click(function(){
+	if (confirm("Ar tikrai norite pašalinti šio lauko koordinačių duomenis?")) { 
+	    var url = "upload/deleteCoord.php";	
+	    var posting = $.post( url, { id: $(this).data('field') } );
+
+	      /* Put the results in a div */
+	      posting.done(function( data ) {
+	        	reloadMaps();
+	      });
+	}
     return false;
 });
 

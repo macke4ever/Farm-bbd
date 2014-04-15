@@ -4,7 +4,7 @@ function addShowFieldListeners () {
  	<?php
 
 		include "../connection/dbConfig.php";
-		$r = mysql_query("SELECT id from fields where farm_id = '4' and coordinates != ''"); 
+		$r = mysql_query("SELECT id from fields where farm_id = '".$_SESSION['user_farm']."' and coordinates != ''"); 
 
 		$fields = array();
 		while($field = mysql_fetch_assoc($r)){

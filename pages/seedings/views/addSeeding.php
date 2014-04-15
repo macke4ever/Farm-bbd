@@ -15,7 +15,7 @@
             <option value="0"></option>  
           <?php 
               foreach ($cultures as $key => $culture) {
-                $seeds = $db->query('SELECT * from seeds where culture_id = '.$culture['id'].' and farm_id = 4');
+                $seeds = $db->query('SELECT * from seeds where culture_id = '.$culture['id'].' and farm_id = '.$_SESSION["user_farm"]);
                 if (sizeof($seeds) > 0) {
                   echo '<optgroup label="'.$culture['name'].'">';
                   foreach ($seeds as $key => $seed) {

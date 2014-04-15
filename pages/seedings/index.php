@@ -3,7 +3,7 @@
 	// include_once "../../db.class.php";
 	include_once "../../dbConfig.php";
 
-    $q = "SELECT * FROM seedings inner join cultures on `seedings`.culture_id = `cultures`.id where `seedings`.farm_id = 4 and `seedings`.season_id = 5 group by `seedings`.culture_id";
+    $q = "SELECT * FROM seedings inner join cultures on `seedings`.culture_id = `cultures`.id where `seedings`.farm_id = ".$_SESSION["user_farm"]." and `seedings`.season_id = ".$_SESSION["user_season"]." group by `seedings`.culture_id";
     $cultures = $db->query($q);
 	// $fieldworks = $db->query("SELECT name, id FROM fieldworks where farm_id = 4 and season_id = 5 ORDER BY name ASC ");	
 		
@@ -19,7 +19,7 @@
 		if (@$cultures){
 			foreach ($cultures as $key => $culture) {
 				# code...
-				$seeds = $db->query("SELECT * FROM seedings inner join seeds on `seedings`.seed_id = `seeds`.id where `seedings`.farm_id = 4 and `seedings`.season_id = 5 and `seedings`.culture_id = ".$culture['id']);
+				$seeds = $db->query("SELECT * FROM seedings inner join seeds on `seedings`.seed_id = `seeds`.id where `seedings`.farm_id = ".$_SESSION["user_farm"]." and `seedings`.season_id = ".$_SESSION["user_season"]." and `seedings`.culture_id = ".$culture['id']);
 				// var_dump($seeds);
 				echo '<h2>'.$culture['name'].'</h2>';
 				$color = 1;
