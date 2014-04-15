@@ -1,3 +1,6 @@
+<?php 
+	session_start();
+ ?>
 <div id="seeds">	
 	
 	<h1>Pasėlių veislės</h1><?php if ($_SESSION["user_rights"] >= 16){ ?><a href=""><img src="img/add.png" class="addButton" tabindex="1" data-id="'.@$seed['id'].'" style="width: 22px; height:22px; margin: 10px 15px 0 0;"></a><?php } ?>
