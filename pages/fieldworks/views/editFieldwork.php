@@ -28,7 +28,7 @@
 
     /* attach a submit handler to the form */
     $("#changeFieldwork").submit(function(event) {
-
+      $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
       /* stop form from submitting normally */
       event.preventDefault();
 
@@ -49,6 +49,7 @@
     });
 
     $('#cancel').click(function(){
+    	$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 	    var file = "pages/fieldworks/views/showFieldwork.php?id="
 		file += $(this).data('fieldwork');
 		// console.log(file);

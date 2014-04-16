@@ -55,6 +55,7 @@
 </div>
 <script type="text/javascript">
 	$('.addButton').click(function(){
+	    $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 	    var file = "pages/seeds/views/addSeed.php"
 	    $.get(file, function(data){
 	        $('#content').html(data);
@@ -82,6 +83,7 @@
 
     $('.delete').click(function(){
     if (confirm("Ar tikrai norite pašalinti pasirinktą veislę?")) {    	
+	    $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 	    var url = "pages/seeds/actions/deleteSeed.php";	
 	    var posting = $.post( url, { id: $(this).data('id') } );
 

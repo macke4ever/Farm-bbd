@@ -46,6 +46,7 @@
 
 <script type="text/javascript">
 	$('.addButton').click(function(){
+	    $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 	    var file = "pages/chemicals/views/addChemical.php"
 	    $.get(file, function(data){
 	        $('#content').html(data);
@@ -55,6 +56,7 @@
 
 
   $('.show').click(function(){
+	$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 	var file = "pages/chemicals/views/showChemical.php?id="
 	file += $(this).data('id');
     $.get(file, function(data){
@@ -65,6 +67,7 @@
 
     $('.delete').click(function(){
     if (confirm("Ar tikrai norite pašalinti pasirinktą chemikalą?")) {    	
+	    $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 	    var url = "pages/chemicals/actions/deleteChemical.php";	
 	    var posting = $.post( url, { id: $(this).data('id') } );
 

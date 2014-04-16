@@ -62,6 +62,7 @@
     /* attach a submit handler to the form */
     $("#changeChemical").submit(function(event) {
 
+      $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
       /* stop form from submitting normally */
       event.preventDefault();
 
@@ -81,6 +82,7 @@
     });
 
     $('#cancel').click(function(){
+	    $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 	    var file = "pages/chemicals/views/showChemical.php?id="
 		file += $(this).data('chemical');
 	    $.get(file, function(data){

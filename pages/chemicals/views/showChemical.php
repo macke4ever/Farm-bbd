@@ -39,6 +39,7 @@
 
 <script type="text/javascript">
 	$('.buttonChange').click(function(){
+	    $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 	    var file = "pages/chemicals/views/editChemical.php?id="
 		file += $(this).data('chemical');
 	    $.get(file, function(data){
@@ -48,6 +49,7 @@
 	});
 
 	$('#cancel').click(function(){
+	    $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 	    var file = "pages/chemicals/index.php"
 	    $.get(file, function(data){
 	        $('#content').html(data);

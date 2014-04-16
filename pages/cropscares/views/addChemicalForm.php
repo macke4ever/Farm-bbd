@@ -31,8 +31,9 @@
 	// });
 
     $("#addChemicalToCropscare").submit(function(event) {
+	     $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 	      /* stop form from submitting normally */
-	      event.preventDefault();
+	     event.preventDefault();
 	      /* get some values from elements on the page: */
 	     var $form = $( this ),
 	         url = $form.attr( 'action' );

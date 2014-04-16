@@ -38,6 +38,7 @@
 <script type="text/javascript">
 	 /* attach a submit handler to the form */
    	$("#seedForm").submit(function(event) {
+		$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 
       /* stop form from submitting normally */
       

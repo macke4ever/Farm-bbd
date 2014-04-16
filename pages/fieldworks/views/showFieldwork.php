@@ -27,6 +27,7 @@
 
 <script type="text/javascript">
 	$('.buttonChange').click(function(){
+		$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 	    var file = "pages/fieldworks/views/editFieldwork.php?id="
 		file += $(this).data('fieldwork');
 	    $.get(file, function(data){
@@ -36,6 +37,7 @@
 	});
 
 	$('#cancel').click(function(){
+		$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
      // console.log('aa');
      	resetMaps();
         var file = "pages/fieldworks/index.php";

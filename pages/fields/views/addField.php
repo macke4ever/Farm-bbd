@@ -20,6 +20,8 @@
 	 /* attach a submit handler to the form */
    	$("#fieldForm").submit(function(event) {
 
+      
+      $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
       /* stop form from submitting normally */
       
       event.preventDefault();

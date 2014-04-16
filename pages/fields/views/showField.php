@@ -134,6 +134,7 @@
 
 <script type="text/javascript">
 	$('.buttonChange').click(function(){
+	    $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 	    var file = "pages/fields/views/editField.php?id="
 		file += $(this).data('field');
 	    $.get(file, function(data){
@@ -144,6 +145,7 @@
 
 $('.delete').click(function(){
     if (confirm("Ar tikrai norite pašalinti pasirinktą  darbą?")) {    	
+	    $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 	    var url = "pages/fields/actions/deleteWorkFromField.php";	
 	    var posting = $.post( url, { id: $(this).data('id'),  type: $(this).data('type'), field_id: <?php echo @$_GET['id'] ?> } );
 
@@ -159,6 +161,7 @@ $('.delete').click(function(){
 });
 
     $('#cancel').click(function(){
+    	$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
      // console.log('aa');
 
      //prideta visokios logikos kad butu galima gristi i ankstesni puslapi pagal tai is kur buvo ateita

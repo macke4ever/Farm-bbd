@@ -62,6 +62,7 @@
 
     /* attach a submit handler to the form */
     $("#changeCropscare").submit(function(event) {
+      $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
       event.preventDefault();
       var $form = $( this ),
           url = $form.attr( 'action' );
@@ -73,6 +74,7 @@
     });
 
     $('#cancel').click(function(){
+	    $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 	    var file = "pages/cropscares/views/showCropscare.php?id="
 		file += $(this).data('cropscare');
 		 console.log(file);
@@ -84,6 +86,7 @@
 
 	$('.delete').click(function(){
 	    if (confirm("Ar tikrai norite pašalinti pasirinktą  priemonę iš sąrašo?")) {    	
+		    $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 		    var url = "pages/cropscares/actions/deleteChemicalFromCropscare.php";	
 		    var posting = $.post( url, { id: $(this).data('id') }, function(result){
 		    	//response text spausdinimas is to failo i kuri kreipiamasi su post

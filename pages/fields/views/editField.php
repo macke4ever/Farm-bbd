@@ -170,7 +170,7 @@
 <script type='text/javascript'>
     /* attach a submit handler to the form */
     $("#changeField").submit(function(event) {
-
+      $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
       /* stop form from submitting normally */
       event.preventDefault();
 
@@ -194,6 +194,7 @@
 
 $('.delete').click(function(){
     if (confirm("Ar tikrai norite pašalinti pasirinktą  darbą?")) {    	
+	    $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 	    var url = "pages/deleteWorkFromField.php";	
 	    var posting = $.post( url, { id: $(this).data('id'),  type: $(this).data('type') } );
 
@@ -222,6 +223,7 @@ $('#deleteCoord').click(function(){
 });
 
 	$('#cancel').click(function(){
+	    $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 	    var file = "pages/fields/views/showField.php?id="
 		file += $(this).data('field');
 	    $.get(file, function(data){

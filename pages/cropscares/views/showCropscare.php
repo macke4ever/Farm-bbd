@@ -59,6 +59,7 @@
 
 <script type="text/javascript">
 	$('.buttonChange').click(function(){
+	    $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 	    var file = "pages/cropscares/views/editCropscare.php?id="
 		file += $(this).data('cropscares');
 	    $.get(file, function(data){
@@ -68,6 +69,7 @@
 	});
 
 	$('#cancel').click(function(){
+		$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 		resetMaps();
         var file = "pages/cropscares/index.php";
         $.get(file, function(data){
