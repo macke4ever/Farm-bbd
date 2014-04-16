@@ -1,7 +1,7 @@
 <?php
 	include "../../../dbConfig.php";
 
-    $r = mysql_query("SELECT * FROM chemtypes");
+    $r = mysql_query("SELECT * FROM chemtypes ORDER BY name ASC");
     $chemtypes = array();
     while($chemtype = mysql_fetch_assoc($r)){
         $chemtypes[$chemtype['id']] = $chemtype;
@@ -47,7 +47,6 @@
 <script type="text/javascript">
 	 /* attach a submit handler to the form */
    	$("#chemicalForm").submit(function(event) {
-	  $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
       /* stop form from submitting normally */
       
       event.preventDefault();
@@ -59,6 +58,8 @@
       /* Send the data using post */
       var posting = $.post( url, {name: $('#name').val(), chemtype_id: $('#chemtype_id').val(), quantity: $('#quantity').val(), measure: $('#measure').val() } );
 
+	  $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
+      
       /* Put the results in a div */
       posting.done(function( data ) {
         // alert('success');

@@ -216,3 +216,20 @@ table {
 .cf {
     zoom:1;
 }
+
+
+
+
+/* Hover MENU */
+
+ul.cssMenu ul 						
+{ 
+        display:none; /*initially menu item is hidden*/
+        position: absolute; /*absolute positioning is important for menu to float*/
+}
+
+/* Hover effect for menu*/
+ul.cssMenu li:hover > ul 			
+{ 
+	display:block;
+}

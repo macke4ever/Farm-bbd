@@ -28,7 +28,6 @@
 
     /* attach a submit handler to the form */
     $("#changeFieldwork").submit(function(event) {
-      $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
       /* stop form from submitting normally */
       event.preventDefault();
 
@@ -37,9 +36,10 @@
           url = $form.attr( 'action' );
 
        //Send the data using post 
-       // console.log($('#name').val());
       var posting = $.post( url, { name: $('#name').val(), consumption: $('#consumption').val(), id: $('#id').val() } );
-		// console.log(url);
+      
+      $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
+
       /* Put the results in a div */
       posting.done(function( data ) {
         // alert('success');
@@ -49,10 +49,11 @@
     });
 
     $('#cancel').click(function(){
-    	$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 	    var file = "pages/fieldworks/views/showFieldwork.php?id="
 		file += $(this).data('fieldwork');
-		// console.log(file);
+    	
+    	$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
+		
 	    $.get(file, function(data){
 	        $('#content').html(data);
 	      });

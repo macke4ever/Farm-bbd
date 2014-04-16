@@ -170,7 +170,6 @@
 <script type='text/javascript'>
     /* attach a submit handler to the form */
     $("#changeField").submit(function(event) {
-      $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
       /* stop form from submitting normally */
       event.preventDefault();
 
@@ -180,6 +179,8 @@
 
       /* Send the data using post */
       var posting = $.post( url, { date: $('#date').val(), comment: $('#comment').val(), name: $('#name').val(), area: $('#area').val(), season_comment: $('#season_comment').val(), field_id: $('#field_id').val(), seedSelect: $('#seedSelect').val(), seeddate: $('#seeddate').val(), quantity: $('#quantity').val() } );
+      
+      $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 
       /* Put the results in a div */
       posting.done(function( data ) {
@@ -194,9 +195,11 @@
 
 $('.delete').click(function(){
     if (confirm("Ar tikrai norite pašalinti pasirinktą  darbą?")) {    	
-	    $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 	    var url = "pages/deleteWorkFromField.php";	
 	    var posting = $.post( url, { id: $(this).data('id'),  type: $(this).data('type') } );
+
+	    $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
+	      
 
 	      /* Put the results in a div */
 	      posting.done(function( data ) {
@@ -214,6 +217,8 @@ $('#deleteCoord').click(function(){
 	    var url = "upload/deleteCoord.php";	
 	    var posting = $.post( url, { id: $(this).data('field') } );
 
+	    $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
+
 	      /* Put the results in a div */
 	      posting.done(function( data ) {
 	        	reloadMaps();
@@ -223,9 +228,11 @@ $('#deleteCoord').click(function(){
 });
 
 	$('#cancel').click(function(){
-	    $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 	    var file = "pages/fields/views/showField.php?id="
 		file += $(this).data('field');
+
+	    $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
+	    
 	    $.get(file, function(data){
 	        $('#content').html(data);
 	      });

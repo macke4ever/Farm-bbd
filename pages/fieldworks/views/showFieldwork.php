@@ -27,9 +27,11 @@
 
 <script type="text/javascript">
 	$('.buttonChange').click(function(){
-		$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 	    var file = "pages/fieldworks/views/editFieldwork.php?id="
 		file += $(this).data('fieldwork');
+		
+		$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
+	    
 	    $.get(file, function(data){
 	        $('#content').html(data);
 	      });
@@ -37,10 +39,11 @@
 	});
 
 	$('#cancel').click(function(){
-		$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
-     // console.log('aa');
      	resetMaps();
         var file = "pages/fieldworks/index.php";
+		
+		$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
+        
         $.get(file, function(data){
             $('#content').html(data);
           });

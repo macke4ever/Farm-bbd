@@ -16,14 +16,14 @@
 		}			
 
 
-	    $chemtypes = $db->query("SELECT * FROM chemtypes");
+	    $chemtypes = $db->query("SELECT * FROM chemtypes ORDER BY name ASC");
 ?>  
 
 <h1>Redaguoti priežiūros priemonę</h1>
 <form id="changeChemical" action="pages/chemicals/actions/changeChemical.php" method="post">
 	<table>
 		<tr>
-			<td class="tableLeft">Kultūra</td>
+			<td class="tableLeft">Rūšis</td>
 			<td class="tableRight">
 				<select name="chemtype_id" id="chemtype_id" data-placeholder="Pasirinkite tipą" style="width:261px;">
 	                <?php 
@@ -62,7 +62,6 @@
     /* attach a submit handler to the form */
     $("#changeChemical").submit(function(event) {
 
-      $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
       /* stop form from submitting normally */
       event.preventDefault();
 
@@ -73,6 +72,8 @@
       /* Send the data using post */
       var posting = $.post( url, { name: $('#name').val(), chemtype_id: $('#chemtype_id').val(), measure: $('#measure').val(), quantity: $('#quantity').val(), id: $('#id').val() } );
 
+      $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
+
       /* Put the results in a div */
       posting.done(function( data ) {
         // alert('success');
@@ -82,9 +83,11 @@
     });
 
     $('#cancel').click(function(){
-	    $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 	    var file = "pages/chemicals/views/showChemical.php?id="
 		file += $(this).data('chemical');
+	    
+	    $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
+	    
 	    $.get(file, function(data){
 	        $('#content').html(data);
 	      });

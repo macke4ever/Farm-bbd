@@ -39,14 +39,21 @@
 <body>
   <div id="map"></div>
   <div id="settings" class="cf">
-    <ul class='menu cf'>
+    <ul class='menu cf cssMenu'>
       <li data-menu='pages/fields/index.php'><a href="">Laukai</a></li>     
       <li data-menu='pages/cropscares/index.php'><a href="">Priežiūra</a></li>       
       <li data-menu='pages/fieldworks/index.php'><a href="">Dirbimai</a></li>        
       <!-- <li data-menu='pages/seedings/index.php'><a href="">Sėja</a></li>   -->
       <li data-menu='pages/seeds/index.php'><a href="">Sėklos</a></li>   
       <li data-menu='pages/chemicals/index.php'><a href="">Chemija</a></li>  
-      <li data-menu='pages/settings.php'><a href=""><img src="img/settings.png"></a></li>
+      <li data-menu='pages/settings.php'>
+          <a href=""><img src="img/settings.png"></a>
+          <ul>
+            <li><a href="#">item1</a></li>
+            <li><a href="#">item2</a></li>
+            <li><a href="#">item3</a></li>
+          </ul>
+      </li>
     </ul>   
     
     <div id='content'>
@@ -73,9 +80,11 @@
 
   //nustatomas puslapio vaizdas - i kairi stulpeli ikalamas paspausto tabo sugeneruotas kodas.
   $('.menu li').click(function(){
-    $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
     
     var file = $(this).data('menu');
+    
+    $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
+    
     $.get(file, function(data){
         $('#content').html(data);
       });

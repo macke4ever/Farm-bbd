@@ -55,8 +55,10 @@
 </div>
 <script type="text/javascript">
 	$('.addButton').click(function(){
-	    $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 	    var file = "pages/seeds/views/addSeed.php"
+	    
+	    $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
+	    
 	    $.get(file, function(data){
 	        $('#content').html(data);
 	      });
@@ -65,15 +67,17 @@
 
 
   $('.show').click(function(){
-	$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 	var file = "pages/seeds/views/showSeed.php?id="
 	file += $(this).data('id');
+    var file2 = "markWorkFields.php?workType=seed&workID="
+	file2 += $(this).data('id');
+	
+	$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
+    
     $.get(file, function(data){
         $('#content').html(data);
       });
 
-    var file2 = "markWorkFields.php?workType=seed&workID="
-	file2 += $(this).data('id');
     $.get(file2, function(data){
         $('#content2').html(data);
       });
@@ -83,10 +87,11 @@
 
     $('.delete').click(function(){
     if (confirm("Ar tikrai norite pašalinti pasirinktą veislę?")) {    	
-	    $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 	    var url = "pages/seeds/actions/deleteSeed.php";	
 	    var posting = $.post( url, { id: $(this).data('id') } );
 
+	    $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
+	    
 	      /* Put the results in a div */
 	      posting.done(function( data ) {
 	        var file = "pages/seeds/index.php";

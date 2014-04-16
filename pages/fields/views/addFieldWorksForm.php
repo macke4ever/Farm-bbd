@@ -48,7 +48,6 @@
 
 
     $("#addWorkToField").submit(function(event) {
-	      $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 	      /* stop form from submitting normally */
 	      event.preventDefault();
 	      /* get some values from elements on the page: */
@@ -56,6 +55,8 @@
 	         url = $form.attr( 'action' );
 	      /* Send the data using post */
 	     var posting = $.post( url, { date: $('#date').val(), field_id: $('#field_id').val(), id: $('#fieldwork_id').val(), workType: $('#workType').val() } );
+	     
+	     $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 
 	      /* Put the results in a div */
 	     posting.done(function( data ) {
@@ -66,7 +67,6 @@
 
 
 	$("#addCropsCareToField").submit(function(event) {
-        $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
         /* stop form from submitting normally */
 		event.preventDefault();
 		/* get some values from elements on the page: */
@@ -74,6 +74,8 @@
 		url = $form.attr( 'action' );
 		/* Send the data using post */
 		var posting = $.post( url, { date: $('#date2').val(), field_id: $('#field_id2').val(), id: $('#cropscare_id').val(), workType: $('#workType2').val() } );
+       
+        $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 
 		/* Put the results in a div */
 		posting.done(function( data ) {

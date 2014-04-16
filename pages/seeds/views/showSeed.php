@@ -79,9 +79,11 @@
 
 <script type="text/javascript">
 	$('.buttonChange').click(function(){
-		$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 	    var file = "pages/seeds/views/editSeed.php?id="
 		file += $(this).data('seed');
+		
+		$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
+	    
 	    $.get(file, function(data){
 	        $('#content').html(data);
 	      });
@@ -90,8 +92,10 @@
 
 
 	$('#cancel').click(function(){
-		$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 	    var file = "pages/seeds/index.php"
+		
+		$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
+	    
 	    $.get(file, function(data){
 	        $('#content').html(data);
 	      });

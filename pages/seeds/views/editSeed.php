@@ -55,7 +55,6 @@
 <script type='text/javascript'>
     /* attach a submit handler to the form */
     $("#changeSeed").submit(function(event) {
-      $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
       /* stop form from submitting normally */
       event.preventDefault();
 
@@ -65,6 +64,9 @@
 
       /* Send the data using post */
       var posting = $.post( url, { name: $('#name').val(), culture_id: $('#culture_id').val(), quantity: $('#quantity').val(), id: $('#id').val() } );
+      
+      $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
+      
       /* Put the results in a div */
       posting.done(function( data ) {
         // alert('success');
@@ -74,9 +76,11 @@
     });
 
     $('#cancel').click(function(){
-    	$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 	    var file = "pages/seeds/views/showSeed.php?id="
 		file += $(this).data('seed');
+    	
+    	$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
+	    
 	    $.get(file, function(data){
 	        $('#content').html(data);
 	      });

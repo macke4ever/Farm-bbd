@@ -38,7 +38,6 @@
 <script type="text/javascript">
 	 /* attach a submit handler to the form */
    	$("#seedForm").submit(function(event) {
-		$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 
       /* stop form from submitting normally */
       
@@ -50,6 +49,8 @@
 
       /* Send the data using post */
       var posting = $.post( url, {name: $('#name').val(), culture_id: $('#culture_id').val(), quantity: $('#quantity').val() } );
+		
+	  $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 
       /* Put the results in a div */
       posting.done(function( data ) {

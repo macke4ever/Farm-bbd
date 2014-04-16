@@ -48,8 +48,10 @@
 
 <script type="text/javascript">
 	$('.addButton').click(function(){
-		$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 	    var file = "pages/fields/views/addField.php"
+		
+		$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
+	    
 	    $.get(file, function(data){
 	        $('#content').html(data);
 	      });
@@ -57,9 +59,11 @@
 	});
 
 	$('.show').click(function(){
-		$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 	    var file = "pages/fields/views/showField.php?id="
 		file += $(this).data('field');
+		
+		$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
+	    
 	    $.get(file, function(data){
 	        $('#content').html(data);
 	      });
@@ -71,9 +75,10 @@
 
 $('.delete').click(function(){
     if (confirm("Ar tikrai norite pašalinti pasirinktą lauką?\n\nKartu bus pašalinta visa su juo susijusi informacija: žemės darbai, sėja, pasėlių priežiūra, visų metų darbų istorija.")) {    	
-	    $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 	    var url = "pages/fields/actions/deleteField.php";	
 	    var posting = $.post( url, { id: $(this).data('id') } );
+	    
+	    $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 
 	      /* Put the results in a div */
 	      posting.done(function( data ) {

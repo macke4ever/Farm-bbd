@@ -161,7 +161,6 @@ $('.delete').click(function(){
 });
 
     $('#cancel').click(function(){
-    	$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
      // console.log('aa');
 
      //prideta visokios logikos kad butu galima gristi i ankstesni puslapi pagal tai is kur buvo ateita
@@ -170,11 +169,13 @@ $('.delete').click(function(){
 	     	if (!empty($_GET["back"]) && $_GET["back"] == "showseed"){
 	     		echo 'var file = "pages/seeds/views/showSeed.php?id='.$_GET["bid"].'";';
 	     		echo 'var file2 = "markWorkFields.php?workType=seed&workID='.$_GET["bid"].'";';
+	     		echo '$(\'#content\').html("<center><img src=\'img/ajax-loader.gif\' style=\'padding-top: 50px;\'></center>");';
 				echo '$.get(file, function(data){$(\'#content\').html(data);});';
 				echo '$.get(file2, function(data){$(\'#content2\').html(data);});';
 
 	     	} else {	
 	        	echo 'var file = "pages/fields/index.php";';
+	        	echo '$(\'#content\').html("<center><img src=\'img/ajax-loader.gif\' style=\'padding-top: 50px;\'></center>");';
 	        	echo '$.get(file, function(data){$(\'#content\').html(data);});';
 	     	}
 	    ?>

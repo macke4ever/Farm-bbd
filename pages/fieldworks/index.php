@@ -36,8 +36,10 @@
 
 <script type="text/javascript">
 	$('.addButton').click(function(){
-		$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 	    var file = "pages/fieldworks/views/addFieldwork.php"
+		
+		$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
+	    
 	    $.get(file, function(data){
 	        $('#content').html(data);
 	      });
@@ -45,15 +47,18 @@
 	});
 
 	$('.show').click(function(){
-		$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
-	    var file = "pages/fieldworks/views/showFieldwork.php?id="
+	    var file = "pages/fieldworks/views/showFieldwork.php?id=";
 		file += $(this).data('work');
+		
+	    var file2 = "markWorkFields.php?workType=fieldwork&workID=";
+		file2 += $(this).data('work');
+
+		$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
+	    
 	    $.get(file, function(data){
 	        $('#content').html(data);
 	      });
 
-	    var file2 = "markWorkFields.php?workType=fieldwork&workID="
-		file2 += $(this).data('work');
 	    $.get(file2, function(data){
 	        $('#content2').html(data);
 	      });
@@ -63,10 +68,11 @@
 
     $('.delete').click(function(){
     if (confirm("Ar tikrai norite pašalinti pasirinktą darbą?\n\nKartu bus pašalinti šio tipo darbai iš kitų laukų .")) {  
-    	$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");  	
 	    var url = "pages/fieldworks/actions/deleteFieldwork.php";	
 	    var posting = $.post( url, { id: $(this).data('id') } );
 
+    	$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");  	
+	    
 	      /* Put the results in a div */
 	      posting.done(function( data ) {
 	        var file = "pages/fieldworks/index.php";

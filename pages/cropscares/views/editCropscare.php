@@ -62,11 +62,13 @@
 
     /* attach a submit handler to the form */
     $("#changeCropscare").submit(function(event) {
-      $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
       event.preventDefault();
       var $form = $( this ),
           url = $form.attr( 'action' );
       var posting = $.post( url, { name: $('#name').val(), consumption: $('#consumption').val(), id: $('#id').val() } );
+      
+      $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
+      
       posting.done(function( data ) {
         <?php echo 'var file = "pages/cropscares/views/showCropscare.php?id='.@$_GET["id"].'";' ?>
         $.get(file, function(data){$('#content').html(data);});
@@ -74,10 +76,11 @@
     });
 
     $('#cancel').click(function(){
-	    $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 	    var file = "pages/cropscares/views/showCropscare.php?id="
 		file += $(this).data('cropscare');
-		 console.log(file);
+	    
+	    $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
+	    
 	    $.get(file, function(data){
 	        $('#content').html(data);
 	      });
@@ -86,7 +89,6 @@
 
 	$('.delete').click(function(){
 	    if (confirm("Ar tikrai norite pašalinti pasirinktą  priemonę iš sąrašo?")) {    	
-		    $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 		    var url = "pages/cropscares/actions/deleteChemicalFromCropscare.php";	
 		    var posting = $.post( url, { id: $(this).data('id') }, function(result){
 		    	//response text spausdinimas is to failo i kuri kreipiamasi su post
@@ -94,6 +96,8 @@
 		    	// $('#garbage').html('response');
 		    	// console.log(response);
 		    });
+		    
+		    $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 		      /* Put the results in a div */
 		      posting.done(function( data ) {
 		      	console.log("veiksmas atliktas");
