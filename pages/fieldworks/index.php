@@ -11,19 +11,24 @@
 
 	<table>
 	<?php
+		$totalArea = 0;
 		if (@$fieldworks){			
 			$color = 1;
 			foreach ($fieldworks as $key => $work) {
+				$cultureArea = $db->query("SELECT sum(`fields`.area) as area FROM fieldworks_fields LEFT OUTER JOIN `fields` ON `fieldworks_fields`.`field_id` = `fields`.id  WHERE fieldwork_id = ".$work["id"].";"); 
+				$cultureArea = round($cultureArea[0]["area"], 2);
+				$totalArea += $cultureArea;
+
 				if ($color == 1) {
 					$color = 2;
 					echo '<tr>';
-					echo '    <td class="tableSingle show" data-work="'.$work["id"].'"><a href="" class="aStyle">'.$work['name'].'</a></td>';
+					echo '    <td class="tableSingle show" data-work="'.$work["id"].'"><a href="" class="aStyle">'.$work['name'].' <strong>'.$cultureArea.' ha</strong></a></td>';
 					echo '	  <td class="tableSingle" style="text-align: right; width: 20px;"><a href=""><img src="img/delete.png" class="delete" data-id="'.@$work['id'].'" style="width: 16px; height:16px; margin: 2px 4px 0 0;"></a><td>';
 					echo '</tr>';
 				} else {
 					$color = 1;
 					echo '<tr>';
-					echo '    <td class="tableSingle second show" data-work="'.$work["id"].'"><a href="" class="aStyle">'.$work['name'].'</a></td>';
+					echo '    <td class="tableSingle second show" data-work="'.$work["id"].'"><a href="" class="aStyle">'.$work['name'].' <strong>'.$cultureArea.' ha</strong></a></td>';
 					echo '	  <td class="tableSingle second" style="text-align: right; width: 20px;"><a href=""><img src="img/delete.png" class="delete" data-id="'.@$work['id'].'" style="width: 16px; height:16px; margin: 2px 4px 0 0;"></a><td>';
 					echo '</tr>';
 				}	
@@ -31,6 +36,9 @@
 		} 
 	 ?>
 	</table>
+	<?php 
+		echo "<h2>Bendras išdirbtas plotas: ".$totalArea." ha</h2>";
+	 ?>
 </div>
 
 
@@ -66,7 +74,7 @@
 	});
 
 
-    $('.delete').click(function(){
+ $('.delete').click(function(){
     if (confirm("Ar tikrai norite pašalinti pasirinktą darbą?\n\nKartu bus pašalinti šio tipo darbai iš kitų laukų .")) {  
 	    var url = "pages/fieldworks/actions/deleteFieldwork.php";	
 	    var posting = $.post( url, { id: $(this).data('id') } );
@@ -80,5 +88,7 @@
 	      });
     }
     return false;
-  });
+});
+
+   	
 </script>

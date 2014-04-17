@@ -25,7 +25,7 @@
 				{
 					$color = 2;
 					echo '<tr>';
-					echo '    <td class="tableSingle show" data-id="'.@$seed['id'].'"><a href="" class="aStyle">'.@$seed['name'].' '.round($seedArea[0]["area"], 2).' ha</a></td>';
+					echo '    <td class="tableSingle show" data-id="'.@$seed['id'].'"><a href="" class="aStyle">'.@$seed['name'].' <strong>'.round($seedArea[0]["area"], 2).' ha</strong></a></td>';
 					echo '	  <td class="tableSingle" style="text-align: right; width: 20px;"><a href="">';
 					if ($_SESSION["user_rights"] >= 16){
 						echo '<img src="img/delete.png" class="delete" data-id="'.@$seed['id'].'" style="width: 16px; height:16px; margin: 2px 4px 0 0;"></a>';
@@ -35,7 +35,7 @@
 				} else {
 					$color = 1;
 					echo '<tr>';
-					echo '    <td class="tableSingle second show" data-id="'.@$seed['id'].'"><a href="" class="aStyle">'.@$seed['name'].' '.round($seedArea[0]["area"], 2).' ha</a></td>';
+					echo '    <td class="tableSingle second show" data-id="'.@$seed['id'].'"><a href="" class="aStyle">'.@$seed['name'].' <strong>'.round($seedArea[0]["area"], 2).' ha</strong></a></td>';
 					echo '	  <td class="tableSingle second" style="text-align: right; width: 20px;"><a href="">';
 					if ($_SESSION["user_rights"] >= 16){
 						echo '<img src="img/delete.png" class="delete" data-id="'.@$seed['id'].'" style="width: 16px; height:16px; margin: 2px 4px 0 0;"></a>';

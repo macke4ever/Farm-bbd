@@ -13,17 +13,21 @@
 		if (@$cropscares){			
 			$color = 1;
 			foreach ($cropscares as $key => $work) {
+				// echo "SELECT sum(`fields`.area) as area FROM cropscares LEFT OUTER JOIN `fields` ON `cropscares`.`field_id` = `fields`.id  WHERE cropscare_id = ".$work["id"].";";
+				$cropscareArea = $db->query("SELECT sum(`fields`.area) as area FROM cropscares LEFT OUTER JOIN `fields` ON `cropscares`.`field_id` = `fields`.id  WHERE careset_id = ".$work["id"].";"); 
+				$cropscareArea = round($cropscareArea[0]["area"], 2);
+				$totalArea += $cropscareArea;
 				if ($color == 1)
 				{
 					$color = 2;
 					echo '<tr>';
-					echo '    <td class="tableSingle show" data-work="'.$work["id"].'"><a href="" class="aStyle">'.$work['name'].'</a></td>';
+					echo '    <td class="tableSingle show" data-work="'.$work["id"].'"><a href="" class="aStyle">'.$work['name'].' <strong>'.$cropscareArea.' ha</strong></a></td>';
 					echo '	  <td class="tableSingle" style="text-align: right; width: 20px;"><a href=""><img src="img/delete.png" class="delete" data-id="'.@$work['id'].'" style="width: 16px; height:16px; margin: 2px 4px 0 0;"></a><td>';
 					echo '</tr>';
 				} else {
 					$color = 1;
 					echo '<tr>';
-					echo '    <td class="tableSingle second show" data-work="'.$work["id"].'"><a href="" class="aStyle">'.$work['name'].'</a></td>';
+					echo '    <td class="tableSingle second show" data-work="'.$work["id"].'"><a href="" class="aStyle">'.$work['name'].' <strong>'.$cropscareArea.' ha</strong></a></td>';
 					echo '	  <td class="tableSingle second" style="text-align: right; width: 20px;"><a href=""><img src="img/delete.png" class="delete" data-id="'.@$work['id'].'" style="width: 16px; height:16px; margin: 2px 4px 0 0;"></a><td>';
 					echo '</tr>';
 				}
@@ -31,6 +35,12 @@
 		} 
 	 ?>
 	</table>
+
+	<?php 
+
+		echo "<h2>Bendras dirbtas plotas: ".$totalArea." ha</h2>";
+
+	 ?>
 </div>
 
 
