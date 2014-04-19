@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx creator="GPSTracker" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<metadata>
+	<name>prie smalines stulpai</name>
+	<author>
+		<name>Dainius</name>
+		<link href="http://sites.google.com/site/telekgabor/android/gpst">
+			<text>http://sites.google.com/site/telekgabor/android/gpst</text>
+			<type>texh/html</type>
+		</link>
+	</author>
+	<copyright author="Dainius">
+		<year>2014</year>
+		<license>http://www.gnu.org/licenses/gpl.html</license>
+	</copyright>
+	<link href="http://sites.google.com/site/telekgabor/android/gpst">
+		<text>http://sites.google.com/site/telekgabor/android/gpst</text>
+		<type>text/html</type>
+	</link>
+	<time>2014-04-19T13:39:33</time>
+	<keywords>gpst</keywords>
+	<bounds maxlat="90.0" maxlon="180.0" minlat="-90.0" minlon="-180.0"/>
+	<extensions><trackingMode id="trackingModeOff">Off</trackingMode>	</extensions>
+</metadata>
+<trk>
+	<number>0</number>
+	<type>text/html</type>
+	<extensions/>
+<trkseg>
+<trkpt lon="23.03927004" lat="54.68812141">	<ele>89.0</ele>	<time>2014-04-19T13:39:45</time>	<extensions>	<speed>1.0</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03925772" lat="54.68814559">	<ele>88.0</ele>	<time>2014-04-19T13:39:47</time>	<extensions>	<speed>1.25</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03924414" lat="54.68816862">	<ele>87.0</ele>	<time>2014-04-19T13:39:49</time>	<extensions>	<speed>1.25</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03922299" lat="54.688202">	<ele>88.0</ele>	<time>2014-04-19T13:39:51</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03921111" lat="54.68822013">	<ele>87.0</ele>	<time>2014-04-19T13:39:52</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03919931" lat="54.68823694">	<ele>87.0</ele>	<time>2014-04-19T13:39:53</time>	<extensions>	<speed>1.5</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03917708" lat="54.68827071">	<ele>85.0</ele>	<time>2014-04-19T13:39:55</time>	<extensions>	<speed>1.5</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03916336" lat="54.68829013">	<ele>84.0</ele>	<time>2014-04-19T13:39:56</time>	<extensions>	<speed>1.5</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03915197" lat="54.68830948">	<ele>85.0</ele>	<time>2014-04-19T13:39:57</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03913914" lat="54.68833109">	<ele>85.0</ele>	<time>2014-04-19T13:39:58</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03912642" lat="54.6883525">	<ele>85.0</ele>	<time>2014-04-19T13:39:59</time>	<extensions>	<speed>1.75</speed>	<accuracy>11.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03911392" lat="54.68837178">	<ele>85.0</ele>	<time>2014-04-19T13:40:00</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03909885" lat="54.68839123">	<ele>85.0</ele>	<time>2014-04-19T13:40:01</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03908312" lat="54.68840833">	<ele>85.0</ele>	<time>2014-04-19T13:40:02</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03906755" lat="54.68842482">	<ele>85.0</ele>	<time>2014-04-19T13:40:03</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03904628" lat="54.68845154">	<ele>84.0</ele>	<time>2014-04-19T13:40:05</time>	<extensions>	<speed>1.5</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03903145" lat="54.68846907">	<ele>84.0</ele>	<time>2014-04-19T13:40:06</time>	<extensions>	<speed>1.5</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03901236" lat="54.6885014">	<ele>85.0</ele>	<time>2014-04-19T13:40:08</time>	<extensions>	<speed>1.5</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03899903" lat="54.68852037">	<ele>83.0</ele>	<time>2014-04-19T13:40:09</time>	<extensions>	<speed>1.5</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03898053" lat="54.68855654">	<ele>83.0</ele>	<time>2014-04-19T13:40:11</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03897218" lat="54.68857614">	<ele>84.0</ele>	<time>2014-04-19T13:40:12</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03896381" lat="54.68859482">	<ele>85.0</ele>	<time>2014-04-19T13:40:13</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03895516" lat="54.6886135">	<ele>85.0</ele>	<time>2014-04-19T13:40:14</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03894534" lat="54.68863102">	<ele>85.0</ele>	<time>2014-04-19T13:40:15</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03893474" lat="54.68864793">	<ele>86.0</ele>	<time>2014-04-19T13:40:16</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03892356" lat="54.68866481">	<ele>86.0</ele>	<time>2014-04-19T13:40:17</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03890467" lat="54.68869489">	<ele>84.0</ele>	<time>2014-04-19T13:40:19</time>	<extensions>	<speed>1.5</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03889308" lat="54.68871166">	<ele>85.0</ele>	<time>2014-04-19T13:40:20</time>	<extensions>	<speed>1.5</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03886623" lat="54.6887392">	<ele>85.0</ele>	<time>2014-04-19T13:40:22</time>	<extensions>	<speed>1.5</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03885201" lat="54.68875804">	<ele>84.0</ele>	<time>2014-04-19T13:40:24</time>	<extensions>	<speed>1.0</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03883551" lat="54.68878137">	<ele>82.0</ele>	<time>2014-04-19T13:40:26</time>	<extensions>	<speed>1.0</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03882588" lat="54.68880883">	<ele>81.0</ele>	<time>2014-04-19T13:40:28</time>	<extensions>	<speed>1.25</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03881012" lat="54.68884198">	<ele>84.0</ele>	<time>2014-04-19T13:40:30</time>	<extensions>	<speed>1.25</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03878238" lat="54.68887373">	<ele>83.0</ele>	<time>2014-04-19T13:40:32</time>	<extensions>	<speed>1.25</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03876184" lat="54.68889021">	<ele>82.0</ele>	<time>2014-04-19T13:40:33</time>	<extensions>	<speed>1.25</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03874592" lat="54.68890608">	<ele>82.0</ele>	<time>2014-04-19T13:40:34</time>	<extensions>	<speed>1.5</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.0387285" lat="54.68892368">	<ele>81.0</ele>	<time>2014-04-19T13:40:35</time>	<extensions>	<speed>1.5</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03871396" lat="54.68894449">	<ele>82.0</ele>	<time>2014-04-19T13:40:36</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03870012" lat="54.68896577">	<ele>85.0</ele>	<time>2014-04-19T13:40:37</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03868589" lat="54.68898678">	<ele>85.0</ele>	<time>2014-04-19T13:40:38</time>	<extensions>	<speed>1.75</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03867442" lat="54.68900606">	<ele>87.0</ele>	<time>2014-04-19T13:40:39</time>	<extensions>	<speed>1.75</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03866194" lat="54.68902604">	<ele>87.0</ele>	<time>2014-04-19T13:40:40</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03864922" lat="54.6890468">	<ele>88.0</ele>	<time>2014-04-19T13:40:41</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03863875" lat="54.68906408">	<ele>87.0</ele>	<time>2014-04-19T13:40:42</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.0386302" lat="54.68908142">	<ele>88.0</ele>	<time>2014-04-19T13:40:43</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03860693" lat="54.68911032">	<ele>88.0</ele>	<time>2014-04-19T13:40:45</time>	<extensions>	<speed>1.5</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03852908" lat="54.68910539">	<ele>88.0</ele>	<time>2014-04-19T13:40:48</time>	<extensions>	<speed>1.5</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03825693" lat="54.68902424">	<ele>90.0</ele>	<time>2014-04-19T13:40:58</time>	<extensions>	<speed>1.5</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03821073" lat="54.68901668">	<ele>89.0</ele>	<time>2014-04-19T13:41:00</time>	<extensions>	<speed>1.5</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03815763" lat="54.68901236">	<ele>90.0</ele>	<time>2014-04-19T13:41:02</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03810188" lat="54.68900696">	<ele>91.0</ele>	<time>2014-04-19T13:41:04</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03804504" lat="54.68900554">	<ele>90.0</ele>	<time>2014-04-19T13:41:06</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03799646" lat="54.68900071">	<ele>88.0</ele>	<time>2014-04-19T13:41:08</time>	<extensions>	<speed>1.5</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03794633" lat="54.68899632">	<ele>90.0</ele>	<time>2014-04-19T13:41:10</time>	<extensions>	<speed>1.5</speed>	<accuracy>11.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03789984" lat="54.68898777">	<ele>88.0</ele>	<time>2014-04-19T13:41:12</time>	<extensions>	<speed>1.5</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.0378474" lat="54.68897458">	<ele>88.0</ele>	<time>2014-04-19T13:41:14</time>	<extensions>	<speed>1.5</speed>	<accuracy>11.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03782123" lat="54.68896292">	<ele>89.0</ele>	<time>2014-04-19T13:41:15</time>	<extensions>	<speed>1.5</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.0377972" lat="54.68895154">	<ele>88.0</ele>	<time>2014-04-19T13:41:16</time>	<extensions>	<speed>1.5</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03775231" lat="54.68893128">	<ele>86.0</ele>	<time>2014-04-19T13:41:18</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03770111" lat="54.68891785">	<ele>87.0</ele>	<time>2014-04-19T13:41:20</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03765094" lat="54.6889035">	<ele>89.0</ele>	<time>2014-04-19T13:41:22</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03759845" lat="54.68889107">	<ele>88.0</ele>	<time>2014-04-19T13:41:24</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03753955" lat="54.68888279">	<ele>88.0</ele>	<time>2014-04-19T13:41:26</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03748433" lat="54.68888521">	<ele>91.0</ele>	<time>2014-04-19T13:41:28</time>	<extensions>	<speed>1.75</speed>	<accuracy>11.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.0374427" lat="54.68887982">	<ele>91.0</ele>	<time>2014-04-19T13:41:30</time>	<extensions>	<speed>1.25</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03739357" lat="54.68887021">	<ele>91.0</ele>	<time>2014-04-19T13:41:32</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03734141" lat="54.68886146">	<ele>92.0</ele>	<time>2014-04-19T13:41:34</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03729279" lat="54.68884938">	<ele>91.0</ele>	<time>2014-04-19T13:41:36</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03724496" lat="54.6888387">	<ele>91.0</ele>	<time>2014-04-19T13:41:38</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03721007" lat="54.68883385">	<ele>90.0</ele>	<time>2014-04-19T13:41:40</time>	<extensions>	<speed>1.5</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03715378" lat="54.68882303">	<ele>89.0</ele>	<time>2014-04-19T13:41:42</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03712152" lat="54.68881558">	<ele>90.0</ele>	<time>2014-04-19T13:41:43</time>	<extensions>	<speed>2.0</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03706704" lat="54.68880948">	<ele>91.0</ele>	<time>2014-04-19T13:41:45</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03702343" lat="54.68880188">	<ele>90.0</ele>	<time>2014-04-19T13:41:47</time>	<extensions>	<speed>1.5</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.0369873" lat="54.68878395">	<ele>89.0</ele>	<time>2014-04-19T13:41:49</time>	<extensions>	<speed>1.5</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03694619" lat="54.68876431">	<ele>87.0</ele>	<time>2014-04-19T13:41:51</time>	<extensions>	<speed>1.5</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03689539" lat="54.6887551">	<ele>86.0</ele>	<time>2014-04-19T13:41:53</time>	<extensions>	<speed>1.5</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03685336" lat="54.68875133">	<ele>86.0</ele>	<time>2014-04-19T13:41:55</time>	<extensions>	<speed>1.5</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03681816" lat="54.68875343">	<ele>84.0</ele>	<time>2014-04-19T13:41:57</time>	<extensions>	<speed>1.5</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03678296" lat="54.68875354">	<ele>84.0</ele>	<time>2014-04-19T13:41:59</time>	<extensions>	<speed>1.25</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03675193" lat="54.68875649">	<ele>82.0</ele>	<time>2014-04-19T13:42:01</time>	<extensions>	<speed>1.25</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03670628" lat="54.68875099">	<ele>82.0</ele>	<time>2014-04-19T13:42:03</time>	<extensions>	<speed>1.25</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03665651" lat="54.68873938">	<ele>83.0</ele>	<time>2014-04-19T13:42:05</time>	<extensions>	<speed>1.5</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03660929" lat="54.68872864">	<ele>83.0</ele>	<time>2014-04-19T13:42:07</time>	<extensions>	<speed>1.5</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03656031" lat="54.68871268">	<ele>84.0</ele>	<time>2014-04-19T13:42:09</time>	<extensions>	<speed>1.5</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.0365203" lat="54.68869686">	<ele>84.0</ele>	<time>2014-04-19T13:42:11</time>	<extensions>	<speed>1.25</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03648439" lat="54.68868145">	<ele>84.0</ele>	<time>2014-04-19T13:42:13</time>	<extensions>	<speed>1.5</speed>	<accuracy>11.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03644482" lat="54.68866549">	<ele>83.0</ele>	<time>2014-04-19T13:42:15</time>	<extensions>	<speed>1.5</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03639368" lat="54.68864884">	<ele>84.0</ele>	<time>2014-04-19T13:42:17</time>	<extensions>	<speed>1.5</speed>	<accuracy>11.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03634575" lat="54.68863122">	<ele>85.0</ele>	<time>2014-04-19T13:42:19</time>	<extensions>	<speed>1.5</speed>	<accuracy>11.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03629326" lat="54.6886127">	<ele>88.0</ele>	<time>2014-04-19T13:42:21</time>	<extensions>	<speed>1.5</speed>	<accuracy>11.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03624799" lat="54.68859647">	<ele>87.0</ele>	<time>2014-04-19T13:42:23</time>	<extensions>	<speed>1.5</speed>	<accuracy>11.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.0362187" lat="54.6885875">	<ele>87.0</ele>	<time>2014-04-19T13:42:24</time>	<extensions>	<speed>1.5</speed>	<accuracy>11.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03618415" lat="54.68857746">	<ele>87.0</ele>	<time>2014-04-19T13:42:25</time>	<extensions>	<speed>1.5</speed>	<accuracy>11.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03615251" lat="54.68857067">	<ele>86.0</ele>	<time>2014-04-19T13:42:26</time>	<extensions>	<speed>1.5</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.0361119" lat="54.68855819">	<ele>87.0</ele>	<time>2014-04-19T13:42:27</time>	<extensions>	<speed>2.0</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03607749" lat="54.68854796">	<ele>86.0</ele>	<time>2014-04-19T13:42:28</time>	<extensions>	<speed>2.0</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03604612" lat="54.68853988">	<ele>87.0</ele>	<time>2014-04-19T13:42:29</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.0359962" lat="54.68853954">	<ele>87.0</ele>	<time>2014-04-19T13:42:31</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03593964" lat="54.68853002">	<ele>88.0</ele>	<time>2014-04-19T13:42:33</time>	<extensions>	<speed>1.75</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03589085" lat="54.68851951">	<ele>85.0</ele>	<time>2014-04-19T13:42:35</time>	<extensions>	<speed>1.5</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.0358398" lat="54.68850932">	<ele>83.0</ele>	<time>2014-04-19T13:42:37</time>	<extensions>	<speed>1.5</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03580178" lat="54.68849401">	<ele>84.0</ele>	<time>2014-04-19T13:42:39</time>	<extensions>	<speed>1.5</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03576469" lat="54.68847859">	<ele>84.0</ele>	<time>2014-04-19T13:42:41</time>	<extensions>	<speed>1.5</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03574691" lat="54.6884566">	<ele>86.0</ele>	<time>2014-04-19T13:42:44</time>	<extensions>	<speed>1.25</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03576544" lat="54.6884293">	<ele>85.0</ele>	<time>2014-04-19T13:42:46</time>	<extensions>	<speed>1.25</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.0357992" lat="54.6883843">	<ele>86.0</ele>	<time>2014-04-19T13:42:49</time>	<extensions>	<speed>1.5</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03584579" lat="54.6883038">	<ele>84.0</ele>	<time>2014-04-19T13:42:54</time>	<extensions>	<speed>1.5</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03585943" lat="54.68827054">	<ele>84.0</ele>	<time>2014-04-19T13:42:56</time>	<extensions>	<speed>1.75</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03586841" lat="54.68823698">	<ele>84.0</ele>	<time>2014-04-19T13:42:58</time>	<extensions>	<speed>1.75</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03587706" lat="54.68820335">	<ele>85.0</ele>	<time>2014-04-19T13:43:00</time>	<extensions>	<speed>1.75</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03588818" lat="54.68817253">	<ele>84.0</ele>	<time>2014-04-19T13:43:02</time>	<extensions>	<speed>1.75</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.0359119" lat="54.68813077">	<ele>87.0</ele>	<time>2014-04-19T13:43:05</time>	<extensions>	<speed>1.75</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03592478" lat="54.6881018">	<ele>87.0</ele>	<time>2014-04-19T13:43:07</time>	<extensions>	<speed>1.75</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.0359414" lat="54.68807137">	<ele>87.0</ele>	<time>2014-04-19T13:43:09</time>	<extensions>	<speed>1.75</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03594986" lat="54.68803689">	<ele>87.0</ele>	<time>2014-04-19T13:43:11</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03595947" lat="54.68800018">	<ele>87.0</ele>	<time>2014-04-19T13:43:13</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.035974" lat="54.68796645">	<ele>87.0</ele>	<time>2014-04-19T13:43:15</time>	<extensions>	<speed>1.75</speed>	<accuracy>11.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03598709" lat="54.68790905">	<ele>87.0</ele>	<time>2014-04-19T13:43:18</time>	<extensions>	<speed>1.75</speed>	<accuracy>11.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03599785" lat="54.68785207">	<ele>85.0</ele>	<time>2014-04-19T13:43:21</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03602361" lat="54.6878071">	<ele>86.0</ele>	<time>2014-04-19T13:43:24</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03604219" lat="54.68775842">	<ele>87.0</ele>	<time>2014-04-19T13:43:27</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03606373" lat="54.68772637">	<ele>85.0</ele>	<time>2014-04-19T13:43:29</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03608363" lat="54.68769647">	<ele>84.0</ele>	<time>2014-04-19T13:43:31</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03610649" lat="54.68767268">	<ele>83.0</ele>	<time>2014-04-19T13:43:33</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03612661" lat="54.68764348">	<ele>83.0</ele>	<time>2014-04-19T13:43:35</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03613234" lat="54.68762146">	<ele>84.0</ele>	<time>2014-04-19T13:43:36</time>	<extensions>	<speed>2.0</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03613755" lat="54.68759076">	<ele>83.0</ele>	<time>2014-04-19T13:43:37</time>	<extensions>	<speed>2.75</speed>	<accuracy>11.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03613983" lat="54.68756399">	<ele>83.0</ele>	<time>2014-04-19T13:43:38</time>	<extensions>	<speed>2.75</speed>	<accuracy>11.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03614062" lat="54.68753584">	<ele>83.0</ele>	<time>2014-04-19T13:43:39</time>	<extensions>	<speed>2.75</speed>	<accuracy>12.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03614523" lat="54.68751097">	<ele>82.0</ele>	<time>2014-04-19T13:43:40</time>	<extensions>	<speed>2.5</speed>	<accuracy>12.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03615772" lat="54.68747682">	<ele>84.0</ele>	<time>2014-04-19T13:43:42</time>	<extensions>	<speed>2.25</speed>	<accuracy>11.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03617209" lat="54.68745799">	<ele>87.0</ele>	<time>2014-04-19T13:43:44</time>	<extensions>	<speed>2.0</speed>	<accuracy>11.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03620682" lat="54.68743995">	<ele>88.0</ele>	<time>2014-04-19T13:43:46</time>	<extensions>	<speed>2.0</speed>	<accuracy>12.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03622507" lat="54.68741817">	<ele>88.0</ele>	<time>2014-04-19T13:43:48</time>	<extensions>	<speed>1.75</speed>	<accuracy>11.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03624672" lat="54.68739382">	<ele>89.0</ele>	<time>2014-04-19T13:43:50</time>	<extensions>	<speed>1.75</speed>	<accuracy>11.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03627312" lat="54.68736755">	<ele>87.0</ele>	<time>2014-04-19T13:43:52</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03629432" lat="54.68734092">	<ele>86.0</ele>	<time>2014-04-19T13:43:54</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03631095" lat="54.68732388">	<ele>86.0</ele>	<time>2014-04-19T13:43:55</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03634205" lat="54.68730161">	<ele>84.0</ele>	<time>2014-04-19T13:43:57</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03635839" lat="54.68728521">	<ele>85.0</ele>	<time>2014-04-19T13:43:59</time>	<extensions>	<speed>1.5</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03639617" lat="54.68729135">	<ele>86.0</ele>	<time>2014-04-19T13:44:01</time>	<extensions>	<speed>1.25</speed>	<accuracy>11.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03643685" lat="54.68731243">	<ele>84.0</ele>	<time>2014-04-19T13:44:03</time>	<extensions>	<speed>1.25</speed>	<accuracy>11.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03647535" lat="54.68733428">	<ele>86.0</ele>	<time>2014-04-19T13:44:05</time>	<extensions>	<speed>1.5</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03651662" lat="54.6873578">	<ele>86.0</ele>	<time>2014-04-19T13:44:07</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03656416" lat="54.68738185">	<ele>85.0</ele>	<time>2014-04-19T13:44:09</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03658845" lat="54.68739417">	<ele>86.0</ele>	<time>2014-04-19T13:44:10</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03661821" lat="54.68740597">	<ele>86.0</ele>	<time>2014-04-19T13:44:11</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03667086" lat="54.68742446">	<ele>87.0</ele>	<time>2014-04-19T13:44:13</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03669835" lat="54.68743352">	<ele>87.0</ele>	<time>2014-04-19T13:44:14</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03674668" lat="54.68744507">	<ele>88.0</ele>	<time>2014-04-19T13:44:16</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03678827" lat="54.68744729">	<ele>86.0</ele>	<time>2014-04-19T13:44:18</time>	<extensions>	<speed>1.5</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03683493" lat="54.68746553">	<ele>87.0</ele>	<time>2014-04-19T13:44:20</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03685861" lat="54.68747877">	<ele>86.0</ele>	<time>2014-04-19T13:44:21</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03688534" lat="54.6874932">	<ele>88.0</ele>	<time>2014-04-19T13:44:22</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03693507" lat="54.68751157">	<ele>88.0</ele>	<time>2014-04-19T13:44:24</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03699222" lat="54.68752154">	<ele>88.0</ele>	<time>2014-04-19T13:44:26</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03702315" lat="54.68752494">	<ele>87.0</ele>	<time>2014-04-19T13:44:27</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03707381" lat="54.68753652">	<ele>86.0</ele>	<time>2014-04-19T13:44:29</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03712438" lat="54.68755052">	<ele>87.0</ele>	<time>2014-04-19T13:44:31</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03717723" lat="54.68756328">	<ele>88.0</ele>	<time>2014-04-19T13:44:33</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.037217" lat="54.68758141">	<ele>88.0</ele>	<time>2014-04-19T13:44:35</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03725626" lat="54.68760777">	<ele>87.0</ele>	<time>2014-04-19T13:44:37</time>	<extensions>	<speed>1.75</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03729868" lat="54.68763084">	<ele>88.0</ele>	<time>2014-04-19T13:44:39</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.0373395" lat="54.68764416">	<ele>86.0</ele>	<time>2014-04-19T13:44:41</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03738015" lat="54.68765675">	<ele>87.0</ele>	<time>2014-04-19T13:44:43</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03741984" lat="54.68767202">	<ele>89.0</ele>	<time>2014-04-19T13:44:45</time>	<extensions>	<speed>1.75</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03746846" lat="54.68768751">	<ele>89.0</ele>	<time>2014-04-19T13:44:47</time>	<extensions>	<speed>1.75</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03751871" lat="54.68770856">	<ele>89.0</ele>	<time>2014-04-19T13:44:49</time>	<extensions>	<speed>1.75</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.0375649" lat="54.68772487">	<ele>88.0</ele>	<time>2014-04-19T13:44:51</time>	<extensions>	<speed>1.75</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03761579" lat="54.68772959">	<ele>91.0</ele>	<time>2014-04-19T13:44:53</time>	<extensions>	<speed>1.75</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03766086" lat="54.68774323">	<ele>91.0</ele>	<time>2014-04-19T13:44:55</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03770182" lat="54.68775728">	<ele>89.0</ele>	<time>2014-04-19T13:44:57</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03773901" lat="54.68776949">	<ele>90.0</ele>	<time>2014-04-19T13:44:59</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03777685" lat="54.68777902">	<ele>91.0</ele>	<time>2014-04-19T13:45:01</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03781869" lat="54.68778994">	<ele>90.0</ele>	<time>2014-04-19T13:45:03</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03786574" lat="54.6878027">	<ele>89.0</ele>	<time>2014-04-19T13:45:05</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03791698" lat="54.68780577">	<ele>90.0</ele>	<time>2014-04-19T13:45:07</time>	<extensions>	<speed>1.5</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03796189" lat="54.68781931">	<ele>90.0</ele>	<time>2014-04-19T13:45:09</time>	<extensions>	<speed>1.5</speed>	<accuracy>11.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03801493" lat="54.68783312">	<ele>91.0</ele>	<time>2014-04-19T13:45:11</time>	<extensions>	<speed>1.5</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03804449" lat="54.68783944">	<ele>92.0</ele>	<time>2014-04-19T13:45:12</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03807464" lat="54.687844">	<ele>92.0</ele>	<time>2014-04-19T13:45:13</time>	<extensions>	<speed>1.75</speed>	<accuracy>11.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03812292" lat="54.68784862">	<ele>91.0</ele>	<time>2014-04-19T13:45:15</time>	<extensions>	<speed>1.75</speed>	<accuracy>11.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.0381772" lat="54.68786026">	<ele>92.0</ele>	<time>2014-04-19T13:45:17</time>	<extensions>	<speed>1.75</speed>	<accuracy>12.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03820777" lat="54.68786522">	<ele>91.0</ele>	<time>2014-04-19T13:45:18</time>	<extensions>	<speed>1.75</speed>	<accuracy>11.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03824298" lat="54.68786863">	<ele>90.0</ele>	<time>2014-04-19T13:45:19</time>	<extensions>	<speed>1.75</speed>	<accuracy>11.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03827878" lat="54.68787685">	<ele>91.0</ele>	<time>2014-04-19T13:45:20</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03830986" lat="54.68788249">	<ele>90.0</ele>	<time>2014-04-19T13:45:21</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03838203" lat="54.68790319">	<ele>87.0</ele>	<time>2014-04-19T13:45:24</time>	<extensions>	<speed>1.75</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.0384715" lat="54.68792502">	<ele>84.0</ele>	<time>2014-04-19T13:45:28</time>	<extensions>	<speed>1.75</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03853357" lat="54.68794453">	<ele>86.0</ele>	<time>2014-04-19T13:45:31</time>	<extensions>	<speed>1.75</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03857738" lat="54.68795711">	<ele>85.0</ele>	<time>2014-04-19T13:45:33</time>	<extensions>	<speed>1.75</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03864536" lat="54.68797475">	<ele>85.0</ele>	<time>2014-04-19T13:45:36</time>	<extensions>	<speed>1.75</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03868963" lat="54.68798635">	<ele>84.0</ele>	<time>2014-04-19T13:45:38</time>	<extensions>	<speed>1.75</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03874032" lat="54.68799515">	<ele>83.0</ele>	<time>2014-04-19T13:45:40</time>	<extensions>	<speed>1.75</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03880288" lat="54.68799861">	<ele>83.0</ele>	<time>2014-04-19T13:45:42</time>	<extensions>	<speed>1.75</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03886544" lat="54.68800112">	<ele>82.0</ele>	<time>2014-04-19T13:45:44</time>	<extensions>	<speed>1.75</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03889983" lat="54.68800434">	<ele>82.0</ele>	<time>2014-04-19T13:45:45</time>	<extensions>	<speed>1.75</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03895829" lat="54.68801343">	<ele>82.0</ele>	<time>2014-04-19T13:45:47</time>	<extensions>	<speed>1.75</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03901026" lat="54.68802554">	<ele>83.0</ele>	<time>2014-04-19T13:45:49</time>	<extensions>	<speed>1.75</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03906234" lat="54.68804041">	<ele>84.0</ele>	<time>2014-04-19T13:45:51</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03911681" lat="54.68805371">	<ele>85.0</ele>	<time>2014-04-19T13:45:53</time>	<extensions>	<speed>1.75</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.0391633" lat="54.68806215">	<ele>84.0</ele>	<time>2014-04-19T13:45:55</time>	<extensions>	<speed>1.75</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.0391994" lat="54.68806976">	<ele>84.0</ele>	<time>2014-04-19T13:45:57</time>	<extensions>	<speed>1.75</speed>	<accuracy>9.0</accuracy>	</extensions></trkpt>
+<trkpt lon="23.03923414" lat="54.6880807">	<ele>84.0</ele>	<time>2014-04-19T13:45:59</time>	<extensions>	<speed>1.75</speed>	<accuracy>10.0</accuracy>	</extensions></trkpt>
+</trkseg>
+</trk>
+</gpx>
