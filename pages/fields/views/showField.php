@@ -33,14 +33,14 @@
 				array_push($fieldworks, $seeding);
 			}   
 		}
-		$fieldwork = $db->query("SELECT fieldworks.`name` as `name`, `fieldworks_fields`.`date` as `date`, `fieldworks_fields`.id as id FROM `fieldworks_fields` INNER JOIN fieldworks ON `fieldworks`.id = `fieldworks_fields`.fieldwork_id WHERE `fieldworks_fields`.field_id = '".@$_GET['id']."' AND `fieldworks`.season_id = '".$_SESSION["user_season"]."' AND `fieldworks`.farm_id = '".$_SESSION["user_farm"]."';"); 		 
+		$fieldwork = $db->query("SELECT fieldworks.`name` as `name`, `fieldworks_fields`.`date` as `date`, `fieldworks_fields`.id as id, `fieldworks_fields`.fieldwork_id as tid FROM `fieldworks_fields` INNER JOIN fieldworks ON `fieldworks`.id = `fieldworks_fields`.fieldwork_id WHERE `fieldworks_fields`.field_id = '".@$_GET['id']."' AND `fieldworks`.season_id = '".$_SESSION["user_season"]."' AND `fieldworks`.farm_id = '".$_SESSION["user_farm"]."';"); 		 
 		if(!empty($fieldwork)){
 			foreach ($fieldwork as $key => $fieldwork_one) {
 				$fieldwork_one['type'] = "fieldowrk";
 				array_push($fieldworks, $fieldwork_one);
 			}
 		}
-		$cropscares = $db->query("SELECT `cropscares`.`id` as `id`, `cropscares`.`date` as `date`, `caresets`.`name` as `name` FROM cropscares INNER JOIN caresets ON `cropscares`.careset_id = `caresets`.id WHERE `caresets`.farm_id = '".$_SESSION["user_farm"]."' AND `caresets`.season_id = '".$_SESSION["user_season"]."' AND `cropscares`.field_id = ".@$_GET['id'].";"); 		 
+		$cropscares = $db->query("SELECT `cropscares`.`id` as `id`, `cropscares`.`date` as `date`, `caresets`.`name` as `name`, `cropscares`.`careset_id` as `tid` FROM cropscares INNER JOIN caresets ON `cropscares`.careset_id = `caresets`.id WHERE `caresets`.farm_id = '".$_SESSION["user_farm"]."' AND `caresets`.season_id = '".$_SESSION["user_season"]."' AND `cropscares`.field_id = ".@$_GET['id'].";"); 		 
 		if(!empty($cropscares)){
 			foreach ($cropscares as $key => $cropscare) {
 				$cropscare['type'] = "cropscare";
@@ -114,14 +114,14 @@
 					$color = 2;
 					echo '<tr>';
 					echo '    <td class="tableLeft">'.@$work['date'].'</td>';
-					echo '	  <td class="tableRight"><a href="" data-id="'.@$work['id'].'" data-type="'.@$work['type'].'">'.@$work['name'].'</a></td>';
+					echo '	  <td class="tableRight"><a href="" data-id="'.@$work['tid'].'" data-type="'.@$work['type'].'" class="aStyle show">'.@$work['name'].'</a></td>';
 					echo '	  <td class="tableSingle" style="text-align: right; width: 20px;"><a href=""><img src="img/delete.png" class="delete" data-id="'.@$work['id'].'" data-type="'.@$work['type'].'" style="width: 16px; height:16px; margin: 2px 4px 0 0;"></a><td>';
 					echo '</tr>';
 				} else {
 					$color = 1;
 					echo '<tr>';
 					echo '    <td class="tableLeft second">'.@$work['date'].'</td>';
-					echo '	  <td class="tableRight second"><a href="" data-id="'.@$work['id'].'" data-type="'.@$work['type'].'">'.@$work['name'].'</a></td>';
+					echo '	  <td class="tableRight second"><a href="" data-id="'.@$work['tid'].'" data-type="'.@$work['type'].'" class="aStyle show">'.@$work['name'].'</a></td>';
 					echo '	  <td class="tableSingle second" style="text-align: right; width: 20px;"><a href=""><img src="img/delete.png" class="delete" data-id="'.@$work['id'].'" data-type="'.@$work['type'].'" style="width: 16px; height:16px; margin: 2px 4px 0 0;"></a><td>';
 					echo '</tr>';
 				}
@@ -193,6 +193,29 @@ $('.delete').click(function(){
 
         return false;
     });
+
+	$('.show').click(function(){
+	    if ($(this).data('type') == "fieldwork"){
+	    	var file = "pages/fieldworks/views/showFieldwork.php?id="
+			file += $(this).data('id');
+	    }
+	    if ($(this).data('type') == "cropscare"){
+	    	var file = "pages/cropscares/views/showCropscare.php?id="
+			file += $(this).data('id');
+	    }
+		if ($(this).data('type') == "seeding"){
+			return false;
+		}
+
+		$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
+	    
+	    $.get(file, function(data){
+	        $('#content').html(data);
+	      });
+	    // resetMaps();
+	    // paryskinti2($(this).data('field'));
+	    return false;
+	});
 
 
 //jeigu reiktu response teksto is .post formos POST:

@@ -21,6 +21,7 @@
 	      
 	      //starting file reading
 	      $coordinates = "";
+	     
 
 			if (file_exists($fileName)) {
 			    $xml = simplexml_load_file($fileName);
@@ -81,8 +82,30 @@
 					       	array_push($coordList, $coord);
 					       }
 
+					       //sitoj vietoj galima atlikti ploto skaiciavima su $coordList masyvu (zaliom koordinatem)
+					       //arba $rdpResult - jau pamazintu optimizuotu masyvu
+
+
 					        $rdpResult = RamerDouglasPeucker($coordList, 0.000022);
 							//var_dump ($rdpResult);
+
+
+					        // $areaCalc = $coordList;
+					        // array_push($areaCalc, $areaCalc[0]);
+					        // $xx = 0;
+					        // $yy = 0;
+					        // $finalArea = 0;
+
+					        // for ($i=0; $i < sizeof($areaCalc)-2; $i++) { 
+					        // 	// $finalArea += ($areaCalc[$i]["lat"]*$areaCalc[$i+1]["long"] - $areaCalc[$i]["long"]*$areaCalc[$i+1]["lat"])*1000000;
+					        	
+					        // 	$xx += $areaCalc[$i]["lat"]*$areaCalc[$i+1]["long"];
+					        // 	$yy += $areaCalc[$i]["long"]*$areaCalc[$i+1]["lat"];
+
+					        // 	// echo $finalArea."<br>";
+					        // 	echo $areaCalc[$i]["lat"]." ".$areaCalc[$i]["long"]." ".$areaCalc[$i+1]["lat"]." ".$areaCalc[$i+1]["long"]."<br>";
+					        // }
+					        // $finalArea = (($xx - $yy)*1000000) / 2;
 
 							$string = "";
 							foreach ($rdpResult as $key => $coordLine) {
@@ -96,6 +119,9 @@
 						    $rr = mysql_query($q); 
 
 					        echo "Koordinatės įkeltos";
+					        // var_dump($finalArea);
+					        // var_dump($xx);
+					        // var_dump($yy);
 					        // echo var_dump($rr);
 
 					      }
