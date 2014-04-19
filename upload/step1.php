@@ -129,6 +129,8 @@
 					  mysql_close();
 					  unlink($fileName);
 
+					  
+
 			} else {
 			    echo 'Nepavyko atidaryti failo: .'.$fileName ;
 			    include "connection.php";

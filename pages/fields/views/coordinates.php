@@ -46,6 +46,25 @@ $(document).ready(function()
         $("#message").html("<font color='green'>"+response.responseText+"</font>");
         setTimeout(reloadMaps, 500);
         
+        var area = 0;
+        $.each(laukai, function(index){
+            if (laukai[index].id == <?php echo @$_GET['id']; ?>){             
+                area = google.maps.geometry.spherical.computeArea(laukai[index].getPath());
+                // return false;
+            }
+        });
+
+        var posting = $.post( "upload/setArea.php", {area: area, id: <?php echo @$_GET['id']; ?> } );
+
+        $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
+        
+        <?php echo "var file = \"pages/fields/views/showField.php?id=".@$_GET['id']."\";"; ?>
+        
+        
+        $.get(file, function(data){
+            $('#content').html(data);
+          });
+
     },
     error: function()
     {

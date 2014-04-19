@@ -72,6 +72,7 @@ function showFieldInfo(event) {
           });  
           resetMaps();        
           paryskinti(this);
+
   //} 
 }
 

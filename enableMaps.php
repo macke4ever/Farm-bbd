@@ -97,11 +97,11 @@ function setSelected(){
 
  function paryskinti2(obj){
   $.each(laukai, function(index){
-            if (laukai[index].id == obj){             
-              laukai[index].setOptions({fillOpacity :0.8});
-              return false;
-            }
-        });
+      if (laukai[index].id == obj){             
+        laukai[index].setOptions({fillOpacity :0.8});
+        return false;
+      }
+  });
  }
 
   function show() {         
