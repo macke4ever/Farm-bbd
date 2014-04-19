@@ -145,10 +145,10 @@
 
 $('.delete').click(function(){
     if (confirm("Ar tikrai norite pašalinti pasirinktą  darbą?")) {    	
-	    $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 	    var url = "pages/fields/actions/deleteWorkFromField.php";	
 	    var posting = $.post( url, { id: $(this).data('id'),  type: $(this).data('type'), field_id: <?php echo @$_GET['id'] ?> } );
 
+	    $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 	      /* Put the results in a div */
 	      posting.done(function( data ) {
 	        <?php echo "var file = \"pages/fields/views/showField.php?id=".@$_GET['id']."\";"; ?>

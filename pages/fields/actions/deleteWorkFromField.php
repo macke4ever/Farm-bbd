@@ -2,12 +2,12 @@
 	//this needs to be edited. When deleting an element not only this record shoulkd be removed but all other tables records that are connected to this one.
 	session_start();
 	include "../../../dbConfig.php";
-	if (@$_POST["type"] == "fieldowrks") {		
+	if (@$_POST["type"] == "fieldowrk") {		
 		$db->query("DELETE FROM fieldworks_fields WHERE id='".@$_POST['id']."'");
 	}
 
 
-	if (@$_POST["type"] == "cropscares") {
+	if (@$_POST["type"] == "cropscare") {
 
 		//modify resources when adding a work to the field
 		$fields = $db->query("SELECT area from fields where id = '".@$_POST['field_id']."'"); 	
@@ -25,7 +25,7 @@
 		$db->query("DELETE FROM cropscares WHERE id='".@$_POST['id']."'");
 	}
 
-	if (@$_POST["type"] == "seedings") {
+	if (@$_POST["type"] == "seeding") {
 		$db->query("DELETE FROM seedings WHERE id='".@$_POST['id']."'");
 	}
  ?>
