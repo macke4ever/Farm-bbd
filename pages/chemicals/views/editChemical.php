@@ -44,16 +44,20 @@
 			<td class="tableRight second"><input type="text" name="name" id="name" value=<?php echo '"'.$chemicals[0]["name"].'"'; ?> style="width: 261px;"></td>
 		</tr>
 		<tr>
-			<td class="tableLeft">Kiekis</td>
-			<td class="tableRight"><input type="text" name="quantity" id="quantity" value=<?php echo '"'.$chemicals[0]["quantity"].'"'; ?> style="width: 100px;"></td>
+			<td class="tableLeft">Turėta</td>
+			<td class="tableRight"><input type="text" name="startQuantity" id="startQuantity" value=<?php echo '"'.$chemicals[0]["startQuantity"].'"'; ?> style="width: 100px;"></td>
 		</tr>
 		<tr>
-			<td class="tableLeft second">Mato vnt.</td>
-			<td class="tableRight second"><input type="text" name="measure" id="measure" value=<?php echo '"'.$chemicals[0]["measure"].'"'; ?> style="width: 50px;"></td>
+			<td class="tableLeft second">Kiekis</td>
+			<td class="tableRight second"><input type="text" name="quantity" id="quantity" value=<?php echo '"'.$chemicals[0]["quantity"].'"'; ?> style="width: 100px;"></td>
 		</tr>
 		<tr>
-		    <td class="tableLeft"><input type="submit" id="submit" name="submit" value="Saugoti"/></td>
-			<td class="tableRight"><input type="hidden" id="id" name="id" value=<?php echo '"'.$chemicals[0]["id"].'"'; ?>/><button id="cancel" data-chemical=<?php echo '"'. @$_GET['id']. '"'; ?>>Atgal</button></td>
+			<td class="tableLeft">Mato vnt.</td>
+			<td class="tableRight"><input type="text" name="measure" id="measure" value=<?php echo '"'.$chemicals[0]["measure"].'"'; ?> style="width: 50px;"></td>
+		</tr>
+		<tr>
+		    <td class="tableLeft second"><input type="submit" id="submit" name="submit" value="Saugoti"/></td>
+			<td class="tableRight second"><input type="hidden" id="id" name="id" value=<?php echo '"'.$chemicals[0]["id"].'"'; ?>/><button id="cancel" data-chemical=<?php echo '"'. @$_GET['id']. '"'; ?>>Atgal</button></td>
 		</tr>
 	</table>
 </form>
@@ -70,7 +74,7 @@
           url = $form.attr( 'action' );
 
       /* Send the data using post */
-      var posting = $.post( url, { name: $('#name').val(), chemtype_id: $('#chemtype_id').val(), measure: $('#measure').val(), quantity: $('#quantity').val(), id: $('#id').val() } );
+      var posting = $.post( url, { name: $('#name').val(), chemtype_id: $('#chemtype_id').val(), measure: $('#measure').val(), quantity: $('#quantity').val(), startQuantity: $('#startQuantity').val(), id: $('#id').val() } );
 
       $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 

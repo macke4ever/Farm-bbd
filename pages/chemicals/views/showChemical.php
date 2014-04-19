@@ -27,8 +27,12 @@
 			<td class="tableRight second"><?php echo @$chemicals[0]['name']; ?></td>
 		</tr>
 		<tr>
-		    <td class="tableLeft">Kiekis</td>
-			<td class="tableRight"><?php echo @$chemicals[0]['quantity']." ".@$chemicals[0]['measure']."."; ?></td>
+		    <td class="tableLeft">Turėta</td>
+			<td class="tableRight"><?php echo @$chemicals[0]['startQuantity']." ".@$chemicals[0]['measure']."."; ?></td>
+		</tr>
+		<tr>
+		    <td class="tableLeft second">Kiekis</td>
+			<td class="tableRight second"><?php echo @$chemicals[0]['quantity']." ".@$chemicals[0]['measure']."."; ?></td>
 		</tr>
 		<tr>
 		    <td class="tableLeft"><?php if ($_SESSION["user_rights"] >= 16){ ?><button type="button" class="buttonChange" data-chemical=<?php echo '"'. @$_GET['id']. '"'; ?>>Redaguoti</button><?php } ?></td>

@@ -29,21 +29,21 @@
 		if(!empty($seedings)){			
 			foreach ($seedings as $key => $seeding) {
 				$seeding['name'] = "Sėjimas";
-				$seeding['type'] = "seedings";
+				$seeding['type'] = "seeding";
 				array_push($fieldworks, $seeding);
 			}   
 		}
 		$fieldwork = $db->query("SELECT fieldworks.`name` as `name`, `fieldworks_fields`.`date` as `date`, `fieldworks_fields`.id as id FROM `fieldworks_fields` INNER JOIN fieldworks ON `fieldworks`.id = `fieldworks_fields`.fieldwork_id WHERE `fieldworks_fields`.field_id = '".@$_GET['id']."' AND `fieldworks`.season_id = '".$_SESSION["user_season"]."' AND `fieldworks`.farm_id = '".$_SESSION["user_farm"]."';"); 		 
 		if(!empty($fieldwork)){
 			foreach ($fieldwork as $key => $fieldwork_one) {
-				$fieldwork_one['type'] = "fieldowrks";
+				$fieldwork_one['type'] = "fieldowrk";
 				array_push($fieldworks, $fieldwork_one);
 			}
 		}
 		$cropscares = $db->query("SELECT `cropscares`.`id` as `id`, `cropscares`.`date` as `date`, `caresets`.`name` as `name` FROM cropscares INNER JOIN caresets ON `cropscares`.careset_id = `caresets`.id WHERE `caresets`.farm_id = '".$_SESSION["user_farm"]."' AND `caresets`.season_id = '".$_SESSION["user_season"]."' AND `cropscares`.field_id = ".@$_GET['id'].";"); 		 
 		if(!empty($cropscares)){
 			foreach ($cropscares as $key => $cropscare) {
-				$cropscare['type'] = "cropscares";
+				$cropscare['type'] = "cropscare";
 				array_push($fieldworks, $cropscare);
 			}
 		}
@@ -114,14 +114,14 @@
 					$color = 2;
 					echo '<tr>';
 					echo '    <td class="tableLeft">'.@$work['date'].'</td>';
-					echo '	  <td class="tableRight">'.@$work['name'].'</td>';
+					echo '	  <td class="tableRight"><a href="" data-id="'.@$work['id'].'" data-type="'.@$work['type'].'">'.@$work['name'].'</a></td>';
 					echo '	  <td class="tableSingle" style="text-align: right; width: 20px;"><a href=""><img src="img/delete.png" class="delete" data-id="'.@$work['id'].'" data-type="'.@$work['type'].'" style="width: 16px; height:16px; margin: 2px 4px 0 0;"></a><td>';
 					echo '</tr>';
 				} else {
 					$color = 1;
 					echo '<tr>';
 					echo '    <td class="tableLeft second">'.@$work['date'].'</td>';
-					echo '	  <td class="tableRight second">'.@$work['name'].'</td>';
+					echo '	  <td class="tableRight second"><a href="" data-id="'.@$work['id'].'" data-type="'.@$work['type'].'">'.@$work['name'].'</a></td>';
 					echo '	  <td class="tableSingle second" style="text-align: right; width: 20px;"><a href=""><img src="img/delete.png" class="delete" data-id="'.@$work['id'].'" data-type="'.@$work['type'].'" style="width: 16px; height:16px; margin: 2px 4px 0 0;"></a><td>';
 					echo '</tr>';
 				}

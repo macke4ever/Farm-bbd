@@ -29,6 +29,10 @@
 			<td class="tableRight"><input type="text" name="name" id="name" style="width: 261px;" tabindex="2"></td>
 		</tr>
 		<tr>
+			<td class="tableLeft">Turėta</td>
+			<td class="tableRight"><input type="text" name="startQuantity" id="startQuantity" style="width: 100px;" tabindex="3"></td>
+		</tr>
+		<tr>
 			<td class="tableLeft">Kiekis</td>
 			<td class="tableRight"><input type="text" name="quantity" id="quantity" style="width: 100px;" tabindex="3"></td>
 		</tr>
@@ -56,7 +60,7 @@
           url = $form.attr( 'action' );
 
       /* Send the data using post */
-      var posting = $.post( url, {name: $('#name').val(), chemtype_id: $('#chemtype_id').val(), quantity: $('#quantity').val(), measure: $('#measure').val() } );
+      var posting = $.post( url, {name: $('#name').val(), chemtype_id: $('#chemtype_id').val(), quantity: $('#quantity').val(), startQuantity: $('#startQuantity').val(), measure: $('#measure').val() } );
 
 	  $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
       
