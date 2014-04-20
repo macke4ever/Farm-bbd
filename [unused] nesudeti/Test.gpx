@@ -1,0 +1,57 @@
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" creator="MotionXGPSFull 21.1 Build 4789R">
+<trk>
+<name>Track 001</name>
+<desc>20 Apr 2014  4:50 pm</desc>
+<trkseg>
+<trkpt lat="54.6277477" lon="23.0862614">
+<ele>64.832</ele>
+<time>2014-04-20T13:50:49.414Z</time>
+</trkpt>
+<trkpt lat="54.6277512" lon="23.0862877">
+<ele>62.632</ele>
+<time>2014-04-20T13:50:51.024Z</time>
+</trkpt>
+<trkpt lat="54.6277680" lon="23.0864469">
+<ele>60.624</ele>
+<time>2014-04-20T13:50:59.720Z</time>
+</trkpt>
+<trkpt lat="54.6277331" lon="23.0866139">
+<ele>60.584</ele>
+<time>2014-04-20T13:51:09.806Z</time>
+</trkpt>
+<trkpt lat="54.6276501" lon="23.0866834">
+<ele>62.088</ele>
+<time>2014-04-20T13:51:21.507Z</time>
+</trkpt>
+<trkpt lat="54.6275898" lon="23.0867990">
+<ele>63.549</ele>
+<time>2014-04-20T13:51:34.382Z</time>
+</trkpt>
+<trkpt lat="54.6275898" lon="23.0867990">
+<ele>64.068</ele>
+<time>2014-04-20T13:51:45.379Z</time>
+</trkpt>
+<trkpt lat="54.6276524" lon="23.0868785">
+<ele>63.892</ele>
+<time>2014-04-20T13:52:00.961Z</time>
+</trkpt>
+</trkseg>
+</trk>
+<extensions>
+<fpdata xmlns="http://www.motionx.com/GPX-Extensions/1/1" sfv="10" origin="MotionXGPSFull 21.1 Build 4789R">
+<bin enc="base64">
+RQIAAAACAAAALNKALvTU1EEBAAAAZjOJQPTU1EEAAADBw71RQAgAAACEFAAAA0uWXkM1
+UEBgCdYbI/JPQAAAAAAKAAAAVHJhY2sgMDAxABUAAAAyMCBBcHIgMjAxNCAgNDo1MCBw
+bQAAAAAA0jOJQPTU1EFwdolA9NTUQXcXAQCxwoT4hoBSQCwAAAAAAAAApBc4OhUWN0D4
+G0AJWlBLQANLll5DNVBAAAAAAAAAFEAAAAAAAAAgQAAAAAAAoGJAAAAAAAAAAAAAAAAA
+wvUoXI9CSkADS5ZeQzVQQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAEAAAABAAAABAAAAC9iMCOAFW9AAAAAAAAAAAABAAAADgAAAFRyYWNrXzAwMS5ncHgA
+AQAAAGA4i0D01NRBCgAAAAEAAAAKAAAAVHJhY2sgMDAxAAAAAAAAAAAAAAAAAAAAAABQ
+AAAAOIE9QPTU1EEAAAAAAAAAAAAAAAAAAAAA/yVEvAIAAAAAAAAAAAAAAAEAAAAjAAAA
+MjEuMSBCdWlsZCA0Nzg5UiwgTVhBRSA2LjAgYi4gNDUwUgB0UgAAAQAAAAECAAAAutBT
+UwDRU1MEyNOALvTU1EHI04Au9NTUQQAAAAAAeBo/AAAAAAFG0oAu9NTUQQeWPkD01NRB
+AAAAwcO9UUAAAAAAAAAAAA==
+</bin>
+</fpdata>
+</extensions>
+</gpx>

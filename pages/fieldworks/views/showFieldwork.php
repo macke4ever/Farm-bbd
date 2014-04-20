@@ -79,18 +79,43 @@
 	    return false;
 	});
 
-	$('#cancel').click(function(){
-     	resetMaps();
-        var file = "pages/fieldworks/index.php";
+	// $('#cancel').click(function(){
+ //     	resetMaps();
+ //        var file = "pages/fieldworks/index.php";
 		
-		$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
+	// 	$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
         
-        $.get(file, function(data){
-            $('#content').html(data);
-          });
+ //        $.get(file, function(data){
+ //            $('#content').html(data);
+ //          });
+ //        return false;
+ //    });
+
+
+    $('#cancel').click(function(){
+     // console.log('aa');
+
+     //prideta visokios logikos kad butu galima gristi i ankstesni puslapi pagal tai is kur buvo ateita
+     //kadangi jau galima perziureti lauka ne tik is lauku saraso bet ir is apsetu lauku tam tikra veisle saraso
+        resetMaps();
+	    <?php 
+	     	if (!empty($_GET["back"])){
+	     		if ($_GET["back"] == "showfield"){
+		     		echo 'var file = "pages/fields/views/showField.php?id='.$_GET["bid"].'";';
+		     		echo 'paryskinti2('.$_GET["bid"].');';
+	     		}
+		     		echo '$(\'#content\').html("<center><img src=\'img/ajax-loader.gif\' style=\'padding-top: 50px;\'></center>");';
+					echo '$.get(file, function(data){$(\'#content\').html(data);});';
+	     	} else {	
+	        	echo 'var file = "pages/fieldworks/index.php";';
+	        	echo '$(\'#content\').html("<center><img src=\'img/ajax-loader.gif\' style=\'padding-top: 50px;\'></center>");';
+	        	echo '$.get(file, function(data){$(\'#content\').html(data);});';
+	     	}
+	    ?>
+        
+
         return false;
     });
-
 
     $('.show').click(function(){
 	    var file = "pages/fields/views/showField.php?back=showfieldwork&bid="+<?php echo @$_GET['id']; ?>+"&id="

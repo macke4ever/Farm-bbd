@@ -67,6 +67,7 @@ function showFieldInfo(event) {
   //if (document.getElementById('fields') != null) {
           var page = "pages/fields/views/showField.php?id=";
           page += this.id;
+          $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
           $.get(page, function(data){
             $('#content').html(data);
           });  

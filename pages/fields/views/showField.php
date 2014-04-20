@@ -36,7 +36,7 @@
 		$fieldwork = $db->query("SELECT fieldworks.`name` as `name`, `fieldworks_fields`.`date` as `date`, `fieldworks_fields`.id as id, `fieldworks_fields`.fieldwork_id as tid FROM `fieldworks_fields` INNER JOIN fieldworks ON `fieldworks`.id = `fieldworks_fields`.fieldwork_id WHERE `fieldworks_fields`.field_id = '".@$_GET['id']."' AND `fieldworks`.season_id = '".$_SESSION["user_season"]."' AND `fieldworks`.farm_id = '".$_SESSION["user_farm"]."';"); 		 
 		if(!empty($fieldwork)){
 			foreach ($fieldwork as $key => $fieldwork_one) {
-				$fieldwork_one['type'] = "fieldowrk";
+				$fieldwork_one['type'] = "fieldwork";
 				array_push($fieldworks, $fieldwork_one);
 			}
 		}
@@ -196,12 +196,18 @@ $('.delete').click(function(){
 
 	$('.show').click(function(){
 	    if ($(this).data('type') == "fieldwork"){
-	    	var file = "pages/fieldworks/views/showFieldwork.php?id="
+	    	<?php echo 'var file = "pages/fieldworks/views/showFieldwork.php?back=showfield&bid='.$_GET["id"].'&id=";'; ?>
 			file += $(this).data('id');
+	    	
+	    	var file2 = "markWorkFields.php?workType=fieldwork&workID="+$(this).data('id');
+	    	$.get(file2, function(data){$('#content2').html(data);});
 	    }
 	    if ($(this).data('type') == "cropscare"){
-	    	var file = "pages/cropscares/views/showCropscare.php?id="
+	    	<?php echo 'var file = "pages/cropscares/views/showCropscare.php?back=showfield&bid='.$_GET["id"].'&id=";'; ?>
 			file += $(this).data('id');
+	    	
+	    	var file2 = "markWorkFields.php?workType=cropscare&workID="+$(this).data('id');
+	    	$.get(file2, function(data){$('#content2').html(data);});
 	    }
 		if ($(this).data('type') == "seeding"){
 			return false;
