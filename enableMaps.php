@@ -104,6 +104,19 @@ function setSelected(){
   });
  }
 
+ function keistiCentra(obj){
+  $.each(laukai, function(index){
+      if (laukai[index].id == obj){
+       if (laukai[index].getPath() !== undefined){     
+          map.setCenter(laukai[index].getPath().getArray()[0]);
+          map.setZoom(15);
+       }            
+        return false;
+      }
+  });
+
+ }
+
   function show() {         
          // laukai[0].setVisible(false);
   }

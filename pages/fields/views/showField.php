@@ -193,6 +193,8 @@ $('.delete').click(function(){
 	        	echo 'var file = "pages/fields/index.php";';
 	        	echo '$(\'#content\').html("<center><img src=\'img/ajax-loader.gif\' style=\'padding-top: 50px;\'></center>");';
 	        	echo '$.get(file, function(data){$(\'#content\').html(data);});';
+	        	echo 'map.setZoom(13);';
+	        	echo 'map.setCenter(new google.maps.LatLng(54.699064, 23.012999));';
 	     	}
 	    ?>
         

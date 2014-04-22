@@ -69,6 +69,7 @@
 	      });
 	    resetMaps();
 	    paryskinti2($(this).data('field'));
+	    keistiCentra($(this).data('field'));
 	    return false;
 	});
 
