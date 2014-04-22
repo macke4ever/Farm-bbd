@@ -17,6 +17,7 @@
 			$_SESSION["user_rights"] = $row['rights'];
 			$_SESSION["user_farm"] = $row['farm_id'];
 			$_SESSION["user_season"] = $row['lastSeason'];
+			$_SESSION["active"] = true;
 		} else {
 			$message="Neteisingas prisijungimo vardas arba slaptažodis \n";
 		}

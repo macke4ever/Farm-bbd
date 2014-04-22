@@ -72,6 +72,15 @@
 
 
 <script type="text/javascript">
+  function testSession(){
+      $.get('session.php', function(data) {
+       if( data == "Expired" ) {
+           // alert("Session expired");
+           window.location.href = "logout.php";
+       }
+   });
+  }
+
 //Menu conroller
 
   
@@ -80,6 +89,7 @@
 
   //nustatomas puslapio vaizdas - i kairi stulpeli ikalamas paspausto tabo sugeneruotas kodas.
   $('.menu li').click(function(){
+    testSession();
     
     var file = $(this).data('menu');
     
@@ -145,6 +155,7 @@
   //   //  $('#content').html(data);
   //   // });
   });
+
 </script>
 
 <?php  } ?>
