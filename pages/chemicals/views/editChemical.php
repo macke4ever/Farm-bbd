@@ -52,6 +52,10 @@
 			<td class="tableRight second"><input type="text" name="quantity" id="quantity" value=<?php echo '"'.$chemicals[0]["quantity"].'"'; ?> style="width: 100px;"></td>
 		</tr>
 		<tr>
+			<td class="tableLeft">Vnt. kaina</td>
+			<td class="tableRight"><input type="text" name="price" id="price" value=<?php echo '"'.$chemicals[0]["price"].'"'; ?> style="width: 50px;">Lt</td>
+		</tr>
+		<tr>
 			<td class="tableLeft">Mato vnt.</td>
 			<td class="tableRight"><input type="text" name="measure" id="measure" value=<?php echo '"'.$chemicals[0]["measure"].'"'; ?> style="width: 50px;"></td>
 		</tr>
@@ -74,7 +78,7 @@
           url = $form.attr( 'action' );
 
       /* Send the data using post */
-      var posting = $.post( url, { name: $('#name').val(), chemtype_id: $('#chemtype_id').val(), measure: $('#measure').val(), quantity: $('#quantity').val(), startQuantity: $('#startQuantity').val(), id: $('#id').val() } );
+      var posting = $.post( url, { name: $('#name').val(), chemtype_id: $('#chemtype_id').val(), measure: $('#measure').val(), quantity: $('#quantity').val(), startQuantity: $('#startQuantity').val(), id: $('#id').val(), price: $('#price').val() } );
 
       $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 

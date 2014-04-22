@@ -11,7 +11,7 @@
 		$area = 0;
 		foreach ($caresetAreas as $key => $value) {
 			$area += $value["area"];
-		}	 	
+		}	
 ?>  
 
 <div id="cropscares">	
@@ -25,7 +25,10 @@
 		    <td class="tableLeft second">L/ha kuro</td>
 			<td class="tableRight second"><?php echo @$cropscares[0]['consumption']; ?></td>
 		</tr>
-
+		<tr>
+		    <td class="tableLeft">Kaina 1 ha</td>
+			<td class="tableRight"><?php echo @$cropscares[0]['price']." Lt"; ?></td>
+		</tr>
 		<tr>
 		    <td class="tableLeft"><button type="button" class="buttonChange" data-cropscares=<?php echo '"'. @$_GET['id']. '"'; ?>>Redaguoti</button></td>
 			<td class="tableRight"><button id="cancel">Atgal</button></td>
@@ -104,17 +107,6 @@
 	    return false;
 	});
 
-	// $('#cancel').click(function(){
-	// 	resetMaps();
- //        var file = "pages/cropscares/index.php";
-		
-	// 	$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
-        
- //        $.get(file, function(data){
- //            $('#content').html(data);
- //          });
- //        return false;
- //    });
 
     $('#cancel').click(function(){
      // console.log('aa');

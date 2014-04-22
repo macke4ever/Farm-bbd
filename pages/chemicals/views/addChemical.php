@@ -34,14 +34,18 @@
 		</tr>
 		<tr>
 			<td class="tableLeft">Kiekis</td>
-			<td class="tableRight"><input type="text" name="quantity" id="quantity" style="width: 100px;" tabindex="3"></td>
+			<td class="tableRight"><input type="text" name="quantity" id="quantity" style="width: 100px;" tabindex="4"></td>
+		</tr>
+		<tr>
+			<td class="tableLeft">Vnt. kaina</td>
+			<td class="tableRight"><input type="text" name="price" id="price" style="width: 50px;" tabindex="5">Lt</td>
 		</tr>
 		<tr>
 			<td class="tableLeft">Mato vnt.</td>
-			<td class="tableRight"><input type="text" name="mesure" id="measure" style="width: 50px;" tabindex="4"></td>
+			<td class="tableRight"><input type="text" name="mesure" id="measure" style="width: 50px;" tabindex="6"></td>
 		</tr>
 		<tr>
-		    <td class="tableLeft"><input type="submit" id="submit" name="submit" value="Saugoti" tabindex="4"/></td>
+		    <td class="tableLeft"><input type="submit" id="submit" name="submit" value="Saugoti" tabindex="7"/></td>
 			<td class="tableRight"></td>
 		</tr>
 	</table>
@@ -60,7 +64,7 @@
           url = $form.attr( 'action' );
 
       /* Send the data using post */
-      var posting = $.post( url, {name: $('#name').val(), chemtype_id: $('#chemtype_id').val(), quantity: $('#quantity').val(), startQuantity: $('#startQuantity').val(), measure: $('#measure').val() } );
+      var posting = $.post( url, {name: $('#name').val(), chemtype_id: $('#chemtype_id').val(), quantity: $('#quantity').val(), startQuantity: $('#startQuantity').val(), measure: $('#measure').val(), price: $('#price').val() } );
 
 	  $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
       

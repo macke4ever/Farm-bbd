@@ -35,6 +35,10 @@
 			<td class="tableRight second"><?php echo @$chemicals[0]['quantity']." ".@$chemicals[0]['measure']."."; ?></td>
 		</tr>
 		<tr>
+		    <td class="tableLeft">Vnt. kaina</td>
+			<td class="tableRight"><?php echo @$chemicals[0]['price']." Lt/".@$chemicals[0]['measure']."."; ?></td>
+		</tr>
+		<tr>
 		    <td class="tableLeft"><?php if ($_SESSION["user_rights"] >= 16){ ?><button type="button" class="buttonChange" data-chemical=<?php echo '"'. @$_GET['id']. '"'; ?>>Redaguoti</button><?php } ?></td>
 			<td class="tableRight"><button id="cancel">Atgal</button></td>
 		</tr>

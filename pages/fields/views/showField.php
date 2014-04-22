@@ -23,6 +23,7 @@
 			`fields`.farm_id = ".$_SESSION["user_farm"]."
 			LIMIT 1"); 		
 		$field = $field[0];	
+		$field["fieldPrice"] = 0;
 			
 		$fieldworks = array();	 
 		$seedings = $db->query("select id as id, date as date from seedings where farm_id = '".$_SESSION["user_farm"]."' and season_id = '".$_SESSION["user_season"]."' and field_id = ".@$_GET['id'].""); 		
@@ -40,13 +41,15 @@
 				array_push($fieldworks, $fieldwork_one);
 			}
 		}
-		$cropscares = $db->query("SELECT `cropscares`.`id` as `id`, `cropscares`.`date` as `date`, `caresets`.`name` as `name`, `cropscares`.`careset_id` as `tid` FROM cropscares INNER JOIN caresets ON `cropscares`.careset_id = `caresets`.id WHERE `caresets`.farm_id = '".$_SESSION["user_farm"]."' AND `caresets`.season_id = '".$_SESSION["user_season"]."' AND `cropscares`.field_id = ".@$_GET['id'].";"); 		 
+		$cropscares = $db->query("SELECT `cropscares`.`id` as `id`, `cropscares`.`date` as `date`, `caresets`.`name` as `name`, `cropscares`.`careset_id` as `tid`, `caresets`.`price` as `price` FROM cropscares INNER JOIN caresets ON `cropscares`.careset_id = `caresets`.id WHERE `caresets`.farm_id = '".$_SESSION["user_farm"]."' AND `caresets`.season_id = '".$_SESSION["user_season"]."' AND `cropscares`.field_id = ".@$_GET['id'].";"); 		 
 		if(!empty($cropscares)){
 			foreach ($cropscares as $key => $cropscare) {
 				$cropscare['type'] = "cropscare";
 				array_push($fieldworks, $cropscare);
-			}
+				$field["fieldPrice"] += $cropscare["price"];
+ 			}
 		}
+		$field["fieldPrice"] = round($field["fieldPrice"], 2);
 
 		//Masyvo rusiavimas, cia nusirodo kaip ji rusiuoti pagal data, kadangi tai yra masyvas is masyvu
 		function invenDescSort($item1,$item2)
@@ -83,15 +86,19 @@
 			<td class="tableRight"><?php if (@$field['harvesting'] != "0000-00-00") {echo @$field['harvesting'];} ?></td>
 		</tr>
 		<tr>
-		    <td class="tableLeft second">Lauko kom.</td>
-			<td class="tableRight second"><?php echo @$field['comment']; ?></td>
+		    <td class="tableLeft second">Savikaina</td>
+			<td class="tableRight second"><?php echo @$field['fieldPrice']." Lt/ha,  Viso: ".round($field["fieldPrice"]*$field["area"], 2). " Lt"; ?></td>
+		</tr>
+		<tr>
+		    <td class="tableLeft">Lauko kom.</td>
+			<td class="tableRight"><?php echo @$field['comment']; ?></td>
 		</tr>
 		<?php 
 			if (@$field['culture']) {
 		?>
 				<tr>
-				    <td class="tableLeft">Sezono kom.</td>
-					<td class="tableRight"><?php echo @$field['season_comment']; ?></td>
+				    <td class="tableLeft second">Sezono kom.</td>
+					<td class="tableRight second"><?php echo @$field['season_comment']; ?></td>
 				</tr>
 		<?php } ?>
 		<tr>
