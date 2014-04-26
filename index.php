@@ -44,16 +44,9 @@
       <li data-menu='pages/cropscares/index.php'><a href="">Priežiūra</a></li>       
       <li data-menu='pages/fieldworks/index.php'><a href="">Dirbimai</a></li>        
       <!-- <li data-menu='pages/seedings/index.php'><a href="">Sėja</a></li>   -->
-      <li data-menu='pages/seeds/index.php'><a href="">Sėklos</a></li>   
+      <li data-menu='pages/seeds/index.php'><a href="">Sėklos</a>
       <li data-menu='pages/chemicals/index.php'><a href="">Chemija</a></li>  
-      <li data-menu='pages/settings.php'>
-          <a href=""><img src="img/settings.png"></a>
-          <ul>
-            <li><a href="#">item1</a></li>
-            <li><a href="#">item2</a></li>
-            <li><a href="#">item3</a></li>
-          </ul>
-      </li>
+      <li data-menu='pages/settings.php'><a href=""><img src="img/settings.png"></a></li>
     </ul>   
     
     <div id='content'>
