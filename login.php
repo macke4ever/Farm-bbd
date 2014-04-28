@@ -9,7 +9,9 @@
 		// $q = "SELECT * FROM users WHERE username='".$_POST["username"]."' and password = '".md5($_POST["password"])."'";
 		// var_dump($q);
 		$uname = str_replace(",\"", "''\"\"", $_POST["username"]);
-		$result = mysql_query("SELECT * FROM users WHERE username='".$uname."' and password = '".md5($_POST["password"])."'");
+		$password = str_replace(",\"", "''\"\"", $_POST["password"]);
+		mysql_query("SET CHARACTER SET utf8");
+		$result = mysql_query("SELECT * FROM users WHERE username='".$uname."' and password = '".md5($password)."'");
 		$row  = mysql_fetch_array($result);
 		if(is_array($row)) {
 			$_SESSION["user_id"] = $row['id'];
@@ -17,6 +19,8 @@
 			$_SESSION["user_rights"] = $row['rights'];
 			$_SESSION["user_farm"] = $row['farm_id'];
 			$_SESSION["user_season"] = $row['lastSeason'];
+			$_SESSION["firstname"] = $row['firstname'];
+			$_SESSION["lastname"] = $row['lastname'];
 			$_SESSION["active"] = true;
 		} else {
 			$message="Neteisingas prisijungimo vardas arba slaptažodis \n";

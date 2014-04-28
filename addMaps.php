@@ -64,16 +64,17 @@ function resetMaps(){
 
 //info apie lauka, cia tveriami visi case pagal paspausta taba
 function showFieldInfo(event) {
-  //if (document.getElementById('fields') != null) {
-          var page = "pages/fields/views/showField.php?id=";
-          page += this.id;
-          $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
-          $.get(page, function(data){
-            $('#content').html(data);
-          });  
-          resetMaps();        
-          paryskinti(this);
+  //if (document.getElementById('fieldwork-show') != null) {
   //} 
+
+    var page = "pages/fields/views/showField.php?id=";
+    page += this.id;
+    $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
+    $.get(page, function(data){
+      $('#content').html(data);
+    });  
+    resetMaps();        
+    paryskinti(this);
 }
 
 

@@ -39,14 +39,20 @@
 <body>
   <div id="map"></div>
   <div id="settings" class="cf">
-    <ul class='menu cf cssMenu'>
+    <ul class='menu cf'>
       <li data-menu='pages/fields/index.php'><a href="">Laukai</a></li>     
       <li data-menu='pages/cropscares/index.php'><a href="">Priežiūra</a></li>       
       <li data-menu='pages/fieldworks/index.php'><a href="">Dirbimai</a></li>        
       <!-- <li data-menu='pages/seedings/index.php'><a href="">Sėja</a></li>   -->
       <li data-menu='pages/seeds/index.php'><a href="">Sėklos</a>
       <li data-menu='pages/chemicals/index.php'><a href="">Chemija</a></li>  
-      <li data-menu='pages/settings.php'><a href=""><img src="img/settings.png"></a></li>
+      <li data-menu='skip'><a href=""><img src="img/settings.png"></a>
+        <ul>
+            <li data-menu='pages/users/user.php'><a href=""><b><?php echo $_SESSION["firstname"]." ".$_SESSION["lastname"]; ?></b></a></li>
+            <!-- <li data-menu='guide'><a href="">Vartotojo gidas</a></li> -->
+            <li data-menu='logout'><a href="logout.php">Atsijungti</a></li>
+        </ul>
+      </li>
     </ul>   
     
     <div id='content'>
@@ -82,17 +88,31 @@
 
   //nustatomas puslapio vaizdas - i kairi stulpeli ikalamas paspausto tabo sugeneruotas kodas.
   $('.menu li').click(function(){
-    testSession();
-    
-    var file = $(this).data('menu');
-    
-    $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
-    
-    $.get(file, function(data){
-        $('#content').html(data);
-      });
-    resetMaps();
-    return false;
+      testSession();
+
+  //logout
+      if ($(this).data('menu') == "logout"){
+        window.location.href = "logout.php";
+        return false;
+      }
+
+      if ($(this).data('menu') == "guide"){
+        var win=window.open("Guide.pdf", '_blank');
+        win.focus();
+        return false;
+      }
+
+      if ($(this).data('menu') !== "skip"){
+      var file = $(this).data('menu');
+        
+        $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
+        
+        $.get(file, function(data){
+            $('#content').html(data);
+          });
+        resetMaps();
+      }
+      return false;
   });
 </script>
 
