@@ -49,7 +49,7 @@
       <li data-menu='skip'><a href=""><img src="img/settings.png"></a>
         <ul>
             <li data-menu='pages/users/user.php'><a href=""><b><?php echo $_SESSION["firstname"]." ".$_SESSION["lastname"]; ?></b></a></li>
-            <!-- <li data-menu='guide'><a href="">Vartotojo gidas</a></li> -->
+            <li data-menu='guide'><a href="">Vartotojo gidas</a></li>
             <li data-menu='logout'><a href="logout.php">Atsijungti</a></li>
         </ul>
       </li>
@@ -97,7 +97,7 @@
       }
 
       if ($(this).data('menu') == "guide"){
-        var win=window.open("Guide.pdf", '_blank');
+        var win=window.open("UserGuide_ZUVS.pdf", '_blank');
         win.focus();
         return false;
       }
