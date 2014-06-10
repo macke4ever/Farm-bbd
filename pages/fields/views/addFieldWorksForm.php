@@ -1,8 +1,8 @@
 <?php 
 	
-    $fieldworksList = $db->query("SELECT * FROM fieldworks ORDER BY name ASC");
+    $fieldworksList = $db->query("SELECT * FROM fieldworks where season_id = '".$_SESSION["user_season"]."' and farm_id = '".$_SESSION["user_farm"]."' ORDER BY name ASC");
 
-    $cropscaresList = $db->query("SELECT * FROM caresets ORDER BY name ASC");
+    $cropscaresList = $db->query("SELECT * FROM caresets where season_id = '".$_SESSION["user_season"]."' and farm_id = '".$_SESSION["user_farm"]."' ORDER BY name ASC");
 
 ?>
 <h2>Darbų pridėjimas</h2>

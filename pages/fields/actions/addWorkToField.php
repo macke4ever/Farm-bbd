@@ -17,7 +17,7 @@
 			$db->query("INSERT INTO `cropscares`(`careset_id`, `field_id`, `done`, `date`)  VALUES ('".@$_POST['id']."', '".@$_POST['field_id']."', '1', '".$date."')");
 			
 
-			//rmodify resources when adding a work to the field
+			//modify resources when adding a work to the field
 			$fields = $db->query("SELECT area from fields where id = '".@$_POST['field_id']."'"); 		
 			if(!empty($fields)){			
 				$chemicals = $db->query("SELECT quantity, chemical_id from caresetcontents where farm_id = '".$_SESSION["user_farm"]."' and season_id = '".$_SESSION["user_season"]."' and careset_id = '".@$_POST['id']."'"); 		

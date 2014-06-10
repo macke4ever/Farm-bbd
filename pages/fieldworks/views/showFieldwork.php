@@ -13,7 +13,7 @@
 			 	
 ?>  
 
-<div id="fieldwork">	
+<div id="fieldwork-view">	
 	<h1>Dirbimo informacija</h1>
 	<table>
 		<tr>
@@ -26,7 +26,7 @@
 		</tr>
 		<tr>
 		    <td class="tableLeft">Plotas</td>
-			<td class="tableRight"><?php echo $area; ?> ha</td>
+			<td class="tableRight" id="area"><?php echo $area; ?> ha</td>
 		</tr>
 		<tr>
 		    <td class="tableLeft"><button type="button" class="buttonChange" data-fieldwork=<?php echo '"'. @$_GET['id']. '"'; ?>>Redaguoti</button></td>
@@ -35,38 +35,53 @@
 	</table>
 </div>
 
-<?php 
-	echo "<h2>Išdirbti laukai</h2>";	
-	echo "<table class='fieldsList'>";	
-	foreach ($fieldworkAreas as $key => $field) {
-		$coord = "";
-		if ($field["coordinates"] == ""){
-			$coord = "color: red;";
-		}
-		if ($color == 1) {
-			$color = 2;
-			echo '<tr>';
-			echo '    <td class="tableSingle show" data-field="'.$field["id"].'"><a href="" class="aStyle" style="'.$coord.'">'.$field['name'].'</a></td>';
-			echo '	  <td class="tableSingle" style="text-align: right; width: 20px;"><a href="">';
-			echo '<td>';
-			echo '</tr>';
-		} else {
-			$color = 1;
-			echo '<tr>';
-			echo '    <td class="tableSingle second show" data-field="'.$field["id"].'"><a href="" class="aStyle" style="'.$coord.'">'.$field['name'].'</a></td>';
-			echo '	  <td class="tableSingle second" style="text-align: right; width: 20px;"><a href="">';
-			echo '<td>';
-			echo '</tr>';
-		}				
-	}
+<div>
+	<h2>Laukų pridėjimas</h2>
+	<table>
+		<tr>
+		    <td class="tableLeft" title="Leisti pridėti laukus prie darbo">Įgalinti</td>
+			<td class="tableRight"><input type="checkbox" name="enableAdd" id="enableAdd"></td>
+		</tr>
+		<tr>
+		    <td class="tableLeft second" title="Darbo atlikimo data">Data</td>
+			<td class="tableRight second"><input type="date" name="date" id="date" placeholder="yyyy-mm-dd"></td>
+			<input type="hidden" name="fieldworkID" value=<?php echo '"'.@$_GET['id'].'"'; ?> id="fieldworkID">
+		</tr>
+	</table>
+</div>
 
-	echo "<tr><td class='tableSingle second' style='padding-top: 20px; font-weight: bold;'>Bendras išdirbtas plotas: ".$area." ha</td><td class='tableSingle second'></td></tr>";
-	echo "<tr><td class='tableSingle second' style='padding-top: 5px; font-weight: bold;'>Sunaudota kuro: ".$area*$fieldwork[0]['consumption']." l</td><td class='tableSingle second'></td></tr>";
-	echo "</table>";
-
- ?>
+<div id="fieldsReturn">
+	<!-- <?php include "doneFields.php"; ?> -->
+</div>
 
 <script type="text/javascript">
+	
+	function updateFieldsReturn(){
+		$.get('pages/fieldworks/views/doneFields.php'+<?php echo "'?id=".@$_GET['id']."&consumption=".@$fieldwork[0]['consumption']."'"; ?>, function(data){
+	        // console.log(data);
+	        data = JSON.parse(data);
+	        $('#area').html(data.area);
+	        $('#fieldsReturn').html(data.fieldsReturn);
+	        $('.show').bind("click", showField);
+      	});
+	    return false;
+	};
+
+	updateFieldsReturn();
+
+    function showField() {
+    	// alert("aa");
+	    var file = "pages/fields/views/showField.php?back=showfieldwork&bid="+<?php echo @$_GET['id']; ?>+"&id=";
+		file += $(this).data('field');
+	    $.get(file, function(data){
+	        $('#content').html(data);
+	      });
+	    resetMaps();
+	    paryskinti2($(this).data('field'));
+	    keistiCentra($(this).data('field'));
+	    return false;
+	};
+
 	$('.buttonChange').click(function(){
 	    var file = "pages/fieldworks/views/editFieldwork.php?id="
 		file += $(this).data('fieldwork');
@@ -79,22 +94,8 @@
 	    return false;
 	});
 
-	// $('#cancel').click(function(){
- //     	resetMaps();
- //        var file = "pages/fieldworks/index.php";
-		
-	// 	$('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
-        
- //        $.get(file, function(data){
- //            $('#content').html(data);
- //          });
- //        return false;
- //    });
-
 
     $('#cancel').click(function(){
-     // console.log('aa');
-
      //prideta visokios logikos kad butu galima gristi i ankstesni puslapi pagal tai is kur buvo ateita
      //kadangi jau galima perziureti lauka ne tik is lauku saraso bet ir is apsetu lauku tam tikra veisle saraso
         resetMaps();
@@ -112,19 +113,7 @@
 	        	echo '$.get(file, function(data){$(\'#content\').html(data);});';
 	     	}
 	    ?>
-        
-
         return false;
     });
 
-    $('.show').click(function(){
-	    var file = "pages/fields/views/showField.php?back=showfieldwork&bid="+<?php echo @$_GET['id']; ?>+"&id="
-		file += $(this).data('field');
-	    $.get(file, function(data){
-	        $('#content').html(data);
-	      });
-	    resetMaps();
-	    paryskinti2($(this).data('field'));
-	    return false;
-	});
 </script>

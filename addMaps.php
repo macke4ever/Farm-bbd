@@ -62,8 +62,29 @@ function resetMaps(){
         });
 }
 
-//info apie lauka, cia tveriami visi case pagal paspausta taba
+//info apie lauka arba veiksmai su lauku, cia tveriami visi case pagal paspausta taba
 function showFieldInfo(event) {
+
+  if (document.getElementById('fieldwork-view') != null) {
+    console.log(this.id);
+
+    enableAdd = $('#enableAdd').prop('checked');
+    date = $('#date').val();
+    fieldworkID = $('#fieldworkID').val();
+
+    if (enableAdd) {
+      var posting = $.post( 'pages/fields/actions/addWorkToField.php', { date: date, field_id: this.id, id: fieldworkID, workType: 'fieldWork' } );
+       posting.done(function( data ) {
+        updateFieldsReturn();
+        var file2 = "markWorkFields.php?workType=fieldwork&workID="+fieldworkID;
+        $.get(file2, function(data){ $('#content2').html(data); });
+      });
+    }
+
+    console.log(date, fieldworkID, enableAdd);
+    return 0;
+  }
+
   //if (document.getElementById('fieldwork-show') != null) {
   //} 
 
@@ -76,5 +97,3 @@ function showFieldInfo(event) {
     resetMaps();        
     paryskinti(this);
 }
-
-

@@ -43,7 +43,6 @@
       <li data-menu='pages/fields/index.php'><a href="">Laukai</a></li>     
       <li data-menu='pages/cropscares/index.php'><a href="">Priežiūra</a></li>       
       <li data-menu='pages/fieldworks/index.php'><a href="">Dirbimai</a></li>        
-      <!-- <li data-menu='pages/seedings/index.php'><a href="">Sėja</a></li>   -->
       <li data-menu='pages/seeds/index.php'><a href="">Sėklos</a>
       <li data-menu='pages/chemicals/index.php'><a href="">Chemija</a></li>  
       <li data-menu='skip'><a href=""><img src="img/settings.png"></a>
@@ -80,6 +79,8 @@
    });
   }
 
+
+  testSession();
 //Menu conroller
 
   
@@ -90,23 +91,24 @@
   $('.menu li').click(function(){
       testSession();
 
-  //logout
+      // logout
       if ($(this).data('menu') == "logout"){
         window.location.href = "logout.php";
         return false;
       }
 
+      // user guide
       if ($(this).data('menu') == "guide"){
         var win=window.open("UserGuide_ZUVS.pdf", '_blank');
         win.focus();
         return false;
       }
 
+      // other menu buttons
+      // skip is used to disable link clickability
       if ($(this).data('menu') !== "skip"){
       var file = $(this).data('menu');
-        
         $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
-        
         $.get(file, function(data){
             $('#content').html(data);
           });
@@ -140,7 +142,6 @@
 
 
 <script type="text/javascript">
-
   //puslapio vaizdo sutvarkymas ir resizinimas pagal lango dydi.
 
   function mapSize(){

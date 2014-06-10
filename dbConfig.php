@@ -3,10 +3,10 @@
 	include_once "db.class.php";
 	session_start();
 	//Database server configuration
-	$server = "pjauk.lt";
-	$login = "farm";
-	$pass= "belarus";
-	$database = "farm";
+	$server = "localhost";
+	$login = "root";
+	$pass= "root";
+	$database = "lrubik_agro";
 	$dbPrefix = "";
 
 	//Create new DB connection

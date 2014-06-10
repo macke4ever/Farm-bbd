@@ -2,7 +2,7 @@
 	//this needs to be edited. When deleting an element not only this record shoulkd be removed but all other tables records that are connected to this one.
 	session_start();
 	include "../../../dbConfig.php";
-	if (@$_POST["type"] == "fieldowrk") {		
+	if (@$_POST["type"] == "fieldwork") {		
 		$db->query("DELETE FROM fieldworks_fields WHERE id='".@$_POST['id']."'");
 	}
 

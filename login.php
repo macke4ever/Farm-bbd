@@ -4,8 +4,8 @@
 	$message="";
 
 	if(count($_POST)>0) {
-		$conn = mysql_connect("pjauk.lt","farm","belarus");
-		mysql_select_db("farm",$conn);
+		$conn = mysql_connect("localhost","root","root");
+		mysql_select_db("lrubik_agro",$conn);
 		// $q = "SELECT * FROM users WHERE username='".$_POST["username"]."' and password = '".md5($_POST["password"])."'";
 		// var_dump($q);
 		$uname = str_replace(",\"", "''\"\"", $_POST["username"]);

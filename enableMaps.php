@@ -65,7 +65,7 @@ function showArrays(event) {
   infoWindow.open(map);
  
 }
-
+// pasenes ir nenaudojamas kodas
 //funkcija kuri pazymi lauka, ji paryskina.
 function setSelected(){
   var yra = $.inArray(this.id, pazymeti);

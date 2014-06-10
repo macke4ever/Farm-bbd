@@ -4,6 +4,62 @@
 		"selected_items":
 		[
 			[
+				"str_re",
+				"str_replace"
+			],
+			[
+				"vard",
+				"var_dump"
+			],
+			[
+				"for",
+				"for	for …"
+			],
+			[
+				"rdp",
+				"rdpResult"
+			],
+			[
+				"field",
+				"fieldworkAreas"
+			],
+			[
+				"culture",
+				"cultureArea"
+			],
+			[
+				"seer",
+				"seedArea"
+			],
+			[
+				"see",
+				"seedAreas"
+			],
+			[
+				"crops",
+				"cropscare"
+			],
+			[
+				"work",
+				"workID"
+			],
+			[
+				"sess",
+				"session_start"
+			],
+			[
+				"strre",
+				"str_replace"
+			],
+			[
+				"respons",
+				"responseStatus"
+			],
+			[
+				"res",
+				"responseText"
+			],
+			[
 				"border",
 				"border-color"
 			],
@@ -18,10 +74,6 @@
 			[
 				"s",
 				"switch	switch …"
-			],
-			[
-				"for",
-				"foreach	foreach …"
 			],
 			[
 				"table",
@@ -72,19 +124,60 @@
 	"buffers":
 	[
 		{
-			"file": "pages/cropscares/views/showCropscare.php",
+			"file": "index.php",
 			"settings":
 			{
-				"buffer_size": 2627,
+				"buffer_size": 4791,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/Users/kestutiscesnavicius/Library/Containers/com.apple.mail/Data/Library/Mail Downloads/89310378-2B2F-4689-A55F-E4F3D9618987/moodle.if.ktu.lt.cfg",
+			"file": "login.php",
 			"settings":
 			{
-				"buffer_size": 340,
+				"buffer_size": 1207,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "pages/users/user.php",
+			"settings":
+			{
+				"buffer_size": 3882,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "pages/users/actions/changeUserPass.php",
+			"settings":
+			{
+				"buffer_size": 475,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "pages/users/actions/changeUserInfo.php",
+			"settings":
+			{
+				"buffer_size": 255,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "style.css",
+			"settings":
+			{
+				"buffer_size": 3272,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Jums sukurtas vartotojas \nvartotojoas: \nslaptažodis: \n\nPrisijungti galite adresu http://ukis.pjauk.lt\n\nPirmi 10 žmonių gaus priėjimą prie sistemos bus galima ja naudotis be jokių mokesčių ar pan. Mainais man reikalinga nuomonė apie sistemą, kas patinka kas nepatinka, kokių funkcijų trūksta.\n\nVisa sistema atrodo tuščia ir be funkcijų, kol nėra pridėta jokių elementų (Laukų, darbų priemonių ir t.t.). Užpildžius skiltis atsiskleidžia sistemos grožis.\n\nKas susideda sistemoje?\nYra 5 pagrindiniai elementai:\nLaukai\nPasėlių priežiūros darbai\nŽemės dirbimai\nChemija\nSėklos\nPaskutiniai du punktai - kaip resursų registras ar sandėlis. Fiksuojami turimų priemonių kiekiai.\nAntras ir trečias punktai - Ūkyje atliekamų darbų sukūrimas. Kad neapkrauti vartotojo bereikalingais tekstais ar pasirinkimais, vartotojas turi galimybę kiekvieną sezoną susikurti konkrečius darbus kurie yra naudojami. Čia fiksuojamos kuro sąnaudos. Jei kalbama apie pasėlių priežiūros darbus taip pat fiksuojamos ir naudojamos priemonės.\nPirmasis punktas  - laukai. Ko gero svarbiausias sistemoje. Čia registruojama viskas kas susiję su konkrečiu lauku (žinoma pirma juos reikia įvesti). Galima nustatyti kas kurį sezoną buvo sėta ar sodinta, sėklos norma. Pridėti lauke atliktus darbus pagal datas ir t.t.\n\nŽemėlapis sistemoje ne šiaip sau. Jame rodomi laukai, jei pasirinktas koks nors darbas - rodoma kuriuose laukuose jis yra atliktas (paryškinami laukai), Skirtingos spalvos reiškia ir skirtingas kultūras.\nKiekvienas laukelis sistemoje kuriame galima įvesti datą veikai dviem režimais - įvedus datą fiksuojama tai kas yra įrašyta laukelyje, nenurodžius datos - fiksuojama šiandienos data.\n\nKuriant naujus elementus bet kuriame punkte iš karto matomos ne visos jo savybės. Pvz pridedant naują pasėlių priežiūros darbą (tarkim Kaso laistymas), bus galima įvesti tik pavadinimą ir kuro sąnaudas 1 ha. Kad pridėti prie darbo kokios priemonės yra naudojamos jam atlikti, reikia sukūrus naują elementą (Paspaudus saugoti), pasirinkti šį elementą iš sąrašo ir spausti Redaguoti. Na čia tokia specifika. \n\n\nJei trumpai apie funkcijas būtų tiek. \nNa  tiesa dar rodomi plotai (lauko plotas skaičiuojamas automatiškai įkėlus koordinates, tinka tik .gpx failai) laukų, kokiame plote iš viso atliktas darbas, lauko savikaina, priemonių sunaudojimai ir pan.\n",
+			"settings":
+			{
+				"buffer_size": 2319,
+				"line_ending": "Unix",
+				"name": "Jums sukurtas vartotojas"
 			}
 		}
 	],
@@ -116,20 +209,83 @@
 	},
 	"file_history":
 	[
-		"/Applications/MAMP/htdocs/farm/pages/fields/views/showField.php",
-		"/Applications/MAMP/htdocs/farm/pages/fields/views/editField.php",
-		"/Applications/MAMP/htdocs/farm/pages/fields/actions/changeField.php",
-		"/Applications/MAMP/htdocs/farm/pages/fields/actions/deleteWorkFromField.php",
-		"/Applications/MAMP/htdocs/farm/pages/fieldworks/views/editFieldwork.php",
+		"/Applications/MAMP/htdocs/farm/pages/users/actions/changeUserInfo.php",
+		"/Applications/MAMP/htdocs/farm/pages/user.php",
+		"/Applications/MAMP/htdocs/farm/login.php",
+		"/Applications/MAMP/htdocs/farm/pages/fields/views/addFieldWorksForm.php",
+		"/Applications/MAMP/htdocs/farm/addMaps.php",
 		"/Applications/MAMP/htdocs/farm/pages/fieldworks/views/showFieldwork.php",
-		"/Applications/MAMP/htdocs/farm/pages/cropscares/views/editCropscare.php",
+		"/Applications/MAMP/htdocs/farm/styleLogin.css",
+		"/Applications/MAMP/htdocs/farm/index.php",
+		"/Applications/MAMP/htdocs/farm/pages/fields/index.php",
+		"/Applications/MAMP/htdocs/farm/enableMaps.php",
+		"/Applications/MAMP/htdocs/farm/pages/fields/views/showField.php",
+		"/Applications/MAMP/htdocs/farm/session.php",
+		"/Applications/MAMP/htdocs/farm/pages/cropscares/actions/addChemicalToCropscare.php",
 		"/Applications/MAMP/htdocs/farm/pages/cropscares/actions/changeCropscare.php",
 		"/Applications/MAMP/htdocs/farm/pages/cropscares/views/showCropscare.php",
-		"/Applications/MAMP/htdocs/farm/pages/cropscares/views/addCropscare.php",
-		"/Applications/MAMP/htdocs/farm/pages/cropscares/actions/deleteCropscare.php",
-		"/Applications/MAMP/htdocs/farm/pages/cropscares/actions/addCropscareSQL.php",
-		"/Applications/MAMP/htdocs/farm/pages/cropscares/index.php",
+		"/Applications/MAMP/htdocs/farm/pages/chemicals/actions/changeChemical.php",
+		"/Applications/MAMP/htdocs/farm/pages/chemicals/actions/addChemicalSQL.php",
+		"/Applications/MAMP/htdocs/farm/pages/chemicals/views/addChemical.php",
+		"/Applications/MAMP/htdocs/farm/pages/chemicals/views/editChemical.php",
+		"/Applications/MAMP/htdocs/farm/pages/chemicals/views/showChemical.php",
+		"/Applications/MAMP/htdocs/farm/upload/setArea.php",
+		"/Applications/MAMP/htdocs/farm/upload/step1.php",
+		"/Applications/MAMP/htdocs/farm/pages/fields/views/coordinates.php",
+		"/Applications/MAMP/htdocs/farm/pages/fields/views/editField.php",
+		"/Applications/MAMP/htdocs/farm/pages/fields/actions/deleteWorkFromField.php",
+		"/Applications/MAMP/htdocs/farm/pages/fields/actions/changeField.php",
+		"/Applications/MAMP/htdocs/farm/pages/chemicals/actions/deleteChemical.php",
+		"/Applications/MAMP/htdocs/farm/pages/seeds/index.php",
 		"/Applications/MAMP/htdocs/farm/pages/fieldworks/index.php",
+		"/Applications/MAMP/htdocs/farm/pages/cropscares/index.php",
+		"/Applications/MAMP/htdocs/farm/pages/chemicals/index.php",
+		"/Applications/MAMP/htdocs/farm/pages/seeds/views/showSeed.php",
+		"/Applications/MAMP/htdocs/farm/pages/seeds/views/editSeed.php",
+		"/Applications/MAMP/htdocs/farm/pages/seeds/views/addSeed.php",
+		"/Applications/MAMP/htdocs/farm/pages/fieldworks/views/editFieldwork.php",
+		"/Applications/MAMP/htdocs/farm/pages/fieldworks/views/addFieldwork.php",
+		"/Applications/MAMP/htdocs/farm/pages/cropscares/views/editCropscare.php",
+		"/Applications/MAMP/htdocs/farm/pages/cropscares/views/addCropscare.php",
+		"/Applications/MAMP/htdocs/farm/pages/cropscares/views/addChemicalForm.php",
+		"/Applications/MAMP/htdocs/farm/style.css",
+		"/Applications/MAMP/htdocs/farm/pages/fields/views/addField.php",
+		"/Applications/MAMP/htdocs/farm/markWorkFields.php",
+		"/Applications/MAMP/htdocs/farm/pages/seedings/views/addSeeding.php",
+		"/Applications/MAMP/htdocs/farm/pages/seedings/index.php",
+		"/Applications/MAMP/htdocs/farm/pages/cropscares/actions/addCropscareSQL.php",
+		"/Applications/MAMP/htdocs/farm/scripts.php",
+		"/Applications/MAMP/htdocs/farm/upload/deleteCoord.php",
+		"/Applications/MAMP/htdocs/farm/pages/fields/views/uploadCoordinates.php",
+		"/Applications/MAMP/htdocs/farm/pages/fields/actions/addWorkToField.php",
+		"/Applications/MAMP/htdocs/farm/dbConfig.php",
+		"/Applications/MAMP/htdocs/farm/[unused] nesudeti/5.gpx",
+		"/Applications/MAMP/htdocs/farm/[unused] nesudeti/Arvydo.gpx",
+		"/Applications/MAMP/htdocs/farm/test.php",
+		"/Applications/MAMP/htdocs/farm/loginForm.php",
+		"/Applications/MAMP/htdocs/farm/pages/settings.php",
+		"/Applications/MAMP/htdocs/farm/pages/cropscares/actions/deleteCropscare.php",
+		"/Applications/MAMP/htdocs/farm/pages/fieldworks/actions/addFieldworkSQL.php",
+		"/Applications/MAMP/htdocs/farm/pages/fieldworks/actions/changeFieldwork.php",
+		"/Applications/MAMP/htdocs/farm/pages/fieldworks/actions/deleteFieldwork.php",
+		"/Applications/MAMP/htdocs/farm/pages/seedings/actions/addFieldworkSQL.php",
+		"/Applications/MAMP/htdocs/farm/pages/seedings/actions/changeFieldwork.php",
+		"/Applications/MAMP/htdocs/farm/pages/seedings/actions/deleteFieldwork.php",
+		"/Applications/MAMP/htdocs/farm/pages/seedings/views/editFieldwork.php",
+		"/Applications/MAMP/htdocs/farm/pages/seedings/views/showFieldwork.php",
+		"/Applications/MAMP/htdocs/farm/pages/seeds/actions/addSeedSQL.php",
+		"/Applications/MAMP/htdocs/farm/pages/seeds/actions/changeSeed.php",
+		"/Applications/MAMP/htdocs/farm/pages/seeds/actions/deleteSeed.php",
+		"/Applications/MAMP/htdocs/farm/pages/fields/actions/addFieldSQL.php",
+		"/Applications/MAMP/htdocs/farm/pages/fields/actions/deleteField.php",
+		"/Applications/MAMP/htdocs/farm/logout.php",
+		"/Applications/MAMP/htdocs/farm/pages/fields/views/step1.php",
+		"/Applications/MAMP/htdocs/farm/upload/logout.php",
+		"/Applications/MAMP/htdocs/farm/pages/cropscares/actions/deleteChemicalFromCropscare.php",
+		"/Applications/MAMP/htdocs/farm/index_old.php",
+		"/Applications/MAMP/htdocs/farm/libs/jquery.min.js",
+		"/Applications/MAMP/htdocs/farm/libs/jquery.form.js",
+		"/Users/kestutiscesnavicius/Library/Containers/com.apple.mail/Data/Library/Mail Downloads/89310378-2B2F-4689-A55F-E4F3D9618987/moodle.if.ktu.lt.cfg",
 		"/Users/kestutiscesnavicius/Desktop/tmp/login.php",
 		"/Users/kestutiscesnavicius/Desktop/tmp/styles.css",
 		"/Users/kestutiscesnavicius/Desktop/tmp/logout.php",
@@ -180,28 +336,7 @@
 		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/main.detached.php",
 		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/css/d-development.css",
 		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/js/chosen/chosen.jquery.js",
-		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/plugins/containers/index.php",
-		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/plugins/clients/clients-fields.php",
-		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/plugins/receivers/receivers-fields.php",
-		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/plugins/receivers/index.php",
-		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/plugins/transporters/transporters-fields.php",
-		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/plugins/transporters/index.php",
-		"/Applications/MAMP/htdocs/terminalai/application/modules/wkm/ajax/getAPMTable.php",
-		"/Applications/MAMP/htdocs/terminalai/application/modules/wkm/ajax/getFile.php",
-		"/Applications/MAMP/htdocs/terminalai/application/modules/wkm/js/wkm-development.js",
-		"/Applications/MAMP/htdocs/terminalai/config/database.php",
-		"/Applications/MAMP/htdocs/terminalai/application/modules/wkm/main.detached.php",
-		"/Applications/MAMP/htdocs/terminalai/system/libs/Exceptions.php",
-		"/Applications/MAMP/htdocs/biudzetu_demo/config/database.php",
-		"/Users/kestutiscesnavicius/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/wkmcore/application/modules/wkm/index.php",
-		"/Users/kestutiscesnavicius/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/wkmcore/application/modules/wkm/inc/events-fields.php",
-		"/Users/kestutiscesnavicius/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/wkmcore/application/modules/wkm/inc/fieldrenderer.php",
-		"/Users/kestutiscesnavicius/wkmcore/application/modules/wkm/inc/fieldrenderer.php",
-		"/Users/kestutiscesnavicius/wkmcore/application/modules/wkm/index.php",
-		"/Users/kestutiscesnavicius/wkmcore/system/libs/Response.php",
-		"/Users/kestutiscesnavicius/wkmcore/application/modules/users/views/users.index.view.php",
-		"/Users/kestutiscesnavicius/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/farm/connection/login.php",
-		"/Volumes/DEBIAN/maps/lrubik_agro.sql"
+		"/Applications/MAMP/htdocs/terminalai/www/application/modules/wkm/plugins/containers/index.php"
 	],
 	"find":
 	{
@@ -212,6 +347,9 @@
 		"height": 0.0,
 		"where_history":
 		[
+			"/Applications/MAMP/htdocs/farm/pages",
+			"",
+			"'\".$_SESSION[\"user_season\"].\"'",
 			""
 		]
 	},
@@ -220,6 +358,22 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"\"];\n",
+			"cropscareAreas",
+			"fieldworkAreas",
+			"cultureArea",
+			"$('#content').html(\"<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>\");",
+			"laukai",
+			"\"].'\"><",
+			"v",
+			"'4'",
+			"'5'",
+			"field_id",
+			"careset_id",
+			"fieldworkList",
+			"fieldwork_id",
+			"fieldworks",
+			"();\n",
 			"var file = \"pages/cropscares/views/showCropscare.php?id=\"\n		file += $(this).data('cropscare');\n		 console.log(file);\n	    $.get(file, function(data){\n	        $('#content').html(data);\n	      });\n	    return false;",
 			"basketball",
 			"'font/",
@@ -311,6 +465,14 @@
 		"regex": false,
 		"replace_history":
 		[
+			"caresetAreas",
+			"cropscareAreas",
+			"cropscareArea",
+			"\".$_SESSION[\"user_farm\"].\"",
+			"'\".$_SESSION[\"user_season\"].\"'",
+			"chemicalList",
+			"chemical_id",
+			"chemicals",
 			"'../../font/",
 			"ContainersLists",
 			"plugins/orders/getOrderContainers",
@@ -341,28 +503,56 @@
 		"show_context": true,
 		"use_buffer2": true,
 		"whole_word": false,
-		"wrap": true
+		"wrap": false
 	},
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "pages/cropscares/views/showCropscare.php",
+					"file": "index.php",
 					"settings":
 					{
-						"buffer_size": 2627,
+						"buffer_size": 4791,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1681,
-								1512
+								3178,
+								3178
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1174.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "login.php",
+					"settings":
+					{
+						"buffer_size": 1207,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								770,
+								779
 							]
 						],
 						"settings":
@@ -370,30 +560,143 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 1.0,
-						"translation.y": 9.0,
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "/Users/kestutiscesnavicius/Library/Containers/com.apple.mail/Data/Library/Mail Downloads/89310378-2B2F-4689-A55F-E4F3D9618987/moodle.if.ktu.lt.cfg",
+					"buffer": 2,
+					"file": "pages/users/user.php",
 					"settings":
 					{
-						"buffer_size": 340,
+						"buffer_size": 3882,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								291,
-								291
+								2061,
+								2061
 							]
 						],
 						"settings":
 						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 446.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "pages/users/actions/changeUserPass.php",
+					"settings":
+					{
+						"buffer_size": 475,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								59,
+								59
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "pages/users/actions/changeUserInfo.php",
+					"settings":
+					{
+						"buffer_size": 255,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								115,
+								248
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 5,
+					"file": "style.css",
+					"settings":
+					{
+						"buffer_size": 3272,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								526,
+								526
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 483.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"settings":
+					{
+						"buffer_size": 2319,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								2319
+							]
+						],
+						"settings":
+						{
+							"auto_name": "Jums sukurtas vartotojas",
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -422,11 +725,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.739305174654,
 			1.0
 		],
 		"rows":
