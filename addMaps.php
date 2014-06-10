@@ -66,8 +66,6 @@ function resetMaps(){
 function showFieldInfo(event) {
 
   if (document.getElementById('fieldwork-view') != null) {
-    console.log(this.id);
-
     enableAdd = $('#enableAdd').prop('checked');
     date = $('#date').val();
     fieldworkID = $('#fieldworkID').val();
@@ -80,13 +78,24 @@ function showFieldInfo(event) {
         $.get(file2, function(data){ $('#content2').html(data); });
       });
     }
-
-    console.log(date, fieldworkID, enableAdd);
     return 0;
   }
 
-  //if (document.getElementById('fieldwork-show') != null) {
-  //} 
+  if (document.getElementById('cropscare-view') != null) {
+    enableAdd = $('#enableAdd').prop('checked');
+    date = $('#date').val();
+    cropscareID = $('#cropscareID').val();
+
+    if (enableAdd) {
+      var posting = $.post( 'pages/fields/actions/addWorkToField.php', { date: date, field_id: this.id, id: cropscareID, workType: 'cropscare' } );
+       posting.done(function( data ) {
+        updateFieldsReturn();
+        var file2 = "markWorkFields.php?workType=cropscare&workID="+cropscareID;
+        $.get(file2, function(data){ $('#content2').html(data); });
+      });
+    }
+    return 0;
+  }
 
     var page = "pages/fields/views/showField.php?id=";
     page += this.id;
