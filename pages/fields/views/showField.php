@@ -178,6 +178,10 @@ $('.delete').click(function(){
 		     		echo 'var file = "pages/seeds/views/showSeed.php?id='.$_GET["bid"].'";';
 		     		echo 'var file2 = "markWorkFields.php?workType=seed&workID='.$_GET["bid"].'";';
 	     		}
+	     		if ($_GET["back"] == "showculture"){
+		     		echo 'var file = "pages/seeds/views/showCulture.php?id='.$_GET["bid"].'";';
+		     		echo 'var file2 = "markWorkFields.php?workType=culture&workID='.$_GET["bid"].'";';
+	     		}
 	     		if ($_GET["back"] == "showfieldwork"){
 		     		echo 'var file = "pages/fieldworks/views/showFieldwork.php?id='.$_GET["bid"].'";';
 		     		echo 'var file2 = "markWorkFields.php?workType=fieldwork&workID='.$_GET["bid"].'";';

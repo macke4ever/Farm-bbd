@@ -36,6 +36,13 @@ if ($workType != "" && $workID != ""){
 			echo "paryskinti2(".$field["id"].");";
 		}
 	}
+
+	if ($workType == "culture"){
+		$fields = $db->query("SELECT `fields`.id as id FROM `fields` LEFT OUTER JOIN seedings ON `fields`.id = `seedings`.`field_id` WHERE culture_id = ".$workID." and season_id = ".$_SESSION["user_season"]." and `fields`.farm_id = ".$_SESSION["user_farm"].";"); 
+		foreach ($fields as $key => $field) {
+			echo "paryskinti2(".$field["id"].");";
+		}
+	}
 }
  ?>
 </script>

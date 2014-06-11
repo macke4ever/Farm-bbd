@@ -229,7 +229,14 @@ table {
 }
 
 
+.show {
+	color: #0F0F0F;
+	text-decoration: none;
+}
 
+.show:hover {
+	text-decoration: underline;
+}
 
 /*Additional stuff*/
 
