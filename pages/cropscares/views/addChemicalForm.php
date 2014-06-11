@@ -4,7 +4,7 @@
 
 
 ?>
-<h2>Darbų pridėjimas</h2>
+<h2>Priemonių pridėjimas</h2>
 <form id="addChemicalToCropscare" action="pages/cropscares/actions/addChemicalToCropscare.php" method="post">
 		<select name="chemical_id" id="chemical_id" data-placeholder="Pasirinkite chemikalą" style="width:100%;">
         <?php 
