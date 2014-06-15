@@ -1,5 +1,6 @@
 <?php
 	include_once "../../../dbConfig.php";	  	
+	include_once "../../../class.text.php";	  	
 
 	$culture = $db->query("SELECT name FROM cultures where id = ".@$_GET['id']);	
 	$fields = $db->query("SELECT `fields`.area as area,  `fields`.name as name, `fields`.id as id, `fields`.coordinates as coordinates FROM `fields` LEFT OUTER JOIN seedings ON `fields`.id = `seedings`.`field_id` WHERE culture_id = ".@$_GET['id']." and season_id = ".$_SESSION["user_season"]." and `fields`.farm_id = ".$_SESSION["user_farm"].";"); 
@@ -16,7 +17,7 @@
 	echo "<h1>".$culture[0]['name']."</h1>";	
 	echo "<table class='fieldsList'>";	
 	echo "	<tr>";
-	echo "		<td class=\"tableRight\" style=\"text-align: center; padding-top: 5px; padding-bottom: 5px;\"><button id=\"cancel\">Atgal</button></td>";
+	echo "		<td class=\"tableRight\" style=\"text-align: center; padding-top: 5px; padding-bottom: 5px;\"><button id=\"cancel\">".$Text->getText("form_back")."</button></td>";
 	echo "		<td class=\"tableSingle\" style=\"text-align: right; width: 20px;\"><a href=\"\"><td>";
 	echo "</tr>";
 	foreach ($fields as $key => $field) {
@@ -39,7 +40,7 @@
 		}				
 	}
 
-	echo "<tr><td class='tableSingle second' style='padding-top: 20px; font-weight: bold;'>Bendras plotas: ".$seedArea." ha</td><td class='tableSingle second'></td></tr>";
+	echo "<tr><td class='tableSingle second' style='padding-top: 20px; font-weight: bold;'>".$Text->getText("seeds_total_area").": ".$seedArea." ha</td><td class='tableSingle second'></td></tr>";
 	echo "</table>";
 
 	?>

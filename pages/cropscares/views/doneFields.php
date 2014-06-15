@@ -1,5 +1,7 @@
 <?php 
 		include_once "../../../dbConfig.php";
+		include_once "../../../class.text.php";
+
 		session_start();
 		$caresetcontents = $db->query("SELECT `caresetcontents`.`id` as `id`, `caresetcontents`.`quantity` as `quantity`, `chemicals`.`name` as `name`, `chemicals`.`measure` as measure FROM caresetcontents INNER JOIN chemicals ON `caresetcontents`.chemical_id = `chemicals`.id WHERE `caresetcontents`.farm_id = ".$_SESSION["user_farm"]." AND `caresetcontents`.season_id = '".$_SESSION["user_season"]."' AND `caresetcontents`.careset_id = ".@$_GET['id'].";");
 		$caresetAreas = $db->query("SELECT `fields`.area as area, `fields`.name as name, `fields`.coordinates as coordinates, `fields`.id as id FROM cropscares LEFT OUTER JOIN `fields` ON `cropscares`.`field_id` = `fields`.id  WHERE careset_id = ".$_GET["id"]." ORDER BY `fields`.name ASC;"); 
@@ -12,7 +14,7 @@
 	//generating fields list
 	$fieldsReturn = "";
 
-	$fieldsReturn .= "<h2>Išdirbti laukai</h2>";	
+	$fieldsReturn .= "<h2>".$Text->getText("done_fields")."</h2>";	
 	$fieldsReturn .=  "<table class='fieldsList'>";	
 	foreach ($caresetAreas as $key => $field) {
 		$coord = "";
@@ -36,14 +38,14 @@
 		}				
 	}
 
-	$fieldsReturn .=  "<tr><td class='tableSingle second' style='padding-top: 20px; font-weight: bold;'>Bendras priežiūros darbų plotas: ".$area." ha</td><td class='tableSingle second'></td></tr>";
-	$fieldsReturn .=  "<tr><td class='tableSingle second' style='padding-top: 5px; font-weight: bold;'>Sunaudota kuro: ".$area*@$_GET['consumption']." l</td><td class='tableSingle second'></td></tr>";
+	$fieldsReturn .=  "<tr><td class='tableSingle second' style='padding-top: 20px; font-weight: bold;'>".$Text->getText("cropscares_area").": ".$area." ha</td><td class='tableSingle second'></td></tr>";
+	$fieldsReturn .=  "<tr><td class='tableSingle second' style='padding-top: 5px; font-weight: bold;'>".$Text->getText("works_fuel_total").": ".$area*@$_GET['consumption']." l</td><td class='tableSingle second'></td></tr>";
 	$fieldsReturn .=  "</table>";
 
 
 	//generating chemicals and quantity of them use list.
 	$chemicalsReturn = "";
-	$chemicalsReturn .= "<h2>Priežiūros priemonės</h2>";
+	$chemicalsReturn .= "<h2>".$Text->getText("cropscares_tools")."</h2>";
 	$chemicalsReturn .= "<table>";
 		if (@$caresetcontents){			
 			$color = 1;

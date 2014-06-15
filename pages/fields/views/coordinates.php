@@ -1,7 +1,13 @@
+<?php 
+
+    include_once "../../../class.text.php";
+
+ ?>
+
 <div id="uploadCoordinates">
 	<form id="myForm" class="upload" action="upload/step1.php" method="post" enctype="multipart/form-data">
-		<input type="file" name="file" id="file" placeholer="Pasirinkite failą">
-		<input type="submit" name="submit" value="OK" style="float: right; margin-right: 7px;">
+		<input type="file" name="file" id="file" value="<?php echo $Text->getText("fields_choose_coordinates"); ?>">
+		<input type="submit" name="submit" value="<?php echo $Text->getText("form_save"); ?>" style="float: right; margin-right: 7px;">
 		<input type="hidden" name="id" id="id" value=<?php echo @$_GET['id']; ?>>
 	</form>
 

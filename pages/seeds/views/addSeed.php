@@ -1,15 +1,16 @@
 <?php
 	include_once "../../../dbConfig.php";	  
+	include_once "../../../class.text.php";	  
 	$cultures = $db->query("SELECT * FROM cultures");
 ?>
 
-<h1>Pridėti naują veislę</h1>
+<h1><?php echo $Text->getText("seeds_add_new"); ?></h1>
 <form id="seedForm" action="pages/seeds/actions/addSeedSQL.php" method="post">
 	<table>
 		<tr>
-			<td class="tableLeft">Kultūra</td>
+			<td class="tableLeft"><?php echo $Text->getText("seeds_culture"); ?></td>
 			<td class="tableRight">
-				<select name="culture_id" id="culture_id" data-placeholder="Pasirinkite kultūrą" style="width:261px;" tabindex="1">
+				<select name="culture_id" id="culture_id" data-placeholder="<?php echo $Text->getText("seeds_select_culture"); ?>" style="width:261px;" tabindex="1">
 	                <?php 
                         echo '<option value="0" selected></option>';
 	                    foreach($cultures as $key => $culture){
@@ -20,15 +21,15 @@
 			</td>
 		</tr>
 		<tr>
-			<td class="tableLeft">Pavadinimas</td>
+			<td class="tableLeft"><?php echo $Text->getText("form_name"); ?></td>
 			<td class="tableRight"><input type="text" name="name" id="name" style="width: 261px;" tabindex="2"></td>
 		</tr>
 		<tr>
-			<td class="tableLeft">Kiekis</td>
+			<td class="tableLeft"><?php echo $Text->getText("form_quantity"); ?></td>
 			<td class="tableRight"><input type="text" name="quantity" id="quantity" style="width: 50px;" tabindex="3">&nbsp;t.</td>
 		</tr>
 		<tr>
-		    <td class="tableLeft"><input type="submit" id="submit" name="submit" value="Saugoti" tabindex="4"/></td>
+		    <td class="tableLeft"><input type="submit" id="submit" name="submit" value="<?php echo $Text->getText("form_save"); ?>"  tabindex="4"/></td>
 			<td class="tableRight"></td>
 		</tr>
 	</table>

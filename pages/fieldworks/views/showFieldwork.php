@@ -2,6 +2,8 @@
 <?php
 
 		include_once "../../../dbConfig.php";
+		include_once "../../../class.text.php";
+
 		$fieldwork = $db->query("SELECT * FROM fieldworks where id = ".@$_GET['id']." and farm_id = ".$_SESSION["user_farm"]." LIMIT 1"); 		
 
 		$fieldworkAreas = $db->query("SELECT `fields`.area as area, `fields`.name as name, `fields`.coordinates as coordinates, `fields`.id as id FROM fieldworks_fields LEFT OUTER JOIN `fields` ON `fieldworks_fields`.`field_id` = `fields`.id  WHERE fieldwork_id = ".$_GET["id"]." ORDER BY `fields`.name ASC;"); 
@@ -14,36 +16,36 @@
 ?>  
 
 <div id="fieldwork-view">	
-	<h1>Dirbimo informacija</h1>
+	<h1><?php echo $Text->getText("fieldworks_info"); ?></h1>
 	<table>
 		<tr>
-		    <td class="tableLeft">Pavadinimas</td>
+		    <td class="tableLeft"><?php echo $Text->getText("form_name"); ?></td>
 			<td class="tableRight"><?php echo @$fieldwork[0]['name']; ?></td>
 		</tr>
 		<tr>
-		    <td class="tableLeft second">L/ha kuro</td>
+		    <td class="tableLeft second"><?php echo $Text->getText("form_fuel"); ?></td>
 			<td class="tableRight second"><?php echo @$fieldwork[0]['consumption']; ?></td>
 		</tr>
 		<tr>
-		    <td class="tableLeft">Plotas</td>
+		    <td class="tableLeft"><?php echo $Text->getText("form_area"); ?></td>
 			<td class="tableRight" id="area"><?php echo $area; ?> ha</td>
 		</tr>
 		<tr>
-		    <td class="tableLeft"><button type="button" class="buttonChange" data-fieldwork=<?php echo '"'. @$_GET['id']. '"'; ?>>Redaguoti</button></td>
-			<td class="tableRight"><button id="cancel">Atgal</button></td>
+		    <td class="tableLeft"><button type="button" class="buttonChange" data-fieldwork=<?php echo '"'. @$_GET['id']. '"'; ?>><?php echo $Text->getText("form_edit"); ?></button></td>
+			<td class="tableRight"><button id="cancel"><?php echo $Text->getText("form_back"); ?></button></td>
 		</tr>
 	</table>
 </div>
 
 <div>
-	<h2>Laukų pridėjimas</h2>
+	<h2><?php echo $Text->getText("works_add_fields"); ?></h2>
 	<table>
 		<tr>
-		    <td class="tableLeft" title="Leisti pridėti laukus prie darbo">Įgalinti</td>
+		    <td class="tableLeft" title="<?php echo $Text->getText("works_title_enable_add"); ?>"><?php echo $Text->getText("works_enable_add"); ?></td>
 			<td class="tableRight"><input type="checkbox" name="enableAdd" id="enableAdd"></td>
 		</tr>
 		<tr>
-		    <td class="tableLeft second" title="Darbo atlikimo data">Data</td>
+		    <td class="tableLeft second" title="<?php echo $Text->getText("works_title_date"); ?>"><?php echo $Text->getText("works_date"); ?></td>
 			<td class="tableRight second"><input type="date" name="date" id="date" placeholder="yyyy-mm-dd"></td>
 			<input type="hidden" name="fieldworkID" value=<?php echo '"'.@$_GET['id'].'"'; ?> id="fieldworkID">
 		</tr>

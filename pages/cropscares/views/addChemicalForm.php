@@ -1,12 +1,13 @@
 <?php 
 	
+	include_once "../../../class.text.php";
     $chemicalsList = $db->query("SELECT * FROM chemicals where `farm_id` = ".$_SESSION["user_farm"]."");
 
 
 ?>
-<h2>Priemonių pridėjimas</h2>
+<h2><?php echo $Text->getText("cropscares_add_tools"); ?></h2>
 <form id="addChemicalToCropscare" action="pages/cropscares/actions/addChemicalToCropscare.php" method="post">
-		<select name="chemical_id" id="chemical_id" data-placeholder="Pasirinkite chemikalą" style="width:100%;">
+		<select name="chemical_id" id="chemical_id" data-placeholder="<?php echo $Text->getText("cropscares_choose_tool"); ?>" style="width:100%;">
         <?php 
             echo '<option value="0" selected></option>';
             foreach($chemicalsList as $key => $chemicalList){
@@ -14,9 +15,9 @@
             }
         ?>
         </select>
-		<input type="text" name="quantity" id="quantity" placeholder="kiekis" style="width: 100px; margin-left: 5px;"><?php echo "<span id='measure'> mato vnt.</span>"; ?>
+		<input type="text" name="quantity" id="quantity" placeholder="<?php echo $Text->getText("cropscares_measure_placeholder"); ?>" style="width: 100px; margin-left: 5px;"><?php echo "<span id='measure'>".$Text->getText("cropscares_measure")."</span>"; ?>
 		<input type="hidden" name="careset_id" id="careset_id" value=<?php echo '"'.@$_GET['id'].'"' ?>>
-		<input type="submit" value="Pridėti ckemikalą" style="float: right; margin-right: 5px;">
+		<input type="submit" value="<?php echo $Text->getText("cropscares_add_tool"); ?>" style="float: right; margin-right: 5px;">
 </form>
 
 <script src="chosen/chosen.jquery.js" type="text/javascript"></script> 

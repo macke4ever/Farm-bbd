@@ -1,6 +1,8 @@
 <?php
 	session_start();
 
+	include_once "class.text.php";
+
 	$message="";
 
 	if(count($_POST)>0) {
@@ -19,11 +21,12 @@
 			$_SESSION["user_rights"] = $row['rights'];
 			$_SESSION["user_farm"] = $row['farm_id'];
 			$_SESSION["user_season"] = $row['lastSeason'];
+			$_SESSION["user_language"] = $row['language'];
 			$_SESSION["firstname"] = $row['firstname'];
 			$_SESSION["lastname"] = $row['lastname'];
 			$_SESSION["active"] = true;
 		} else {
-			$message="Neteisingas prisijungimo vardas arba slaptažodis \n";
+			$message= $Text->getText("login_wrong_login")."\n";
 		}
 	}
 	if(isset($_SESSION["user_id"])) {

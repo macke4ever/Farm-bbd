@@ -2,13 +2,15 @@
 	session_start();
  ?>
 <div id="chemical">	
-	
-	<h1>Pasėlių priežiūros priemonės</h1><?php if ($_SESSION["user_rights"] >= 16){ ?><a href=""><img src="img/add.png" class="addButton" tabindex="1" style="width: 22px; height:22px; margin: 10px 15px 0 0;"></a><?php } ?>
-
-
-<?php
-
+<?php 
 	include "../../dbConfig.php";	   
+	include "../../class.text.php";	   
+	
+	echo "<h1>".$Text->getText("chemicals")."</h1>";
+	if ($_SESSION["user_rights"] >= 16){ ?>
+		<a href=""><img src="img/add.png" class="addButton" tabindex="1" style="width: 22px; height:22px; margin: 10px 15px 0 0;"></a>
+<?php } 
+
 	$chemtypes = $db->query("SELECT `chemtypes`.`id` as id, `chemtypes`.`tableName` as tableName FROM chemicals INNER JOIN chemtypes ON `chemicals`.chemtype_id = `chemtypes`.id WHERE `chemicals`.farm_id = ".$_SESSION["user_farm"]." GROUP BY `chemtypes`.`tableName` ORDER BY tableName ASC"); 			
 	foreach ($chemtypes as $key => $chemtype) {
 		echo "<h2>".$chemtype['tableName']."</h2>";
@@ -70,7 +72,7 @@
   });
 
     $('.delete').click(function(){
-    if (confirm("Ar tikrai norite pašalinti pasirinktą chemikalą?")) {    	
+    if (confirm(<?php echo "\"".$Text->getText("chemicals_message_delete")."\""; ?>)) {    	
 	    var url = "pages/chemicals/actions/deleteChemical.php";	
 	    var posting = $.post( url, { id: $(this).data('id') } );
 

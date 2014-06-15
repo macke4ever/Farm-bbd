@@ -1,13 +1,14 @@
 <?php
 
 	include_once "../../dbConfig.php";
+	include_once "../../class.text.php";
 
 	$fieldworks = $db->query("SELECT name, id FROM fieldworks where farm_id = ".$_SESSION["user_farm"]." and season_id = ".$_SESSION["user_season"]." ORDER BY name ASC ");	
 	
 ?>  
 
 <div id="fieldwork">	
-	<h1>Žemės dirbimai laukuose</h1><a href=""><img src="img/add.png" class="addButton" tabindex="1" style="width: 22px; height:22px; margin: 10px 15px 0 0;"></a>
+	<h1><?php echo $Text->getText("fieldworks"); ?></h1><a href=""><img src="img/add.png" class="addButton" tabindex="1" style="width: 22px; height:22px; margin: 10px 15px 0 0;"></a>
 
 	<table>
 	<?php
@@ -37,7 +38,7 @@
 	 ?>
 	</table>
 	<?php 
-		echo "<h2>Bendras išdirbtas plotas: ".$totalArea." ha</h2>";
+		echo "<h2>".$Text->getText("fieldworks_area").": ".$totalArea." ha</h2>";
 	 ?>
 </div>
 
@@ -75,7 +76,8 @@
 
 
  $('.delete').click(function(){
-    if (confirm("Ar tikrai norite pašalinti pasirinktą darbą?\n\nKartu bus pašalinti šio tipo darbai iš kitų laukų .")) {  
+    // if (confirm( "Ar tikrai norite pašalinti pasirinktą darbą?\n\nKartu bus pašalinti šio tipo darbai iš kitų laukų .")) {  
+    if (confirm(<?php echo "\"".$Text->getText("fieldworks_message_delete")."\""; ?>)) {  
 	    var url = "pages/fieldworks/actions/deleteFieldwork.php";	
 	    var posting = $.post( url, { id: $(this).data('id') } );
 

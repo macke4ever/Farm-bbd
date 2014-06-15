@@ -1,6 +1,6 @@
 <?php 
 
-	include_once "db.class.php";
+	include_once "class.db.php";
 	session_start();
 	//Database server configuration
 	$server = "localhost";

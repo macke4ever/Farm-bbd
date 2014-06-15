@@ -2,6 +2,7 @@
 <?php
 
 	include_once "../../../dbConfig.php";	  
+	include_once "../../../class.text.php";	  
 	$seeds = $db->query("SELECT * FROM seeds where id = ".@$_GET['id']." and farm_id = ".$_SESSION["user_farm"]." LIMIT 1"); 		
 		 
 	if (!empty($seeds)) {
@@ -21,33 +22,33 @@
 ?>  
 
 <div id="seeds">	
-	<h1>Veislės informacija</h1>
+	<h1><?php echo $Text->getText("seeds_info"); ?></h1>
 	<table>
 		<tr>
-		    <td class="tableLeft">Kultūra</td>
+		    <td class="tableLeft"><?php echo $Text->getText("seeds_culture"); ?></td>
 			<td class="tableRight"><?php echo @$seeds[0]['culture']; ?></td>
 		</tr>
 		<tr>
-		    <td class="tableLeft second">Pavadinimas</td>
+		    <td class="tableLeft second"><?php echo $Text->getText("form_name"); ?></td>
 			<td class="tableRight second"><?php echo @$seeds[0]['name']; ?></td>
 		</tr>
 		<tr>
-		    <td class="tableLeft">Kiekis</td>
+		    <td class="tableLeft"><?php echo $Text->getText("form_quantity"); ?></td>
 			<td class="tableRight"><?php echo @$seeds[0]['quantity']; ?>&nbsp;t.</td>
 		</tr>
 		<tr>
-		    <td class="tableLeft second">Plotas</td>
+		    <td class="tableLeft second"><?php echo $Text->getText("form_area"); ?></td>
 			<td class="tableRight second"><?php echo @$seedArea; ?>&nbsp;t.</td>
 		</tr>
 		<tr>
-		    <td class="tableLeft"><?php if ($_SESSION["user_rights"] >= 16){ ?><button type="button" class="buttonChange" data-seed=<?php echo '"'. @$_GET['id']. '"'; ?>>Redaguoti</button><?php } ?></td>
-			<td class="tableRight"><button id="cancel">Atgal</button></td>
+		    <td class="tableLeft"><?php if ($_SESSION["user_rights"] >= 16){ ?><button type="button" class="buttonChange" data-seed=<?php echo '"'. @$_GET['id']. '"'; ?>><?php echo $Text->getText("form_edit"); ?></button><?php } ?></td>
+			<td class="tableRight"><button id="cancel"><?php echo $Text->getText("form_back"); ?></button></td>
 		</tr>
 	</table>
 
 
 	<?php 
-	echo "<h2>Laukai kuriuose pasėta ši veislė</h2>";	
+	echo "<h2>".$Text->getText("seeds_fields")."</h2>";	
 	echo "<table class='fieldsList'>";	
 	foreach ($fields as $key => $field) {
 		$coord = "";
@@ -71,7 +72,7 @@
 		}				
 	}
 
-	echo "<tr><td class='tableSingle second' style='padding-top: 20px; font-weight: bold;'>Bendras plotas: ".$seedArea." ha</td><td class='tableSingle second'></td></tr>";
+	echo "<tr><td class='tableSingle second' style='padding-top: 20px; font-weight: bold;'>".$Text->getText("seeds_total_area").": ".$seedArea." ha</td><td class='tableSingle second'></td></tr>";
 	echo "</table>";
 
 	 ?>

@@ -1,13 +1,15 @@
 <?php 
+
+	include_once "../../../class.text.php";
 	
     $fieldworksList = $db->query("SELECT * FROM fieldworks where season_id = '".$_SESSION["user_season"]."' and farm_id = '".$_SESSION["user_farm"]."' ORDER BY name ASC");
 
     $cropscaresList = $db->query("SELECT * FROM caresets where season_id = '".$_SESSION["user_season"]."' and farm_id = '".$_SESSION["user_farm"]."' ORDER BY name ASC");
 
 ?>
-<h2>Darbų pridėjimas</h2>
+<h2><?php echo $Text->getText("fields_add_work"); ?></h2>
 <form id="addWorkToField" action="pages/fields/actions/addWorkToField.php" method="post">
-		<select name="fieldwork_id" id="fieldwork_id" data-placeholder="Pasirinkite žemės dirbimą" style="width:100%;">
+		<select name="fieldwork_id" id="fieldwork_id" data-placeholder="<?php echo $Text->getText("fields_chose_fieldwork"); ?>" style="width:100%;">
         <?php 
             echo '<option value="0" selected></option>';
             foreach($fieldworksList as $key => $fieldworkList){
@@ -18,11 +20,11 @@
 		<input type="date" name="date" id="date" placeholder="yyyy-mm-dd">
 		<input type="hidden" name="field_id" id="field_id" value=<?php echo '"'.@$_GET['id'].'"' ?>>
 		<input type="hidden" name="workType" id="workType" value="fieldWork">
-		<input type="submit" value="Pridėti žemės dirbimą">
+		<input type="submit" value="<?php echo $Text->getText("fields_add_fieldwork"); ?>">
 </form>
 
 <form id="addCropsCareToField" action="pages/fields/actions/addWorkToField.php" method="post">
-		<select name="cropscare_id" id="cropscare_id" data-placeholder="Pasirinkite priežiūros darbą" style="width:100%;">
+		<select name="cropscare_id" id="cropscare_id" data-placeholder="<?php echo $Text->getText("fields_chose_cropscare"); ?>" style="width:100%;">
         <?php 
             echo '<option value="0" selected></option>';
             foreach($cropscaresList as $key => $cropscareList){
@@ -33,7 +35,7 @@
 		<input type="date" name="date2" id="date2" placeholder="yyyy-mm-dd">
 		<input type="hidden" name="field_id2" id="field_id2" value=<?php echo '"'.@$_GET['id'].'"' ?>>
 		<input type="hidden" name="workType2" id="workType2" value="cropscare">
-		<input type="submit" value="Pridėti priežiūros darbą">
+		<input type="submit" value="<?php echo $Text->getText("fields_add_cropscare"); ?>">
 </form>
 
 

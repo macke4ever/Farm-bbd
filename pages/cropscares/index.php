@@ -1,12 +1,14 @@
 <?php
 
 	include "../../dbConfig.php";	   
+	include "../../class.text.php";	
+
 	$cropscares = $db->query("SELECT name, id FROM caresets where farm_id = ".$_SESSION["user_farm"]." and season_id = ".$_SESSION["user_season"]." ORDER BY name ASC "); 
 
 ?>  
 
 <div id="cropscare">	
-	<h1>Pasėlių priežiūros darbai</h1><a href=""><img src="img/add.png" class="addButton" tabindex="1" style="width: 22px; height:22px; margin: 10px 15px 0 0;"></a>
+	<h1><?php echo $Text->getText("cropscares"); ?></h1><a href=""><img src="img/add.png" class="addButton" tabindex="1" style="width: 22px; height:22px; margin: 10px 15px 0 0;"></a>
 
 	<table>
 	<?php
@@ -38,7 +40,7 @@
 
 	<?php 
 
-		echo "<h2>Bendras dirbtas plotas: ".$totalArea." ha</h2>";
+		echo "<h2>".$Text->getText("cropscares_area").": ".$totalArea." ha</h2>";
 
 	 ?>
 </div>
@@ -77,7 +79,7 @@
 
 
     $('.delete').click(function(){
-    if (confirm("Ar tikrai norite pašalinti pasirinktą darbą?\n\nKartu bus pašalinti šio tipo darbai iš kitų laukų .")) {    	
+    if (confirm(<?php echo "\"".$Text->getText("cropscares_message_delete")."\""; ?>)) {    	
 	    var url = "pages/cropscares/actions/deleteCropscare.php";	
 	    var posting = $.post( url, { id: $(this).data('id') } );
 

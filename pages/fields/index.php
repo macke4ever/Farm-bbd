@@ -1,8 +1,10 @@
 <div id="fields">
 <?php 		
 	include "../../dbConfig.php";
+	include "../../class.text.php";
+
 	$fields = $db->query("SELECT  name, id, coordinates, area FROM fields WHERE farm_id = '".$_SESSION["user_farm"]."' order by name asc"); 	 
-	echo '<h1>Laukai</h1>';
+	echo '<h1>'.$Text->getText("fields").'</h1>';
 	if ($_SESSION["user_rights"] >= 16) {
 		echo '<a href=""><img src="img/add.png" class="addButton" tabindex="1" style="width: 22px; height:22px; margin: 10px 15px 0 0;">';
 	}
@@ -40,7 +42,7 @@
 			}				
 		}
 
-		echo "<tr><td class='tableSingle second' style='padding-top: 20px; font-weight: bold;'>Bendras plotas: ".$area." ha</td><td class='tableSingle second'></td></tr>";
+		echo "<tr><td class='tableSingle second' style='padding-top: 20px; font-weight: bold;'>".$Text->getText("fields_area").": ".$area." ha</td><td class='tableSingle second'></td></tr>";
 		echo "</table>";
 	}
  ?>	
@@ -75,7 +77,7 @@
 
 
 $('.delete').click(function(){
-    if (confirm("Ar tikrai norite pašalinti pasirinktą lauką?\n\nKartu bus pašalinta visa su juo susijusi informacija: žemės darbai, sėja, pasėlių priežiūra, visų metų darbų istorija.")) {    	
+    if (confirm(<?php echo "\"".$Text->getText("fields_message_delete")."\""; ?>)) {    	
 	    var url = "pages/fields/actions/deleteField.php";	
 	    var posting = $.post( url, { id: $(this).data('id') } );
 	    

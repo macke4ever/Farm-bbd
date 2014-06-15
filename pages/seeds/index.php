@@ -1,14 +1,19 @@
 <?php 
 	session_start();
- ?>
-<div id="seeds">	
-	
-	<h1>Pasėlių veislės</h1><?php if ($_SESSION["user_rights"] >= 16){ ?><a href=""><img src="img/add.png" class="addButton" tabindex="1" data-id="'.@$seed['id'].'" style="width: 22px; height:22px; margin: 10px 15px 0 0;"></a><?php } ?>
-
-
-<?php
 
 	include_once "../../dbConfig.php";
+	include_once "../../class.text.php";
+ ?>
+<div id="seeds">	
+<?php 	
+	echo "<h1>".$Text->getText("seeds")."</h1>";
+
+	if ($_SESSION["user_rights"] >= 16){ ?>
+		<a href=""><img src="img/add.png" class="addButton" tabindex="1" data-id="'.@$seed['id'].'" style="width: 22px; height:22px; margin: 10px 15px 0 0;"></a>
+<?php } 
+
+
+
 	$cultures = $db->query("SELECT cultures.`name` as tableName, `cultures`.id as id FROM seeds INNER JOIN cultures ON `seeds`.culture_id = `cultures`.id WHERE `seeds`.farm_id = ".$_SESSION["user_farm"]." GROUP BY cultures.`name` ORDER BY cultures.`name` ASC"); 			
 	$totalArea = 0;
 	foreach ($cultures as $key => $culture) {
@@ -50,7 +55,7 @@
 
   }
 
-  	echo "<h2>Bendras užsėtas plotas: ".$totalArea." ha</h2>";
+  	echo "<h2>".$Text->getText("seeds_total_area").": ".$totalArea." ha</h2>";
   ?> 
 </div>
 <script type="text/javascript">
@@ -87,7 +92,7 @@
   });
 
     $('.delete').click(function(){
-    if (confirm("Ar tikrai norite pašalinti pasirinktą veislę?")) {    	
+    if (confirm(<?php echo "\"".$Text->getText("seeds_message_delete")."\""; ?>)) {    	
 	    var url = "pages/seeds/actions/deleteSeed.php";	
 	    var posting = $.post( url, { id: $(this).data('id') } );
 

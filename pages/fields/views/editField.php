@@ -1,6 +1,8 @@
 <?php
 
-		include "../../../dbConfig.php";	   
+		include "../../../dbConfig.php";
+		include "../../../class.text.php";
+
 		$field = $db->query("SELECT
 			`fields`.`name` as name,
 			`fields`.area as area,
@@ -32,7 +34,7 @@
 		$seedings = $db->query("select id as id, date as date from seedings where farm_id = ".$_SESSION["user_farm"]." and season_id = ".$_SESSION["user_season"]." and field_id = ".@$_GET['id'].""); 		
 		if(!empty($seedings)){			
 			foreach ($seedings as $key => $seeding) {
-				$seeding['name'] = "Sėjimas";
+				$seeding['name'] = $Text->getText("works_name_seeding");
 				$seeding['type'] = "seedings";
 				array_push($fieldworks, $seeding);
 			}   
@@ -65,19 +67,19 @@
 ?>  
 
 <div id="fields">	
-	<h1>Lauko informacija</h1>
+	<h1><?php echo $Text->getText("fields_edit"); ?></h1>
 	<form id="changeField" action="pages/fields/actions/changeField.php" method="post">
 		<table>
 			<tr>
-			    <td class="tableLeft">Pavadinimas</td>
+			    <td class="tableLeft"><?php echo $Text->getText("form_name"); ?></td>
 				<td class="tableRight"><input id="name" name="name" type="text" value=<?php echo '"'.@$field['name'].'"'; ?> /></td>
 			</tr>
 			<tr>
-			    <td class="tableLeft second">Plotas</td>
+			    <td class="tableLeft second"><?php echo $Text->getText("form_area"); ?></td>
 				<td class="tableRight second"><input id="area" name="area" type="text" value=<?php echo '"'.@$field['area'].'"'; ?> /></td>
 			</tr>
 			<tr>
-			    <td class="tableLeft">Kultūra</td>
+			    <td class="tableLeft"><?php echo $Text->getText("seeds_culture"); ?></td>
 				<td class="tableRight">
 					
 					<select data-placeholder="Pasirinkite kultūrą" name="selectedSeed" id="seedSelect" style="width: 261px;" >
@@ -102,42 +104,42 @@
 				</td>
 			</tr>
 			<tr>
-			    <td class="tableLeft second">Sėj. data</td>
+			    <td class="tableLeft second"><?php echo $Text->getText("fields_seeding_date"); ?></td>
 				<td class="tableRight second"><input id="seeddate" name="seeddate" type="date" value=<?php echo '"'.@$field['seeddate'].'"'; ?> /></td>
 			</tr>
 			<tr>
-			    <td class="tableLeft">Norma</td>
+			    <td class="tableLeft"><?php echo $Text->getText("fields_seed_quantity"); ?></td>
 				<td class="tableRight"><input id="quantity" name="quantity" type="text" value=<?php echo '"'.@$field['quantity'].'"'; ?> style="width:50px; text-align: right;"> kg</td>
 			</tr>
 			<tr>
-			    <td class="tableLeft second">Nukulta</td>
+			    <td class="tableLeft second"><?php echo $Text->getText("form_harvest_date"); ?></td>
 				<td class="tableRight second"><input id="date" name="date" type="date" value=<?php echo '"'.@$field['harvesting'].'"'; ?> /></td>
 			</tr>
 			<tr>
-			    <td class="tableLeft">Lauko kom.</td>
+			    <td class="tableLeft"><?php echo $Text->getText("form_comment"); ?></td>
 				<td class="tableRight"><textarea id="comment" name="comment" cols="30"><?php echo @$field['comment']; ?></textarea></td>
 			</tr>
 			<?php 
 				if ($field['culture']) {
 			?>
 					<tr>
-					    <td class="tableLeft second">Sezono kom.</td>
+					    <td class="tableLeft second"><?php echo $Text->getText("form_season_comment"); ?></td>
 						<td class="tableRight second"><textarea id="season_comment" name="season_comment" cols="30"><?php echo @$field['season_comment']; ?></textarea></td>
 					</tr>
 			<?php } ?>
 			<tr>
 				<input type="hidden" id="field_id" name="field_id" value=<?php echo '"'.@$_GET['id'].'"'; ?> />
-			    <td class="tableLeft"><input type="submit" id="submit" value="Saugoti" data-field=<?php echo '"'. @$_GET['id']. '"'; ?>/></td>
-				<td class="tableRight"><button id="cancel" data-field=<?php echo '"'. @$_GET['id']. '"'; ?>>Atgal</button></td>
+			    <td class="tableLeft"><input type="submit" id="submit" value="<?php echo $Text->getText("form_save"); ?>" data-field=<?php echo '"'. @$_GET['id']. '"'; ?>/></td>
+				<td class="tableRight"><button id="cancel" data-field=<?php echo '"'. @$_GET['id']. '"'; ?>><?php echo $Text->getText("form_back"); ?></button></td>
 			</tr>
 		</table>
 	</form>
 
 	<div id="coordContent"><?php include "coordinates.php"; ?></div>
-	<button id="deleteCoord" style="margin-left: 15px;" data-field=<?php echo '"'. @$_GET['id']. '"'; ?>>Trinti koordinates</button><br>
+	<button id="deleteCoord" style="margin-left: 15px;" data-field=<?php echo '"'. @$_GET['id']. '"'; ?>><?php echo $Text->getText("fields_delete_coord"); ?></button><br>
 
 
-	<h2>Darbai lauke</h2>
+	<h2><?php echo $Text->getText("fields_works_in_field"); ?></h2>
 
 	<table>
 	<?php
@@ -194,7 +196,7 @@
 
 
 $('.delete').click(function(){
-    if (confirm("Ar tikrai norite pašalinti pasirinktą  darbą?")) {    	
+    if (confirm(<?php echo "\"".$Text->getText("fields_message_delete_work")."\""; ?>)) {    	
 	    var url = "pages/deleteWorkFromField.php";	    
 	    var posting = $.post( url, { id: $(this).data('id'),  type: $(this).data('type') } );
 
@@ -212,7 +214,7 @@ $('.delete').click(function(){
 });
 
 $('#deleteCoord').click(function(){
-	if (confirm("Ar tikrai norite pašalinti šio lauko koordinačių duomenis?")) { 
+	if (confirm(<?php echo "\"".$Text->getText("fields_message_delete_coord")."\""; ?>)) { 
 	    var url = "upload/deleteCoord.php";	   
 	    var posting = $.post( url, { id: $(this).data('field') } );
 

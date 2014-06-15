@@ -2,6 +2,7 @@
 <?php
 
 		include "../../../dbConfig.php";	
+		include "../../../class.text.php";	
 		//var_dump($_GET);   
 		$chemicals = $db->query("SELECT * FROM chemicals where id = ".@$_GET['id']." and farm_id = ".$_SESSION["user_farm"]." LIMIT 1"); 		
 			 
@@ -16,31 +17,31 @@
 ?>  
 
 <div id="chemical">	
-	<h1>Priežiūros priemonės informacija</h1>
+	<h1><?php echo $Text->getText("chemicals_info"); ?></h1>
 	<table>
 		<tr>
-		    <td class="tableLeft">Tipas</td>
+		    <td class="tableLeft"><?php echo $Text->getText("chemicals_type"); ?></td>
 			<td class="tableRight"><?php echo @$chemicals[0]['chemtype']; ?></td>
 		</tr>
 		<tr>
-		    <td class="tableLeft second">Pavadinimas</td>
+		    <td class="tableLeft second"><?php echo $Text->getText("form_name"); ?></td>
 			<td class="tableRight second"><?php echo @$chemicals[0]['name']; ?></td>
 		</tr>
 		<tr>
-		    <td class="tableLeft">Turėta</td>
+		    <td class="tableLeft"><?php echo $Text->getText("form_total_quantity"); ?></td>
 			<td class="tableRight"><?php echo @$chemicals[0]['startQuantity']." ".@$chemicals[0]['measure']."."; ?></td>
 		</tr>
 		<tr>
-		    <td class="tableLeft second">Kiekis</td>
+		    <td class="tableLeft second"><?php echo $Text->getText("form_quantity"); ?></td>
 			<td class="tableRight second"><?php echo @$chemicals[0]['quantity']." ".@$chemicals[0]['measure']."."; ?></td>
 		</tr>
 		<tr>
-		    <td class="tableLeft">Vnt. kaina</td>
+		    <td class="tableLeft"><?php echo $Text->getText("form_measure"); ?></td>
 			<td class="tableRight"><?php echo @$chemicals[0]['price']." Lt/".@$chemicals[0]['measure']."."; ?></td>
 		</tr>
 		<tr>
-		    <td class="tableLeft"><?php if ($_SESSION["user_rights"] >= 16){ ?><button type="button" class="buttonChange" data-chemical=<?php echo '"'. @$_GET['id']. '"'; ?>>Redaguoti</button><?php } ?></td>
-			<td class="tableRight"><button id="cancel">Atgal</button></td>
+		    <td class="tableLeft"><?php if ($_SESSION["user_rights"] >= 16){ ?><button type="button" class="buttonChange" data-chemical=<?php echo '"'. @$_GET['id']. '"'; ?>><?php echo $Text->getText("form_edit"); ?></button><?php } ?></td>
+			<td class="tableRight"><button id="cancel"><?php echo $Text->getText("form_back"); ?></button></td>
 		</tr>
 	</table>
 </div>

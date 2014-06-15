@@ -1,5 +1,7 @@
 <?php 
 		include_once "../../../dbConfig.php";
+		include_once "../../../class.text.php";
+
 		$fieldworkAreas = $db->query("SELECT `fields`.area as area, `fields`.name as name, `fields`.coordinates as coordinates, `fields`.id as id FROM fieldworks_fields LEFT OUTER JOIN `fields` ON `fieldworks_fields`.`field_id` = `fields`.id  WHERE fieldwork_id = ".$_GET["id"]." ORDER BY `fields`.name ASC;"); 
 		
 		$area = 0;
@@ -9,7 +11,7 @@
 
 	$fieldsReturn = "";
 
-	$fieldsReturn .= "<h2>Išdirbti laukai</h2>";	
+	$fieldsReturn .= "<h2>".$Text->getText("done_fields")."</h2>";	
 	$fieldsReturn .= "<table class='fieldsList'>";	
 	foreach ($fieldworkAreas as $key => $field) {
 		$coord = "";
@@ -33,8 +35,8 @@
 		}				
 	}
 
-	$fieldsReturn .= "<tr><td class='tableSingle second' style='padding-top: 20px; font-weight: bold;'>Bendras išdirbtas plotas: ".$area." ha</td><td class='tableSingle second'></td></tr>";
-	$fieldsReturn .= "<tr><td class='tableSingle second' style='padding-top: 5px; font-weight: bold;'>Sunaudota kuro: ".$area*@$_GET['consumption']." l</td><td class='tableSingle second'></td></tr>";
+	$fieldsReturn .= "<tr><td class='tableSingle second' style='padding-top: 20px; font-weight: bold;'>".$Text->getText("fieldworks_area").": ".$area." ha</td><td class='tableSingle second'></td></tr>";
+	$fieldsReturn .= "<tr><td class='tableSingle second' style='padding-top: 5px; font-weight: bold;'>".$Text->getText("works_fuel_total").": ".$area*@$_GET['consumption']." l</td><td class='tableSingle second'></td></tr>";
 	$fieldsReturn .= "</table>";
 
 	$array = array('fieldsReturn' => $fieldsReturn, 'area' => $area);

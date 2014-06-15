@@ -2,25 +2,27 @@
 <?php
 
 	include_once "../../../dbConfig.php";
+	include_once "../../../class.text.php";
+
 	$cropscare = $db->query("SELECT * FROM caresets where id = ".@$_GET['id']." and farm_id = ".$_SESSION["user_farm"]." LIMIT 1"); 	
 	$caresetcontents = $db->query("SELECT `caresetcontents`.`id` as `id`, `caresetcontents`.`quantity` as `quantity`, `chemicals`.`name` as `name`, `chemicals`.`measure` as measure FROM caresetcontents INNER JOIN chemicals ON `caresetcontents`.chemical_id = `chemicals`.id WHERE `caresetcontents`.farm_id = ".$_SESSION["user_farm"]." AND `caresetcontents`.season_id = '".$_SESSION["user_season"]."' AND `caresetcontents`.careset_id = ".@$_GET['id'].";");	
 
 ?>  
 
-<h1>Redaguoti dirbimą</h1>
+<h1><?php echo $Text->getText("cropscare_edit"); ?></h1>
 <form id="changeCropscare" action="pages/cropscares/actions/changeCropscare.php" method="post">
 	<table>
 		<tr>
-			<td class="tableLeft ">Pavadinimas</td>
+			<td class="tableLeft "><?php echo $Text->getText("form_name"); ?></td>
 			<td class="tableRight "><input type="text" name="name" id="name" value=<?php echo '"'.$cropscare[0]["name"].'"'; ?> style="width: 261px;"></td>
 		</tr>
 		<tr>
-			<td class="tableLeft second">L/ha kuro</td>
+			<td class="tableLeft second"><?php echo $Text->getText("form_fuel"); ?></td>
 			<td class="tableRight second"><input type="text" name="consumption" id="consumption" value=<?php echo '"'.$cropscare[0]["consumption"].'"'; ?> style="width: 261px;"></td>
 		</tr>
 		<tr>
-		    <td class="tableLeft"><input type="submit" id="submit" name="submit" value="Saugoti"/></td>
-			<td class="tableRight"><input type="hidden" id="id" name="id" value=<?php echo '"'.$cropscare[0]["id"].'"'; ?>/><button type="cancel" id="cancel" data-cropscare=<?php echo '"'. @$_GET['id']. '"'; ?>>Atgal</button></td>
+		    <td class="tableLeft"><input type="submit" id="submit" name="submit" value="<?php echo $Text->getText("form_save"); ?>"/></td>
+			<td class="tableRight"><input type="hidden" id="id" name="id" value=<?php echo '"'.$cropscare[0]["id"].'"'; ?>/><button type="cancel" id="cancel" data-cropscare=<?php echo '"'. @$_GET['id']. '"'; ?>><?php echo $Text->getText("form_back"); ?></button></td>
 		</tr>
 	</table>
 </form>
@@ -88,7 +90,7 @@
 	});
 
 	$('.delete').click(function(){
-	    if (confirm("Ar tikrai norite pašalinti pasirinktą  priemonę iš sąrašo?")) {    	
+	    if (confirm(<?php echo "\"".$Text->getText("cropscares_message_delete_tool")."\""; ?>)) {    	
 		    var url = "pages/cropscares/actions/deleteChemicalFromCropscare.php";	
 		    var posting = $.post( url, { id: $(this).data('id') }, function(result){
 		    	//response text spausdinimas is to failo i kuri kreipiamasi su post

@@ -2,6 +2,8 @@
 <?php
 
 		include "../../../dbConfig.php";	   
+		include "../../../class.text.php";	
+
 		$field = $db->query("SELECT
 			`fields`.`name` as name,
 			`fields`.area as area,
@@ -29,7 +31,7 @@
 		$seedings = $db->query("select id as id, date as date from seedings where farm_id = '".$_SESSION["user_farm"]."' and season_id = '".$_SESSION["user_season"]."' and field_id = ".@$_GET['id'].""); 		
 		if(!empty($seedings)){			
 			foreach ($seedings as $key => $seeding) {
-				$seeding['name'] = "Sėjimas";
+				$seeding['name'] = $Text->getText("works_name_seeding");
 				$seeding['type'] = "seeding";
 				array_push($fieldworks, $seeding);
 			}   
@@ -63,53 +65,53 @@
 ?>  
 
 <div id="fields">	
-	<h1>Lauko informacija</h1>
+	<h1><?php echo $Text->getText("fields_info"); ?></h1>
 	<table>
 		<tr>
-		    <td class="tableLeft">Pavadinimas</td>
+		    <td class="tableLeft"><?php echo $Text->getText("form_name"); ?></td>
 			<td class="tableRight"><?php echo @$field['name']; ?></td>
 		</tr>
 		<tr>
-		    <td class="tableLeft second">Plotas</td>
+		    <td class="tableLeft second"><?php echo $Text->getText("form_area"); ?></td>
 			<td class="tableRight second"><?php echo @$field['area']." ha"; ?></td>
 		</tr>
 		<tr>
-		    <td class="tableLeft">Kultūra</td>
+		    <td class="tableLeft"><?php echo $Text->getText("seeds_culture"); ?></td>
 			<td class="tableRight"><?php echo @$field['culture']; ?></td>
 		</tr>
 		<tr>
-		    <td class="tableLeft second">Veislė</td>
+		    <td class="tableLeft second"><?php echo $Text->getText("seeds_seed"); ?></td>
 			<td class="tableRight second"><?php echo @$field['seed'].", ".@$field['quantity']." kg/ha"; ?></td>
 		</tr>
 		<tr>
-		    <td class="tableLeft">Nukulta</td>
+		    <td class="tableLeft"><?php echo $Text->getText("form_harvest_date"); ?></td>
 			<td class="tableRight"><?php if (@$field['harvesting'] != "0000-00-00") {echo @$field['harvesting'];} ?></td>
 		</tr>
 		<tr>
-		    <td class="tableLeft second">Savikaina</td>
+		    <td class="tableLeft second"><?php echo $Text->getText("fields_price"); ?></td>
 			<td class="tableRight second"><?php echo @$field['fieldPrice']." Lt/ha,  Viso: ".round($field["fieldPrice"]*$field["area"], 2). " Lt"; ?></td>
 		</tr>
 		<tr>
-		    <td class="tableLeft">Lauko kom.</td>
+		    <td class="tableLeft"><?php echo $Text->getText("form_comment"); ?></td>
 			<td class="tableRight"><?php echo @$field['comment']; ?></td>
 		</tr>
 		<?php 
 			if (@$field['culture']) {
 		?>
 				<tr>
-				    <td class="tableLeft second">Sezono kom.</td>
+				    <td class="tableLeft second"><?php echo $Text->getText("form_season_comment"); ?></td>
 					<td class="tableRight second"><?php echo @$field['season_comment']; ?></td>
 				</tr>
 		<?php } ?>
 		<tr>
-		    <td class="tableLeft"><?php if ($_SESSION["user_rights"] >= 16){ ?><button type="button" class="buttonChange" data-field=<?php echo '"'. @$_GET['id']. '"'; ?>>Redaguoti</button><?php } ?></td>
-			<td class="tableRight"><button id="cancel">Atgal</button></td>
+		    <td class="tableLeft"><?php if ($_SESSION["user_rights"] >= 16){ ?><button type="button" class="buttonChange" data-field=<?php echo '"'. @$_GET['id']. '"'; ?>><?php echo $Text->getText("form_edit"); ?></button><?php } ?></td>
+			<td class="tableRight"><button id="cancel"><?php echo $Text->getText("form_back"); ?></button></td>
 		</tr>
 	</table>
 
 	<?php include "addFieldWorksForm.php" ?>
 
-	<h2>Darbai lauke</h2>
+	<h2><?php echo $Text->getText("fields_works_in_field"); ?></h2>
 
 	<table>
 	<?php
@@ -151,7 +153,7 @@
 	});
 
 $('.delete').click(function(){
-    if (confirm("Ar tikrai norite pašalinti pasirinktą  darbą?")) {    	
+    if (confirm(<?php echo "\"".$Text->getText("fields_message_delete_work")."\""; ?>)) {    	
 	    var url = "pages/fields/actions/deleteWorkFromField.php";	
 	    var posting = $.post( url, { id: $(this).data('id'),  type: $(this).data('type'), field_id: <?php echo @$_GET['id'] ?> } );
 

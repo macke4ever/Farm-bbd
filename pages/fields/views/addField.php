@@ -1,16 +1,22 @@
-<h1>Pridėti naują lauką</h1>
+<?php 
+
+  include_once "../../../class.text.php";
+
+ ?>
+
+<h1><?php echo $Text->getText("fields_add"); ?></h1>
 <form id="fieldForm" action="pages/fields/actions/addFieldSQL.php" method="post">
 	<table>
 		<tr>
-			<td class="tableLeft">Pavadinimas</td>
+			<td class="tableLeft"><?php echo $Text->getText("form_name"); ?></td>
 			<td class="tableRight"><input type="text" name="name" id="name" style="width: 261px;" tabindex="2"></td>
 		</tr>
 		<tr>
-			<td class="tableLeft">Plotas</td>
+			<td class="tableLeft"><?php echo $Text->getText("form_area"); ?></td>
 			<td class="tableRight"><input type="text" name="area" id="area" style="width: 100px;" tabindex="3"></td>
 		</tr>
 		<tr>
-		    <td class="tableLeft"><input type="submit" id="submit" name="submit" value="Saugoti" tabindex="4"/></td>
+		    <td class="tableLeft"><input type="submit" id="submit" name="submit" value="<?php echo $Text->getText("form_save"); ?>" tabindex="4"/></td>
 			<td class="tableRight"></td>
 		</tr>
 	</table>

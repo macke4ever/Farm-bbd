@@ -1,16 +1,20 @@
-<h1>Pridėti naują priežiūros darbą</h1>
+<?php 
+  include_once "../../../class.text.php";
+?>
+
+<h1><?php echo $Text->getText("cropscares_add"); ?></h1>
 <form id="cropscaresForm" action="pages/cropscares/actions/addCropscareSQL.php" method="post">
 	<table>
 		<tr>
-      <td class="tableLeft">Pavadinimas</td>
+      <td class="tableLeft"><?php echo $Text->getText("form_name"); ?></td>
       <td class="tableRight"><input type="text" name="name" id="name" style="width: 261px;" tabindex="2"></td>
     </tr>
     <tr>
-			<td class="tableLeft second">L/ha kuro</td>
+			<td class="tableLeft second"><?php echo $Text->getText("form_fuel"); ?></td>
 			<td class="tableRight second"><input type="text" name="consumption" id="consumption" style="width: 261px;" tabindex="3"></td>
 		</tr>
 		<tr>
-		    <td class="tableLeft"><input type="submit" id="submit" name="submit" value="Saugoti" tabindex="4"/></td>
+		    <td class="tableLeft"><input type="submit" id="submit" name="submit" value="<?php echo $Text->getText("form_save"); ?>" tabindex="4"/></td>
 			<td class="tableRight"></td>
 		</tr>
 	</table>

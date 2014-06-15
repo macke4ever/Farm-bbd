@@ -1,3 +1,10 @@
+<?php 
+  if(session_id() == '') {
+      session_start();
+  }
+
+  include_once "class.text.php";
+ ?>
 <html>
 <head>
   <title>AgroServ - Žemės ūkio vladymo sistema</title>
@@ -6,7 +13,6 @@
 
 <?php 
   // baziniai reikalai reikalingi prisijungimams ir darbui su sesija
-  session_start();
 
   $message = "";
 
@@ -39,85 +45,13 @@
 <body>
   <div id="map"></div>
   <div id="settings" class="cf">
-    <ul class='menu cf'>
-      <li data-menu='pages/fields/index.php'><a href="">Laukai</a></li>     
-      <li data-menu='pages/cropscares/index.php'><a href="">Priežiūra</a></li>       
-      <li data-menu='pages/fieldworks/index.php'><a href="">Dirbimai</a></li>        
-      <li data-menu='pages/seeds/index.php'><a href="">Sėklos</a>
-      <li data-menu='pages/chemicals/index.php'><a href="">Chemija</a></li>  
-      <li data-menu='skip'><a href=""><img src="img/settings.png"></a>
-        <ul>
-            <li data-menu='pages/users/user.php'><a href=""><b><?php echo $_SESSION["firstname"]." ".$_SESSION["lastname"]; ?></b></a></li>
-            <li data-menu='guide'><a href="">Vartotojo gidas</a></li>
-            <li data-menu='logout'><a href="logout.php">Atsijungti</a></li>
-        </ul>
-      </li>
-    </ul>   
-    
-    <div id='content'>
+    <div id="main">
+      <?php include_once "main.php"; ?>
     </div>
-    <div id='content2'>
-    </div>
-
-    <!-- <div id='mapCoordsInclude'></div> -->
-    <!-- <div id='mapCoordsInclude'><?php  //include "addMaps.php"; ?></div> -->
-
-
   </div>
 </body>
 
 <?php include "enableMaps.php"; ?>
-
-
-<script type="text/javascript">
-  function testSession(){
-      $.get('session.php', function(data) {
-       if( data == "Expired" ) {
-           // alert("Session expired");
-           window.location.href = "logout.php";
-       }
-   });
-  }
-
-
-  testSession();
-//Menu conroller
-
-  
-  //nustatomas pirmo puslapio vaizdas - i kairi stulpeli ikalamas fields.php sugeneruotas kodas.
-  $.get("pages/fields/index.php", function(data){$('#content').html(data);});
-
-  //nustatomas puslapio vaizdas - i kairi stulpeli ikalamas paspausto tabo sugeneruotas kodas.
-  $('.menu li').click(function(){
-      testSession();
-
-      // logout
-      if ($(this).data('menu') == "logout"){
-        window.location.href = "logout.php";
-        return false;
-      }
-
-      // user guide
-      if ($(this).data('menu') == "guide"){
-        var win=window.open("UserGuide_ZUVS.pdf", '_blank');
-        win.focus();
-        return false;
-      }
-
-      // other menu buttons
-      // skip is used to disable link clickability
-      if ($(this).data('menu') !== "skip"){
-      var file = $(this).data('menu');
-        $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
-        $.get(file, function(data){
-            $('#content').html(data);
-          });
-        resetMaps();
-      }
-      return false;
-  });
-</script>
-
 
 <script type="text/javascript"> 
   //vis dar neaisku kokio velnio as sita reikala rasiau.
@@ -138,38 +72,6 @@
 
       $('#save').html('issaugoti');
     });
-</script>
-
-
-<script type="text/javascript">
-  //puslapio vaizdo sutvarkymas ir resizinimas pagal lango dydi.
-
-  function mapSize(){
-    var pl = $('body').width();
-    mpl = pl - $('#settings').width();
-    $('#map').width(mpl);
-  }
-
-  function contentSize(){
-    var pl = $('#settings').height();
-    mpl = pl - 30;
-    //mpl = pl - $('.menu').height();
-    $('#content').height(mpl);
-  }
-
-  $(window).resize(function(){
-    mapSize();
-    contentSize();
-  });
-
-  $(document).ready(function() {
-    mapSize();
-    contentSize();
-  //   // $.get('mainSettings.php', function(data){
-  //   //  $('#content').html(data);
-  //   // });
-  });
-
 </script>
 
 <?php  } ?>

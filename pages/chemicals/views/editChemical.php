@@ -2,6 +2,7 @@
 <?php
 
 		include "../../../dbConfig.php";	
+		include "../../../class.text.php";	
 		//var_dump($_GET);   
 		$r = mysql_query("SELECT * FROM chemicals where id = ".@$_GET['id']." and farm_id = ".$_SESSION["user_farm"]." LIMIT 1"); 		
 			 
@@ -19,13 +20,13 @@
 	    $chemtypes = $db->query("SELECT * FROM chemtypes ORDER BY name ASC");
 ?>  
 
-<h1>Redaguoti priežiūros priemonę</h1>
+<h1><?php echo $Text->getText("chemicals_edit"); ?></h1>
 <form id="changeChemical" action="pages/chemicals/actions/changeChemical.php" method="post">
 	<table>
 		<tr>
-			<td class="tableLeft">Rūšis</td>
+			<td class="tableLeft"><?php echo $Text->getText("chemicals_type"); ?></td>
 			<td class="tableRight">
-				<select name="chemtype_id" id="chemtype_id" data-placeholder="Pasirinkite tipą" style="width:261px;">
+				<select name="chemtype_id" id="chemtype_id" data-placeholder="<?php echo $Text->getText("chemicals_select_type"); ?>" style="width:261px;">
 	                <?php 
                         echo '<option value="0" selected></option>';
 	                    foreach($chemtypes as $key => $chemtype){
@@ -40,28 +41,28 @@
 			</td>
 		</tr>
 		<tr>
-			<td class="tableLeft second">Pavadinimas</td>
+			<td class="tableLeft second"><?php echo $Text->getText("form_name"); ?></td>
 			<td class="tableRight second"><input type="text" name="name" id="name" value=<?php echo '"'.$chemicals[0]["name"].'"'; ?> style="width: 261px;"></td>
 		</tr>
 		<tr>
-			<td class="tableLeft">Turėta</td>
+			<td class="tableLeft"><?php echo $Text->getText("form_total_quantity"); ?></td>
 			<td class="tableRight"><input type="text" name="startQuantity" id="startQuantity" value=<?php echo '"'.$chemicals[0]["startQuantity"].'"'; ?> style="width: 100px;"></td>
 		</tr>
 		<tr>
-			<td class="tableLeft second">Kiekis</td>
+			<td class="tableLeft second"><?php echo $Text->getText("form_quantity"); ?></td>
 			<td class="tableRight second"><input type="text" name="quantity" id="quantity" value=<?php echo '"'.$chemicals[0]["quantity"].'"'; ?> style="width: 100px;"></td>
 		</tr>
 		<tr>
-			<td class="tableLeft">Vnt. kaina</td>
+			<td class="tableLeft"><?php echo $Text->getText("form_unit_price"); ?></td>
 			<td class="tableRight"><input type="text" name="price" id="price" value=<?php echo '"'.$chemicals[0]["price"].'"'; ?> style="width: 50px;">Lt</td>
 		</tr>
 		<tr>
-			<td class="tableLeft">Mato vnt.</td>
+			<td class="tableLeft"><?php echo $Text->getText("form_measure"); ?></td>
 			<td class="tableRight"><input type="text" name="measure" id="measure" value=<?php echo '"'.$chemicals[0]["measure"].'"'; ?> style="width: 50px;"></td>
 		</tr>
 		<tr>
-		    <td class="tableLeft second"><input type="submit" id="submit" name="submit" value="Saugoti"/></td>
-			<td class="tableRight second"><input type="hidden" id="id" name="id" value=<?php echo '"'.$chemicals[0]["id"].'"'; ?>/><button id="cancel" data-chemical=<?php echo '"'. @$_GET['id']. '"'; ?>>Atgal</button></td>
+		    <td class="tableLeft second"><input type="submit" id="submit" name="submit" value="<?php echo $Text->getText("form_save"); ?>"/></td>
+			<td class="tableRight second"><input type="hidden" id="id" name="id" value=<?php echo '"'.$chemicals[0]["id"].'"'; ?>/><button id="cancel" data-chemical=<?php echo '"'. @$_GET['id']. '"'; ?>><?php echo $Text->getText("form_back"); ?></button></td>
 		</tr>
 	</table>
 </form>
