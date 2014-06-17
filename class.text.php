@@ -48,6 +48,7 @@
 		function changeLanguage($language = "en"){
 			$this->language = $language;
 			$this->updateArray();
+			$this->db->query("UPDATE users SET language = '".$language."' WHERE id = '".$_SESSION["user_id"]."'" );
 			$_SESSION["user_language"] = $language;
 		}
 
