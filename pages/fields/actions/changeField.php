@@ -29,7 +29,7 @@
 			if (!empty($seed_id)){			
 				$fields = $db->query("SELECT area from fields where id = '".@$_POST['field_id']."'"); 		
 				if(!empty($fields)){	
-					$numbVal = $fields[0]["area"] * $seed_id[0]["quantity"];		 		
+					$numbVal = $fields[0]["area"] * @$_POST["quantity"];		 		
 					$db->query("UPDATE seeds SET quantity = (quantity + ".$numbVal."/1000) WHERE id = '".$seed_id[0]["seed_id"]."'");   
 				}
 			}
@@ -43,7 +43,7 @@
 		//removes from resources when seeding is added to the field
 		$fields = $db->query("SELECT area from fields where id = '".@$_POST['field_id']."'"); 		
 		if(!empty($fields)){			 		
-			$numbVal = $fields[0]["area"] * $seed_id[0]["quantity"];
+			$numbVal = $fields[0]["area"] * @$_POST["quantity"];
 			$db->query("UPDATE seeds SET quantity = (quantity - ".$numbVal."/1000) WHERE id = '".$_POST["seedSelect"]."'");   
 		}
 
