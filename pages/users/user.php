@@ -7,6 +7,7 @@
 	$user = $user[0];
 
 	$languages = $db->query("SELECT * FROM languages");
+	$seasons = $db->query("SELECT * FROM seasons ORDER BY name DESC");
 	// var_dump($user);
  ?>
 
@@ -59,8 +60,8 @@
 	</table>
 </form>
 
-<h2><?php echo $Text->getText("user_languages_change"); ?></h2>
-<form id="changeUserLang" action="pages/users/actions/changeUserLang.php" method="post">
+<h2><?php echo $Text->getText("user_variables_change"); ?></h2>
+<form id="changeUserVars" action="pages/users/actions/changeUserVars.php" method="post">
 	<table>
 		<tr>
 			<td class="tableLeft"><?php echo $Text->getText("user_language"); ?></td>
@@ -72,6 +73,22 @@
 	                        	echo '<option value="'.$language['shortLang'].'" selected>'.$Text->getText($language["keyword"]).'</option>';
 	                        } else {
 	                        	echo '<option value="'.$language['shortLang'].'">'.$Text->getText($language["keyword"]).'</option>';                            	
+	                        }
+                        }
+	                ?>
+	              </select>
+			</td>
+		</tr>
+		<tr>
+			<td class="tableLeft second"><?php echo $Text->getText("user_season"); ?></td>
+			<td class="tableRight second">
+				<select name="season" id="season" data-placeholder="<?php echo $Text->getText("user_select_season"); ?>" style="width:261px;">
+	                <?php 
+	                    foreach($seasons as $key => $season){
+	                        if ($season['id'] == $_SESSION["user_season"]) {
+	                        	echo '<option value="'.$season['id'].'" selected>'.$season["name"].'</option>';
+	                        } else {
+	                        	echo '<option value="'.$season['id'].'">'.$season["name"].'</option>';                            	
 	                        }
                         }
 	                ?>
@@ -133,17 +150,18 @@
     return false;
     });
 
-    $("#changeUserLang").submit(function(event) {
+    $("#changeUserVars").submit(function(event) {
 	     event.preventDefault();
 	     var $form = $( this ),
 	         url = $form.attr( 'action' );
-	     var posting = $.post( url, { shortLang: $('#language').val() } );
+	     var posting = $.post( url, { shortLang: $('#language').val(), season: $('#season').val() } );
 	     // console.log(posting);
 	     $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 
 	      /* Put the results in a div */
 	     posting.done(function( data ) {
 	       $.get("main.php?page=user", function(data){$('#main').html(data);});
+	       reloadMaps();
 	    });
     });
 </script>
