@@ -65,14 +65,29 @@
 
 	}
 
-
+	//---- HARVESTING stuf.
 		//var_dump($_POST);	
 		$result = $db->query("SELECT * FROM `harvestings` WHERE farm_id = '".$_SESSION["user_farm"]."' AND season_id = '".$_SESSION["user_season"]."' AND field_id='".@$_POST['field_id']."'");
+		
+		$harvested = 0;
+		$harvestDate = "0000-00-00";
+		if (!empty($_POST['harvested'])) {
+			$harvested = str_replace(",", ".", $_POST["harvested"]);
+
+			$harvestDate = date("Y-m-d");
+			if (!empty($_POST['date'])) {
+				$harvestDate = $_POST['date'];
+			}
+		} else {
+			if (!empty($_POST['date'])){
+				$harvestDate = $_POST['date'];
+			}
+		}			
 
 		if ($result) {
-			$db->query("UPDATE `harvestings` SET `date`='".@$_POST['date']."' WHERE farm_id = '".$_SESSION["user_farm"]."' AND season_id = '".$_SESSION["user_season"]."' AND field_id='".@$_POST['field_id']."'");
+			$db->query("UPDATE `harvestings` SET `date`='".$harvestDate."', `quantity` = '".$harvested."' WHERE farm_id = '".$_SESSION["user_farm"]."' AND season_id = '".$_SESSION["user_season"]."' AND field_id='".@$_POST['field_id']."'");
 		} else {
-			$db->query("INSERT INTO `harvestings`(`field_id`, `season_id`, `farm_id`, `date`)  VALUES ('".@$_POST['field_id']."', '".$_SESSION["user_season"]."', '".$_SESSION["user_farm"]."', '".@$_POST['date']."')");
+			$db->query("INSERT INTO `harvestings`(`field_id`, `season_id`, `farm_id`, `date`, `quantity`)  VALUES ('".@$_POST['field_id']."', '".$_SESSION["user_season"]."', '".$_SESSION["user_farm"]."', '".$harvestDate."', '".$harvested."')");
 		}
 
 

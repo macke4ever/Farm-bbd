@@ -10,6 +10,7 @@
 			cultures.`name` as culture,
 			`seeds`.name as seed,
 			`tempHarvest`.`date` as harvesting,
+			`tempHarvest`.`quantity` as harvestQuantity,
 			`laikina`.`comment` as season_comment,
 			`laikina`.`seed_id` as seed_id,
 			`laikina`.`date` as seeddate,
@@ -113,18 +114,22 @@
 			</tr>
 			<tr>
 			    <td class="tableLeft second"><?php echo $Text->getText("form_harvest_date"); ?></td>
-				<td class="tableRight second"><input id="date" name="date" type="date" value=<?php echo '"'.@$field['harvesting'].'"'; ?> /></td>
+				<td class="tableRight second"><input id="date" name="date" type="date" value=<?php if (@$field['harvesting'] != "0000-00-00") {echo '"'.@$field['harvesting'].'"';} ?> ></td>
 			</tr>
 			<tr>
-			    <td class="tableLeft"><?php echo $Text->getText("form_comment"); ?></td>
-				<td class="tableRight"><textarea id="comment" name="comment" cols="30"><?php echo @$field['comment']; ?></textarea></td>
+			    <td class="tableLeft"><?php echo $Text->getText("form_harvest_quantity"); ?></td>
+				<td class="tableRight"><input id="harvested" name="harvested" type="number" value=<?php echo '"'.@$field['harvestQuantity'].'"'; ?> />t.</td>
+			</tr>
+			<tr>
+			    <td class="tableLeft second"><?php echo $Text->getText("form_comment"); ?></td>
+				<td class="tableRight second"><textarea id="comment" name="comment" cols="30"><?php echo @$field['comment']; ?></textarea></td>
 			</tr>
 			<?php 
 				if ($field['culture']) {
 			?>
 					<tr>
-					    <td class="tableLeft second"><?php echo $Text->getText("form_season_comment"); ?></td>
-						<td class="tableRight second"><textarea id="season_comment" name="season_comment" cols="30"><?php echo @$field['season_comment']; ?></textarea></td>
+					    <td class="tableLeft"><?php echo $Text->getText("form_season_comment"); ?></td>
+						<td class="tableRight"><textarea id="season_comment" name="season_comment" cols="30"><?php echo @$field['season_comment']; ?></textarea></td>
 					</tr>
 			<?php } ?>
 			<tr>
@@ -180,7 +185,7 @@
           url = $form.attr( 'action' );
 
       /* Send the data using post */
-      var posting = $.post( url, { date: $('#date').val(), comment: $('#comment').val(), name: $('#name').val(), area: $('#area').val(), season_comment: $('#season_comment').val(), field_id: $('#field_id').val(), seedSelect: $('#seedSelect').val(), seeddate: $('#seeddate').val(), quantity: $('#quantity').val() } );
+      var posting = $.post( url, { date: $('#date').val(), comment: $('#comment').val(), name: $('#name').val(), area: $('#area').val(), season_comment: $('#season_comment').val(), field_id: $('#field_id').val(), seedSelect: $('#seedSelect').val(), seeddate: $('#seeddate').val(), quantity: $('#quantity').val(), harvested: $('#harvested').val() } );
       
       $('#content').html("<center><img src='img/ajax-loader.gif' style='padding-top: 50px;'></center>");
 

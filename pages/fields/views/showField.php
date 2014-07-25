@@ -11,6 +11,7 @@
 			cultures.`name` as culture,
 			`seeds`.name as seed,
 			`tempHarvest`.`date` as harvesting,
+			`tempHarvest`.`quantity` as harvestQuantity,
 			`laikina`.`quantity` as quantity,
 			`laikina`.`comment` as season_comment,
 			`fields`.comment as comment
@@ -88,19 +89,23 @@
 			<td class="tableRight"><?php if (@$field['harvesting'] != "0000-00-00") {echo @$field['harvesting'];} ?></td>
 		</tr>
 		<tr>
-		    <td class="tableLeft second"><?php echo $Text->getText("fields_price"); ?></td>
-			<td class="tableRight second"><?php echo @$field['fieldPrice']." Lt/ha,  Viso: ".round($field["fieldPrice"]*$field["area"], 2). " Lt"; ?></td>
+		    <td class="tableLeft second"><?php echo $Text->getText("form_harvest_quantity"); ?></td>
+			<td class="tableRight second"><?php echo @$field['harvestQuantity']; ?> t.</td>
 		</tr>
 		<tr>
-		    <td class="tableLeft"><?php echo $Text->getText("form_comment"); ?></td>
-			<td class="tableRight"><?php echo @$field['comment']; ?></td>
+		    <td class="tableLeft"><?php echo $Text->getText("fields_price"); ?></td>
+			<td class="tableRight"><?php echo @$field['fieldPrice']." Lt/ha,  Viso: ".round($field["fieldPrice"]*$field["area"], 2). " Lt"; ?></td>
+		</tr>
+		<tr>
+		    <td class="tableLeft second"><?php echo $Text->getText("form_comment"); ?></td>
+			<td class="tableRight second"><?php echo @$field['comment']; ?></td>
 		</tr>
 		<?php 
 			if (@$field['culture']) {
 		?>
 				<tr>
-				    <td class="tableLeft second"><?php echo $Text->getText("form_season_comment"); ?></td>
-					<td class="tableRight second"><?php echo @$field['season_comment']; ?></td>
+				    <td class="tableLeft"><?php echo $Text->getText("form_season_comment"); ?></td>
+					<td class="tableRight"><?php echo @$field['season_comment']; ?></td>
 				</tr>
 		<?php } ?>
 		<tr>
