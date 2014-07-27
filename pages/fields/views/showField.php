@@ -90,7 +90,7 @@
 		</tr>
 		<tr>
 		    <td class="tableLeft second"><?php echo $Text->getText("form_harvest_quantity"); ?></td>
-			<td class="tableRight second"><?php echo @$field['harvestQuantity']; ?> t.</td>
+			<td class="tableRight second"><?php echo @$field['harvestQuantity']." t. / ".round(@$field['harvestQuantity']/@$field['area'], 2)." t/ha"; ?></td>
 		</tr>
 		<tr>
 		    <td class="tableLeft"><?php echo $Text->getText("fields_price"); ?></td>
@@ -158,6 +158,7 @@
 	});
 
 $('.delete').click(function(){
+	testSession();
     if (confirm(<?php echo "\"".$Text->getText("fields_message_delete_work")."\""; ?>)) {    	
 	    var url = "pages/fields/actions/deleteWorkFromField.php";	
 	    var posting = $.post( url, { id: $(this).data('id'),  type: $(this).data('type'), field_id: <?php echo @$_GET['id'] ?> } );
@@ -175,6 +176,7 @@ $('.delete').click(function(){
 });
 
     $('#cancel').click(function(){
+    	testSession();
      // console.log('aa');
 
      //prideta visokios logikos kad butu galima gristi i ankstesni puslapi pagal tai is kur buvo ateita
@@ -215,6 +217,7 @@ $('.delete').click(function(){
     });
 
 	$('.show').click(function(){
+		testSession();
 	    if ($(this).data('type') == "fieldwork"){
 	    	<?php echo 'var file = "pages/fieldworks/views/showFieldwork.php?back=showfield&bid='.$_GET["id"].'&id=";'; ?>
 			file += $(this).data('id');

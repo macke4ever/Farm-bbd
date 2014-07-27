@@ -118,7 +118,7 @@
 			</tr>
 			<tr>
 			    <td class="tableLeft"><?php echo $Text->getText("form_harvest_quantity"); ?></td>
-				<td class="tableRight"><input id="harvested" name="harvested" type="number" value=<?php echo '"'.@$field['harvestQuantity'].'"'; ?> />t.</td>
+				<td class="tableRight"><input id="harvested" name="harvested" type="text" value=<?php echo '"'.@$field['harvestQuantity'].'"'; ?> />t.</td>
 			</tr>
 			<tr>
 			    <td class="tableLeft second"><?php echo $Text->getText("form_comment"); ?></td>

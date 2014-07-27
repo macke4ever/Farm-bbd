@@ -69,6 +69,8 @@ function resetMaps(){
 //info apie lauka arba veiksmai su lauku, cia tveriami visi case pagal paspausta taba
 function showFieldInfo(event) {
 
+  testSession();
+
   if (document.getElementById('fieldwork-view') != null) {
     enableAdd = $('#enableAdd').prop('checked');
     date = $('#date').val();

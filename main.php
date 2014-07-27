@@ -13,6 +13,7 @@
       <li data-menu='skip'><a href=""><img src="img/settings.png"></a>
         <ul>
             <li data-menu='pages/users/user.php'><a href=""><b><?php echo $_SESSION["firstname"]." ".$_SESSION["lastname"]; ?></b></a></li>
+            <li data-menu='pages/prices/index.php'><a href=""><?php echo $Text->getText("menu_prices"); ?></a></li>
             <li data-menu='guide'><a href=""><?php echo $Text->getText("menu_userguide"); ?></a></li>
             <li data-menu='logout'><a href="logout.php"><?php echo $Text->getText("menu_disconnect"); ?></a></li>
         </ul>
